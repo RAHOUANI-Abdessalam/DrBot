@@ -1,0 +1,235 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: fungal infection
+  steps:
+  - intent: fungal_infection
+  - action: utter_fungal_infection
+
+- story: allergy
+  steps:
+  - intent: allergy
+  - action: utter_allergy
+
+- story: gerd
+  steps:
+  - intent: gerd
+  - action: utter_gerd
+
+- story: chronic cholestasis
+  steps:
+  - intent: chronic_cholestasis
+  - action: utter_chronic_cholestasis
+
+- story: drug reaction
+  steps:
+  - intent: drug_reaction
+  - action: utter_drug_reaction
+
+- story: peptic ulcer diseae
+  steps:
+  - intent: peptic_ulcer_diseae
+  - action: utter_peptic_ulcer_diseae
+
+- story: aids
+  steps:
+  - intent: aids
+  - action: utter_aids
+
+- story: diabetes
+  steps:
+  - intent: diabetes
+  - action: utter_diabetes
+
+- story: gastroenteritis
+  steps:
+  - intent: gastroenteritis
+  - action: utter_gastroenteritis
+
+- story: bronchial asthma
+  steps:
+  - intent: bronchial_asthma
+  - action: utter_bronchial_asthma
+
+- story: hypertension
+  steps:
+  - intent: hypertension
+  - action: utter_hypertension
+
+- story: migraine
+  steps:
+  - intent: migraine
+  - action: utter_migraine
+
+- story: cervical spondylosis
+  steps:
+  - intent: cervical_spondylosis
+  - action: utter_cervical_spondylosis
+
+- story: paralysis (brain hemorrhage)
+  steps:
+  - intent: paralysis_(brain_hemorrhage)
+  - action: utter_paralysis_(brain_hemorrhage)
+
+- story: jaundice
+  steps:
+  - intent: jaundice
+  - action: utter_jaundice
+
+- story: malaria
+  steps:
+  - intent: malaria
+  - action: utter_malaria
+
+- story: chicken pox
+  steps:
+  - intent: chicken_pox
+  - action: utter_chicken_pox
+
+- story: dengue
+  steps:
+  - intent: dengue
+  - action: utter_dengue
+
+- story: typhoid
+  steps:
+  - intent: typhoid
+  - action: utter_typhoid
+
+- story: hepatitis a
+  steps:
+  - intent: hepatitis_a
+  - action: utter_hepatitis_a
+
+- story: hepatitis b
+  steps:
+  - intent: hepatitis_b
+  - action: utter_hepatitis_b
+
+- story: hepatitis c
+  steps:
+  - intent: hepatitis_c
+  - action: utter_hepatitis_c
+
+- story: hepatitis d
+  steps:
+  - intent: hepatitis_d
+  - action: utter_hepatitis_d
+
+- story: hepatitis e
+  steps:
+  - intent: hepatitis_e
+  - action: utter_hepatitis_e
+
+- story: alcoholic hepatitis
+  steps:
+  - intent: alcoholic_hepatitis
+  - action: utter_alcoholic_hepatitis
+
+- story: tuberculosis
+  steps:
+  - intent: tuberculosis
+  - action: utter_tuberculosis
+
+- story: common cold
+  steps:
+  - intent: common_cold
+  - action: utter_common_cold
+
+- story: pneumonia
+  steps:
+  - intent: pneumonia
+  - action: utter_pneumonia
+
+- story: dimorphic hemmorhoids(piles)
+  steps:
+  - intent: dimorphic_hemmorhoids(piles)
+  - action: utter_dimorphic_hemmorhoids(piles)
+
+- story: heart attack
+  steps:
+  - intent: heart_attack
+  - action: utter_heart_attack
+
+- story: varicose veins
+  steps:
+  - intent: varicose_veins
+  - action: utter_varicose_veins
+
+- story: hypothyroidism
+  steps:
+  - intent: hypothyroidism
+  - action: utter_hypothyroidism
+
+- story: hyperthyroidism
+  steps:
+  - intent: hyperthyroidism
+  - action: utter_hyperthyroidism
+
+- story: hypoglycemia
+  steps:
+  - intent: hypoglycemia
+  - action: utter_hypoglycemia
+
+- story: osteoarthristis
+  steps:
+  - intent: osteoarthristis
+  - action: utter_osteoarthristis
+
+- story: arthritis
+  steps:
+  - intent: arthritis
+  - action: utter_arthritis
+
+- story: (vertigo) paroymsal positional vertigo
+  steps:
+  - intent: (vertigo)_paroymsal_positional_vertigo
+  - action: utter_(vertigo)_paroymsal_positional_vertigo
+
+- story: acne
+  steps:
+  - intent: acne
+  - action: utter_acne
+
+- story: urinary tract infection
+  steps:
+  - intent: urinary_tract_infection
+  - action: utter_urinary_tract_infection
+
+- story: psoriasis
+  steps:
+  - intent: psoriasis
+  - action: utter_psoriasis
+
+- story: impetigo
+  steps:
+  - intent: impetigo
+  - action: utter_impetigo

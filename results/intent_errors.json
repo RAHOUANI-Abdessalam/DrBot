@@ -1,0 +1,66 @@
+[
+  {
+    "text": "headache, nausea, vomiting, light hurts",
+    "intent": "migraine",
+    "intent_prediction": {
+      "name": "malaria",
+      "confidence": 0.23457960784435272
+    }
+  },
+  {
+    "text": "temperature, shivering, headache, vomiting",
+    "intent": "malaria",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.15436123311519623
+    }
+  },
+  {
+    "text": "temperature, headache, pain, muscle ache",
+    "intent": "dengue",
+    "intent_prediction": {
+      "name": "malaria",
+      "confidence": 0.23286588490009308
+    }
+  },
+  {
+    "text": "temperature, jaundice, nausea, itch",
+    "intent": "hepatitis_a",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.3492337763309479
+    }
+  },
+  {
+    "text": "temperature, tiredness, nausea, muscle pain",
+    "intent": "hepatitis_b",
+    "intent_prediction": {
+      "name": "dengue",
+      "confidence": 0.33298900723457336
+    }
+  },
+  {
+    "text": "cough, mucus, short of breath, temperature",
+    "intent": "pneumonia",
+    "intent_prediction": {
+      "name": "psoriasis",
+      "confidence": 0.13667887449264526
+    }
+  },
+  {
+    "text": "pain, nausea, pale, short of breath",
+    "intent": "heart_attack",
+    "intent_prediction": {
+      "name": "dengue",
+      "confidence": 0.11588285863399506
+    }
+  },
+  {
+    "text": "rash, white patches, redness, itch",
+    "intent": "psoriasis",
+    "intent_prediction": {
+      "name": "fungal_infection",
+      "confidence": 0.17880167067050934
+    }
+  }
+]

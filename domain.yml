@@ -1,0 +1,247 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - fungal_infection
+  - allergy
+  - gerd
+  - chronic_cholestasis
+  - drug_reaction
+  - peptic_ulcer_diseae
+  - aids
+  - diabetes
+  - gastroenteritis
+  - bronchial_asthma
+  - hypertension
+  - migraine
+  - cervical_spondylosis
+  - paralysis_(brain_hemorrhage)
+  - jaundice
+  - malaria
+  - chicken_pox
+  - dengue
+  - typhoid
+  - hepatitis_a
+  - hepatitis_b
+  - hepatitis_c
+  - hepatitis_d
+  - hepatitis_e
+  - alcoholic_hepatitis
+  - tuberculosis
+  - common_cold
+  - pneumonia
+  - dimorphic_hemmorhoids(piles)
+  - heart_attack
+  - varicose_veins
+  - hypothyroidism
+  - hyperthyroidism
+  - hypoglycemia
+  - osteoarthristis
+  - arthritis
+  - (vertigo)_paroymsal_positional_vertigo
+  - acne
+  - urinary_tract_infection
+  - psoriasis
+  - impetigo
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, developed by Masters studients ,powered by Rasa."
+
+  utter_fungal_infection:
+  - text: "You have Fungal infection"
+
+  utter_allergy:
+  - text: "You have Allergy"
+
+  utter_gerd:
+    - text: "You have GERD"
+
+  utter_chronic_cholestasis:
+    - text: "You have Chronic cholestasis"
+
+  utter_drug_reaction:
+    - text: "You have Drug Reaction"
+
+  utter_peptic_ulcer_diseae:
+    - text: "You have Peptic ulcer diseae"
+
+  utter_aids:
+    - text: "You have AIDS"
+
+  utter_diabetes:
+    - text: "You have Diabetes"
+
+  utter_gastroenteritis:
+    - text: "You have Gastroenteritis"
+
+  utter_bronchial_asthma:
+    - text: "You have Bronchial Asthma"
+
+  utter_hypertension:
+    - text: "You have Hypertension"
+
+  utter_migraine:
+    - text: "You have Migraine"
+
+  utter_cervical_spondylosis:
+    - text: "You have Cervical spondylosis"
+
+  utter_paralysis_(brain_hemorrhage):
+    - text: "You have Paralysis (brain hemorrhage)"
+
+  utter_jaundice:
+    - text: "You have Jaundice"
+
+  utter_malaria:
+    - text: "You have Malaria"
+
+  utter_chicken_pox:
+    - text: "You have Chicken pox"
+
+  utter_dengue:
+    - text: "You have Dengue"
+
+  utter_typhoid:
+    - text: "You have Typhoid"
+
+  utter_hepatitis_a:
+    - text: "You have hepatitis A"
+
+  utter_hepatitis_b:
+    - text: "You have Hepatitis B"
+
+  utter_hepatitis_c:
+    - text: "You have Hepatitis C"
+
+  utter_hepatitis_d:
+    - text: "You have Hepatitis D"
+
+  utter_hepatitis_e:
+    - text: "You have Hepatitis E"
+
+  utter_alcoholic_hepatitis:
+    - text: "You have Alcoholic hepatitis"
+
+  utter_tuberculosis:
+    - text: "You have Tuberculosis"
+
+  utter_common_cold:
+    - text: "You have Common Cold"
+
+  utter_pneumonia:
+    - text: "You have Pneumonia"
+
+  utter_dimorphic_hemmorhoids(piles):
+    - text: "You have Dimorphic hemmorhoids(piles)"
+
+  utter_heart_attack:
+    - text: "You have Heart attack"
+
+  utter_varicose_veins:
+    - text: "You have Varicose veins"
+
+  utter_hypothyroidism:
+    - text: "You have Hypothyroidism"
+
+  utter_hyperthyroidism:
+    - text: "You have Hyperthyroidism"
+
+  utter_hypoglycemia:
+    - text: "You have Hypoglycemia"
+
+  utter_osteoarthristis:
+    - text: "You have Osteoarthristis"
+
+  utter_arthritis:
+    - text: "You have Arthritis"
+
+  utter_(vertigo)_paroymsal_positional_vertigo:
+    - text: "You have (vertigo) Paroymsal  Positional Vertigo"
+
+  utter_acne:
+    - text: "You have Acne"
+
+  utter_urinary_tract_infection:
+    - text: "You have Urinary tract infection"
+
+  utter_psoriasis:
+    - text: "You have Psoriasis"
+
+  utter_impetigo:
+    - text: "You have Impetigo"
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_fungal_infection
+- utter_allergy
+- utter_gerd
+- utter_chronic_cholestasis
+- utter_drug_reaction
+- utter_peptic_ulcer_diseae
+- utter_aids
+- utter_diabetes
+- utter_gastroenteritis
+- utter_bronchial_asthma
+- utter_hypertension
+- utter_migraine
+- utter_cervical_spondylosis
+- utter_paralysis_(brain_hemorrhage)
+- utter_jaundice
+- utter_malaria
+- utter_chicken_pox
+- utter_dengue
+- utter_typhoid
+- utter_hepatitis_a
+- utter_hepatitis_b
+- utter_hepatitis_c
+- utter_hepatitis_d
+- utter_hepatitis_e
+- utter_alcoholic_hepatitis
+- utter_tuberculosis
+- utter_common_cold
+- utter_pneumonia
+- utter_dimorphic_hemmorhoids(piles)
+- utter_heart_attack
+- utter_varicose_veins
+- utter_hypothyroidism
+- utter_hyperthyroidism
+- utter_hypoglycemia
+- utter_osteoarthristis
+- utter_arthritis
+- utter_(vertigo)_paroymsal_positional_vertigo
+- utter_acne
+- utter_urinary_tract_infection
+- utter_psoriasis
+- utter_impetigo
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
