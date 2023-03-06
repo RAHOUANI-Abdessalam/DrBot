@@ -49,6 +49,7 @@ intents:
   - urinary_tract_infection
   - psoriasis
   - impetigo
+  - visit_doctor
 
 responses:
   utter_greet:
@@ -193,6 +194,129 @@ responses:
   utter_impetigo:
     - text: "You have Impetigo"
 
+  utter_fungal_infection_specialist:
+  - text: "You should visit a Dermatologist or General practitioner"
+
+  utter_allergy_specialist:
+  - text: "You must visit an Allergist or Immunologist"
+
+  utter_gerd_specialist:
+    - text: "You must visit a Gastroenterologist"
+
+  utter_chronic_cholestasis_specialist:
+    - text: "You must visit a Hepatologist or Gastroenterologist"
+
+  utter_drug_reaction_specialist:
+    - text: "You must visit an Allergist or Immunologist or Dermatologist"
+
+  utter_peptic_ulcer_diseae_specialist:
+    - text: "You must visit a Gastroenterologist"
+
+  utter_aids_specialist:
+    - text: "You must visit an Infectious Disease Specialist"
+
+  utter_diabetes_specialist:
+    - text: "You must visit an Endocrinologist"
+
+  utter_gastroenteritis_specialist:
+    - text: "You must visit a Gastroenterologist"
+
+  utter_bronchial_asthma_specialist:
+    - text: "You must visit a Pulmonologist or Allergist"
+
+  utter_hypertension_specialist:
+    - text: "You must visit a Cardiologist"
+
+  utter_migraine_specialist:
+    - text: "You must visit a Neurologist"
+
+  utter_cervical_spondylosis_specialist:
+    - text: "You must visit an Orthopedic specialist or a neurologist"
+
+  utter_paralysis_(brain_hemorrhage)_specialist:
+    - text: "You must visit a Neurologist"
+
+  utter_jaundice_specialist:
+    - text: "You must visit a Hepatologist or Gastroenterologist"
+
+  utter_malaria_specialist:
+    - text: "You must visit a Infectious Disease Specialist"
+
+  utter_chicken_pox_specialist:
+    - text: "You must visit a Dermatologist"
+
+  utter_dengue_specialist:
+    - text: "You must visit an Infectious Disease Specialist"
+
+  utter_typhoid_specialist:
+    - text: "You must visit an Infectious Disease Specialist"
+
+  utter_hepatitis_a_specialist:
+    - text: "You should visit a Hepatologist or Gastroenterologist"
+
+  utter_hepatitis_b_specialist:
+    - text: "You have to visit a Hepatologist or Gastroenterologist"
+
+  utter_hepatitis_c_specialist:
+    - text: "You need to visit a Hepatologist or Gastroenterologist"
+
+  utter_hepatitis_d_specialist:
+    - text: "You must go see a Hepatologist or Gastroenterologist"
+
+  utter_hepatitis_e_specialist:
+    - text: "You must see a Hepatologist or Gastroenterologist"
+
+  utter_alcoholic_hepatitis_specialist:
+    - text: "You must visit a Hepatologist or Gastroenterologist"
+
+  utter_tuberculosis_specialist:
+    - text: "You have to visit a Pulmonologist or Infectious Disease Specialist"
+
+  utter_common_cold_specialist:
+    - text: "You need to visit a General Practitioner"
+
+  utter_pneumonia_specialist:
+    - text: "You must visit a Pulmonologist or Infectious Disease Specialist"
+
+  utter_dimorphic_hemmorhoids(piles)_specialist:
+    - text: "You should visit a Proctologist or General Surgeon"
+
+  utter_heart_attack_specialist:
+    - text: "You must visit a Cardiologist"
+
+  utter_varicose_veins_specialist:
+    - text: "You must visit a Vascular Surgeon"
+
+  utter_hypothyroidism_specialist:
+    - text: "You have to visit an Endocrinologist"
+
+  utter_hyperthyroidism_specialist:
+    - text: "You must go visit an Endocrinologist"
+
+  utter_hypoglycemia_specialist:
+    - text: "You must visit an Endocrinologist"
+
+  utter_osteoarthristis_specialist:
+    - text: "You must visit a Rheumatologist or Orthopedist"
+
+  utter_arthritis_specialist:
+    - text: "You should visit a Rheumatologist or Orthopedist"
+
+  utter_(vertigo)_paroymsal_positional_vertigo_specialist:
+    - text: "You have to visit an ENT Specialist or Neurologist"
+
+  utter_acne_specialist:
+    - text: "You need to visit a Dermatologist"
+
+  utter_urinary_tract_infection_specialist:
+    - text: "You must visit an Urologist"
+
+  utter_psoriasis_specialist:
+    - text: "You have to visit a Dermatologist or Rheumatologist"
+
+  utter_impetigo_specialist:
+    - text: "You should visit a Dermatologist or General Practitioner"
+
 actions:
 - utter_greet
 - utter_cheer_up
@@ -241,6 +365,47 @@ actions:
 - utter_urinary_tract_infection
 - utter_psoriasis
 - utter_impetigo
+- utter_fungal_infection_specialist
+- utter_allergy_specialist
+- utter_gerd_specialist
+- utter_chronic_cholestasis_specialist
+- utter_drug_reaction_specialist
+- utter_peptic_ulcer_diseae_specialist
+- utter_aids_specialist
+- utter_diabetes_specialist
+- utter_gastroenteritis_specialist
+- utter_bronchial_asthma_specialist
+- utter_hypertension_specialist
+- utter_migraine_specialist
+- utter_cervical_spondylosis_specialist
+- utter_paralysis_(brain_hemorrhage)_specialist
+- utter_jaundice_specialist
+- utter_malaria_specialist
+- utter_chicken_pox_specialist
+- utter_dengue_specialist
+- utter_typhoid_specialist
+- utter_hepatitis_a_specialist
+- utter_hepatitis_b_specialist
+- utter_hepatitis_c_specialist
+- utter_hepatitis_d_specialist
+- utter_hepatitis_e_specialist
+- utter_alcoholic_hepatitis_specialist
+- utter_tuberculosis_specialist
+- utter_common_cold_specialist
+- utter_pneumonia_specialist
+- utter_dimorphic_hemmorhoids(piles)_specialist
+- utter_heart_attack_specialist
+- utter_varicose_veins_specialist
+- utter_hypothyroidism_specialist
+- utter_hyperthyroidism_specialist
+- utter_hypoglycemia_specialist
+- utter_osteoarthristis_specialist
+- utter_arthritis_specialist
+- utter_(vertigo)_paroymsal_positional_vertigo_specialist
+- utter_acne_specialist
+- utter_urinary_tract_infection_specialist
+- utter_psoriasis_specialist
+- utter_impetigo_specialist
 
 session_config:
   session_expiration_time: 60

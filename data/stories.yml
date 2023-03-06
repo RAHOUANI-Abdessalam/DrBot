@@ -233,3 +233,290 @@ stories:
   steps:
   - intent: impetigo
   - action: utter_impetigo
+
+- story: fungal infection
+  steps:
+  - intent: fungal_infection
+  - action: utter_fungal_infection
+  - intent: visit_doctor
+  - action: utter_fungal_infection_specialist
+
+- story: allergy
+  steps:
+  - intent: allergy
+  - action: utter_allergy
+  - intent: visit_doctor
+  - action: utter_allergy_specialist
+
+- story: gerd
+  steps:
+  - intent: gerd
+  - action: utter_gerd
+  - intent: visit_doctor
+  - action: utter_gerd_specialist
+
+- story: chronic cholestasis
+  steps:
+  - intent: chronic_cholestasis
+  - action: utter_chronic_cholestasis
+  - intent: visit_doctor
+  - action: utter_chronic_cholestasis_specialist
+
+- story: drug reaction
+  steps:
+  - intent: drug_reaction
+  - action: utter_drug_reaction
+  - intent: visit_doctor
+  - action: utter_drug_reaction_specialist
+
+- story: peptic ulcer diseae
+  steps:
+  - intent: peptic_ulcer_diseae
+  - action: utter_peptic_ulcer_diseae
+  - intent: visit_doctor
+  - action: utter_peptic_ulcer_diseae_specialist
+
+- story: aids
+  steps:
+  - intent: aids
+  - action: utter_aids
+  - intent: visit_doctor
+  - action: utter_aids_specialist
+
+- story: diabetes
+  steps:
+  - intent: diabetes
+  - action: utter_diabetes
+  - intent: visit_doctor
+  - action: utter_diabetes_specialist
+
+- story: gastroenteritis
+  steps:
+  - intent: gastroenteritis
+  - action: utter_gastroenteritis
+  - intent: visit_doctor
+  - action: utter_gastroenteritis_specialist
+
+- story: bronchial asthma
+  steps:
+  - intent: bronchial_asthma
+  - action: utter_bronchial_asthma
+  - intent: visit_doctor
+  - action: utter_bronchial_asthma_specialist
+
+- story: hypertension
+  steps:
+  - intent: hypertension
+  - action: utter_hypertension
+  - intent: visit_doctor
+  - action: utter_hypertension_specialist
+
+- story: migraine
+  steps:
+  - intent: migraine
+  - action: utter_migraine
+  - intent: visit_doctor
+  - action: utter_migraine_specialist
+
+- story: cervical spondylosis
+  steps:
+  - intent: cervical_spondylosis
+  - action: utter_cervical_spondylosis
+  - intent: visit_doctor
+  - action: utter_cervical_spondylosis_specialist
+
+- story: paralysis (brain hemorrhage)
+  steps:
+  - intent: paralysis_(brain_hemorrhage)
+  - action: utter_paralysis_(brain_hemorrhage)
+  - intent: visit_doctor
+  - action: utter_paralysis_(brain_hemorrhage)_specialist
+
+- story: jaundice
+  steps:
+  - intent: jaundice
+  - action: utter_jaundice
+  - intent: visit_doctor
+  - action: utter_jaundice_specialist
+
+- story: malaria
+  steps:
+  - intent: malaria
+  - action: utter_malaria
+  - intent: visit_doctor
+  - action: utter_malaria_specialist
+
+- story: chicken pox
+  steps:
+  - intent: chicken_pox
+  - action: utter_chicken_pox
+  - intent: visit_doctor
+  - action: utter_chicken_pox_specialist
+
+- story: dengue
+  steps:
+  - intent: dengue
+  - action: utter_dengue
+  - intent: visit_doctor
+  - action: utter_dengue_specialist
+
+- story: typhoid
+  steps:
+  - intent: typhoid
+  - action: utter_typhoid
+  - intent: visit_doctor
+  - action: utter_typhoid_specialist
+
+- story: hepatitis a
+  steps:
+  - intent: hepatitis_a
+  - action: utter_hepatitis_a
+  - intent: visit_doctor
+  - action: utter_hepatitis_a_specialist
+
+- story: hepatitis b
+  steps:
+  - intent: hepatitis_b
+  - action: utter_hepatitis_b
+  - intent: visit_doctor
+  - action: utter_hepatitis_b_specialist
+
+- story: hepatitis c
+  steps:
+  - intent: hepatitis_c
+  - action: utter_hepatitis_c
+  - intent: visit_doctor
+  - action: utter_hepatitis_c_specialist
+
+- story: hepatitis d
+  steps:
+  - intent: hepatitis_d
+  - action: utter_hepatitis_d
+  - intent: visit_doctor
+  - action: utter_hepatitis_d_specialist
+
+- story: hepatitis e
+  steps:
+  - intent: hepatitis_e
+  - action: utter_hepatitis_e
+  - intent: visit_doctor
+  - action: utter_hepatitis_e_specialist
+
+- story: alcoholic hepatitis
+  steps:
+  - intent: alcoholic_hepatitis
+  - action: utter_alcoholic_hepatitis
+  - intent: visit_doctor
+  - action: utter_alcoholic_hepatitis_specialist
+
+- story: tuberculosis
+  steps:
+  - intent: tuberculosis
+  - action: utter_tuberculosis
+  - intent: visit_doctor
+  - action: utter_tuberculosis_specialist
+
+- story: common cold
+  steps:
+  - intent: common_cold
+  - action: utter_common_cold
+  - intent: visit_doctor
+  - action: utter_common_cold_specialist
+
+- story: pneumonia
+  steps:
+  - intent: pneumonia
+  - action: utter_pneumonia
+  - intent: visit_doctor
+  - action: utter_pneumonia_specialist
+
+- story: dimorphic hemmorhoids(piles)
+  steps:
+  - intent: dimorphic_hemmorhoids(piles)
+  - action: utter_dimorphic_hemmorhoids(piles)
+  - intent: visit_doctor
+  - action: utter_dimorphic_hemmorhoids(piles)_specialist
+
+- story: heart attack
+  steps:
+  - intent: heart_attack
+  - action: utter_heart_attack
+  - intent: visit_doctor
+  - action: utter_heart_attack_specialist
+
+- story: varicose veins
+  steps:
+  - intent: varicose_veins
+  - action: utter_varicose_veins
+  - intent: visit_doctor
+  - action: utter_varicose_veins_specialist
+
+- story: hypothyroidism
+  steps:
+  - intent: hypothyroidism
+  - action: utter_hypothyroidism
+  - intent: visit_doctor
+  - action: utter_hypothyroidism_specialist
+
+- story: hyperthyroidism
+  steps:
+  - intent: hyperthyroidism
+  - action: utter_hyperthyroidism
+  - intent: visit_doctor
+  - action: utter_hyperthyroidism_specialist
+
+- story: hypoglycemia
+  steps:
+  - intent: hypoglycemia
+  - action: utter_hypoglycemia
+  - intent: visit_doctor
+  - action: utter_hypoglycemia_specialist
+
+- story: osteoarthristis
+  steps:
+  - intent: osteoarthristis
+  - action: utter_osteoarthristis
+  - intent: visit_doctor
+  - action: utter_osteoarthristis_specialist
+
+- story: arthritis
+  steps:
+  - intent: arthritis
+  - action: utter_arthritis
+  - intent: visit_doctor
+  - action: utter_arthritis_specialist
+
+- story: (vertigo) paroymsal positional vertigo
+  steps:
+  - intent: (vertigo)_paroymsal_positional_vertigo
+  - action: utter_(vertigo)_paroymsal_positional_vertigo
+  - intent: visit_doctor
+  - action: utter_(vertigo)_paroymsal_positional_vertigo_specialist
+
+- story: acne
+  steps:
+  - intent: acne
+  - action: utter_acne
+  - intent: visit_doctor
+  - action: utter_acne_specialist
+
+- story: urinary tract infection
+  steps:
+  - intent: urinary_tract_infection
+  - action: utter_urinary_tract_infection
+  - intent: visit_doctor
+  - action: utter_urinary_tract_infection_specialist
+
+- story: psoriasis
+  steps:
+  - intent: psoriasis
+  - action: utter_psoriasis
+  - intent: visit_doctor
+  - action: utter_psoriasis_specialist
+
+- story: impetigo
+  steps:
+  - intent: impetigo
+  - action: utter_impetigo
+  - intent: visit_doctor
+  - action: utter_impetigo_specialist

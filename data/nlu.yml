@@ -38,6 +38,7 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - yes please
 
 - intent: deny
   examples: |
@@ -526,3 +527,11 @@ nlu:
     - skin_rash,  high_fever,  blister,  yellow_crust_ooze
     - skin_rash,  high_fever,  blister,  red_sore_around_nose
     - rash, itch, blistering
+
+- intent: visit_doctor
+  examples: |
+    - which doctor should i visit ?
+    - what is the name of the specialist ?
+    - i want to see a doctor, recommend to me which specialist i should go to ?
+    - where i must go ?
+    - how is the specialist doctor called ?
