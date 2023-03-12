@@ -21,6 +21,13 @@ nlu:
   examples: |
     - cu
     - good by
+    - see you later
+    - good night
+    - bye
+- intent: bye
+  examples: |
+    - cu
+    - good by
     - cee you later
     - good night
     - bye
