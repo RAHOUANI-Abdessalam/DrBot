@@ -98,442 +98,441 @@ nlu:
     - am I talking to a bot?
     - am I talking to a human?
 
-- intent: fungal_infection
+- intent:  fungal_infection
   examples: |
-    - itching,  skin_rash,  nodal_skin_eruptions,  dischromic _patches
-    - skin_rash,  nodal_skin_eruptions,  dischromic _patches
-    - itching,  nodal_skin_eruptions,  dischromic _patches
-    - itching,  skin_rash,  dischromic _patches
-    - itching,  skin_rash,  nodal_skin_eruptions
+    - [itching] [skin_rash] [nodal_skin_eruptions] [dischromic_patches] (Symptoms)
+    - [skin_rash] [nodal_skin_eruptions] [dischromic_patches] (Symptoms)
+    - [itching] [nodal_skin_eruptions] [dischromic_patches] (Symptoms)
+    - [itching] [skin_rash] [dischromic_patches] (Symptoms)
+    - [itching] [skin_rash] [nodal_skin_eruptions] (Symptoms)
 
-- intent: allergy
+- intent:  allergy
   examples: |
-    - continuous_sneezing,  shivering,  chills,  watering_from_eyes
-    - shivering,  chills,  watering_from_eyes
-    - continuous_sneezing,  chills,  watering_from_eyes
-    - continuous_sneezing,  shivering,  watering_from_eyes
-    - continuous_sneezing,  shivering,  chills
+    - [continuous_sneezing] [shivering] [chills] [watering_from_eyes] (Symptoms)
+    - [shivering] [chills] [watering_from_eyes] (Symptoms)
+    - [continuous_sneezing] [chills] [watering_from_eyes] (Symptoms)
+    - [continuous_sneezing] [shivering] [watering_from_eyes] (Symptoms)
+    - [continuous_sneezing] [shivering] [chills] (Symptoms)
 
-- intent: gerd
+- intent:  gerd
   examples: |
-    - stomach_pain,  acidity,  ulcers_on_tongue,  vomiting,  cough,  chest_pain
-    - stomach_pain,  ulcers_on_tongue,  vomiting,  cough,  chest_pain
-    - stomach_pain,  acidity,  vomiting,  cough,  chest_pain
-    - stomach_pain,  acidity,  ulcers_on_tongue,  cough,  chest_pain
-    - stomach_pain,  acidity,  ulcers_on_tongue,  vomiting,  chest_pain
-    - stomach_pain,  acidity,  ulcers_on_tongue,  vomiting,  cough
-    - acidity,  ulcers_on_tongue,  vomiting,  cough,  chest_pain
+    - [stomach_pain] [acidity] [ulcers_on_tongue] [vomiting] [cough] [chest_pain] (Symptoms)
+    - [stomach_pain] [ulcers_on_tongue] [vomiting] [cough] [chest_pain] (Symptoms)
+    - [stomach_pain] [acidity] [vomiting] [cough] [chest_pain] (Symptoms)
+    - [stomach_pain] [acidity] [ulcers_on_tongue] [cough] [chest_pain] (Symptoms)
+    - [stomach_pain] [acidity] [ulcers_on_tongue] [vomiting] [chest_pain] (Symptoms)
+    - [stomach_pain] [acidity] [ulcers_on_tongue] [vomiting] [cough] (Symptoms)
+    - [acidity] [ulcers_on_tongue] [vomiting] [cough] [chest_pain] (Symptoms)
 
-- intent: chronic_cholestasis
+- intent:  chronic_cholestasis
   examples: |
-    - itching,  vomiting,  yellowish_skin,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - vomiting,  yellowish_skin,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - itching,  yellowish_skin,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - itching,  vomiting,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - itching,  vomiting,  yellowish_skin,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - itching,  vomiting,  yellowish_skin,  nausea,  abdominal_pain,  yellowing_of_eyes
-    - itching,  vomiting,  yellowish_skin,  nausea,  loss_of_appetite,  yellowing_of_eyes
-    - itching,  vomiting,  yellowish_skin,  nausea,  loss_of_appetite,  abdominal_pain
+    - [itching] [vomiting] [yellowish_skin] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [vomiting] [yellowish_skin] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [itching] [yellowish_skin] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [itching] [vomiting] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [itching] [vomiting] [yellowish_skin] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [itching] [vomiting] [yellowish_skin] [nausea] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [itching] [vomiting] [yellowish_skin] [nausea] [loss_of_appetite] [yellowing_of_eyes] (Symptoms)
+    - [itching] [vomiting] [yellowish_skin] [nausea] [loss_of_appetite] [abdominal_pain] (Symptoms)
 
-- intent: drug_reaction
+- intent:  drug_reaction
   examples: |
-    - itching,  skin_rash,  stomach_pain,  burning_micturition,  spotting_ urination
-    - itching,  stomach_pain,  burning_micturition,  spotting_ urination
-    - itching,  skin_rash,  burning_micturition,  spotting_ urination
-    - itching,  skin_rash,  stomach_pain,  spotting_ urination
-    - itching,  skin_rash,  stomach_pain,  burning_micturition
-    - skin_rash,  stomach_pain,  burning_micturition,  spotting_ urination
+    - [itching] [skin_rash] [stomach_pain] [burning_micturition] [spotting_urination] (Symptoms)
+    - [itching] [stomach_pain] [burning_micturition] [spotting_urination] (Symptoms)
+    - [itching] [skin_rash] [burning_micturition] [spotting_urination] (Symptoms)
+    - [itching] [skin_rash] [stomach_pain] [spotting_] [urination] (Symptoms)
+    - [itching] [skin_rash] [stomach_pain] [burning_micturition] (Symptoms)
+    - [skin_rash] [stomach_pain] [burning_micturition] [spotting_urination] (Symptoms)
 
-- intent: peptic_ulcer_diseae
+- intent:  peptic_ulcer_diseae
   examples: |
-    - vomiting,  loss_of_appetite,  abdominal_pain,  passage_of_gases,  internal_itching
-    - vomiting,  indigestion,  abdominal_pain,  passage_of_gases,  internal_itching
-    - indigestion,  loss_of_appetite,  abdominal_pain,  passage_of_gases,  internal_itching
-    - vomiting,  indigestion,  loss_of_appetite,  passage_of_gases,  internal_itching
-    - vomiting,  indigestion,  loss_of_appetite,  abdominal_pain,  internal_itching
-    - vomiting,  indigestion,  loss_of_appetite,  abdominal_pain,  passage_of_gases
-    - vomiting,  indigestion,  loss_of_appetite,  abdominal_pain,  passage_of_gases,  internal_itching
+    - [vomiting] [loss_of_appetite] [abdominal_pain] [passage_of_gases] [internal_itching] (Symptoms)
+    - [vomiting] [indigestion] [abdominal_pain] [passage_of_gases] [internal_itching] (Symptoms)
+    - [indigestion] [loss_of_appetite] [abdominal_pain] [passage_of_gases] [internal_itching] (Symptoms)
+    - [vomiting] [indigestion] [loss_of_appetite] [passage_of_gases] [internal_itching] (Symptoms)
+    - [vomiting] [indigestion] [loss_of_appetite] [abdominal_pain] [internal_itching] (Symptoms)
+    - [vomiting] [indigestion] [loss_of_appetite] [abdominal_pain] [passage_of_gases] (Symptoms)
+    - [vomiting] [indigestion] [loss_of_appetite] [abdominal_pain] [passage_of_gases] [internal_itching] (Symptoms)
 
-- intent: aids
+- intent:  aids
   examples: |
-    - muscle_wasting,  patches_in_throat,  high_fever,  extra_marital_contacts
-    - patches_in_throat,  high_fever,  extra_marital_contacts
-    - muscle_wasting,  high_fever,  extra_marital_contacts
-    - muscle_wasting,  patches_in_throat,  extra_marital_contacts
-    - muscle_wasting,  patches_in_throat,  high_fever
+    - [muscle_wasting] [patches_in_throat] [high_fever] [extra_marital_contacts] (Symptoms)
+    - [patches_in_throat] [high_fever] [extra_marital_contacts] (Symptoms)
+    - [muscle_wasting] [high_fever] [extra_marital_contacts] (Symptoms)
+    - [muscle_wasting] [patches_in_throat] [extra_marital_contacts] (Symptoms)
+    - [muscle_wasting] [patches_in_throat] [high_fever] (Symptoms)
 
-- intent: diabetes
+- intent:  diabetes
   examples: |
-    - fatigue,  weight_loss,  restlessness,  lethargy,  irregular_sugar_level,  blurred_and_distorted_vision,  obesity,  excessive_hunger,  increased_appetite,  polyuria
-    - weight_loss,  restlessness,  lethargy,  irregular_sugar_level,  blurred_and_distorted_vision,  obesity,  excessive_hunger,  increased_appetite,  polyuria
-    - fatigue,  restlessness,  lethargy,  irregular_sugar_level,  blurred_and_distorted_vision,  obesity,  excessive_hunger,  increased_appetite,  polyuria
-    - fatigue,  weight_loss,  lethargy,  irregular_sugar_level,  blurred_and_distorted_vision,  obesity,  excessive_hunger,  increased_appetite,  polyuria
-    - fatigue,  weight_loss,  restlessness,  irregular_sugar_level,  blurred_and_distorted_vision,  obesity,  excessive_hunger,  increased_appetite,  polyuria
-    - fatigue,  weight_loss,  restlessness,  lethargy,  blurred_and_distorted_vision,  obesity,  excessive_hunger,  increased_appetite,  polyuria
-    - fatigue,  weight_loss,  restlessness,  lethargy,  irregular_sugar_level,  obesity,  excessive_hunger,  increased_appetite,  polyuria
-    - fatigue,  weight_loss,  restlessness,  lethargy,  irregular_sugar_level,  blurred_and_distorted_vision,  excessive_hunger,  increased_appetite,  polyuria
-    - fatigue,  weight_loss,  restlessness,  lethargy,  irregular_sugar_level,  blurred_and_distorted_vision,  obesity,  increased_appetite,  polyuria
+    - [fatigue] [weight_loss] [restlessness] [lethargy] [irregular_sugar_level] [blurred_and_distorted_vision] [obesity] [excessive_hunger] [increased_appetite] [polyuria] (Symptoms)
+    - [weight_loss] [restlessness] [lethargy] [irregular_sugar_level] [blurred_and_distorted_vision] [obesity] [excessive_hunger] [increased_appetite] [polyuria] (Symptoms)
+    - [fatigue] [restlessness] [lethargy] [irregular_sugar_level] [blurred_and_distorted_vision] [obesity] [excessive_hunger] [increased_appetite] [polyuria] (Symptoms)
+    - [fatigue] [weight_loss] [lethargy] [irregular_sugar_level] [blurred_and_distorted_vision] [obesity] [excessive_hunger] [increased_appetite] [polyuria] (Symptoms)
+    - [fatigue] [weight_loss] [restlessness] [irregular_sugar_level] [blurred_and_distorted_vision] [obesity] [excessive_hunger] [increased_appetite] [polyuria] (Symptoms)
+    - [fatigue] [weight_loss] [restlessness] [lethargy] [blurred_and_distorted_vision] [obesity] [excessive_hunger] [increased_appetite] [polyuria] (Symptoms)
+    - [fatigue] [weight_loss] [restlessness] [lethargy] [irregular_sugar_level] [obesity] [excessive_hunger] [increased_appetite] [polyuria] (Symptoms)
+    - [fatigue] [weight_loss] [restlessness] [lethargy] [irregular_sugar_level] [blurred_and_distorted_vision] [excessive_hunger] [increased_appetite] [polyuria] (Symptoms)
+    - [fatigue] [weight_loss] [restlessness] [lethargy] [irregular_sugar_level] [blurred_and_distorted_vision] [obesity] [increased_appetite] [polyuria] (Symptoms)
 
-- intent: gastroenteritis
+- intent:  gastroenteritis
   examples: |
-    - vomiting,  sunken_eyes,  dehydration,  diarrhoea
-    - sunken_eyes,  dehydration,  diarrhoea
-    - vomiting,  dehydration,  diarrhoea
-    - vomiting,  sunken_eyes,  diarrhoea
-    - vomiting,  sunken_eyes,  dehydration
+    - [vomiting] [sunken_eyes] [dehydration] [diarrhoea] (Symptoms)
+    - [sunken_eyes] [dehydration] [diarrhoea] (Symptoms)
+    - [vomiting] [dehydration] [diarrhoea] (Symptoms)
+    - [vomiting] [sunken_eyes] [diarrhoea] (Symptoms)
+    - [vomiting] [sunken_eyes] [dehydration] (Symptoms)
 
-- intent: bronchial_asthma
+- intent:  bronchial_asthma
   examples: |
-    - fatigue,  cough,  high_fever,  breathlessness,  family_history,  mucoid_sputum
-    - cough,  high_fever,  breathlessness,  family_history,  mucoid_sputum
-    - fatigue,  high_fever,  breathlessness,  family_history,  mucoid_sputum
-    - fatigue,  cough,  breathlessness,  family_history,  mucoid_sputum
-    - fatigue,  cough,  high_fever,  family_history,  mucoid_sputum
-    - fatigue,  cough,  high_fever,  breathlessness,  mucoid_sputum
-    - fatigue,  cough,  high_fever,  breathlessness,  family_history
+    - [fatigue] [cough] [high_fever] [breathlessness] [family_history] [mucoid_sputum] (Symptoms)
+    - [cough] [high_fever] [breathlessness] [family_history] [mucoid_sputum] (Symptoms)
+    - [fatigue] [high_fever] [breathlessness] [family_history] [mucoid_sputum] (Symptoms)
+    - [fatigue] [cough] [breathlessness] [family_history] [mucoid_sputum] (Symptoms)
+    - [fatigue] [cough] [high_fever] [family_history] [mucoid_sputum] (Symptoms)
+    - [fatigue] [cough] [high_fever] [breathlessness] [mucoid_sputum] (Symptoms)
+    - [fatigue] [cough] [high_fever] [breathlessness] [family_history] (Symptoms)
 
-- intent: hypertension
+- intent:  hypertension
   examples: |
-    - headache,  chest_pain,  dizziness,  loss_of_balance,  lack_of_concentration
-    - chest_pain,  dizziness,  loss_of_balance,  lack_of_concentration
-    - headache,  dizziness,  loss_of_balance,  lack_of_concentration
-    - headache,  chest_pain,  loss_of_balance,  lack_of_concentration
-    - headache,  chest_pain,  dizziness,  lack_of_concentration
-    - headache,  chest_pain,  dizziness,  loss_of_balance
+    - [headache] [chest_pain] [dizziness] [loss_of_balance] [lack_of_concentration] (Symptoms)
+    - [chest_pain] [dizziness] [loss_of_balance] [lack_of_concentration] (Symptoms)
+    - [headache] [dizziness] [loss_of_balance] [lack_of_concentration] (Symptoms)
+    - [headache] [chest_pain] [loss_of_balance] [lack_of_concentration] (Symptoms)
+    - [headache] [chest_pain] [dizziness] [lack_of_concentration] (Symptoms)
+    - [headache] [chest_pain] [dizziness] [loss_of_balance] (Symptoms)
 
-- intent: migraine
+- intent:  migraine
   examples: |
-    - acidity,  indigestion,  headache,  blurred_and_distorted_vision,  excessive_hunger,  stiff_neck,  depression,  irritability,  visual_disturbances
-    - indigestion,  headache,  blurred_and_distorted_vision,  excessive_hunger,  stiff_neck,  depression,  irritability,  visual_disturbances
-    - acidity,  headache,  blurred_and_distorted_vision,  excessive_hunger,  stiff_neck,  depression,  irritability,  visual_disturbances
-    - acidity,  indigestion,  blurred_and_distorted_vision,  excessive_hunger,  stiff_neck,  depression,  irritability,  visual_disturbances
-    - acidity,  indigestion,  headache,  excessive_hunger,  stiff_neck,  depression,  irritability,  visual_disturbances
-    - acidity,  indigestion,  headache,  blurred_and_distorted_vision,  stiff_neck,  depression,  irritability,  visual_disturbances
-    - acidity,  indigestion,  headache,  blurred_and_distorted_vision,  excessive_hunger,  depression,  irritability,  visual_disturbances
-    - acidity,  indigestion,  headache,  blurred_and_distorted_vision,  excessive_hunger,  stiff_neck,  irritability,  visual_disturbances
-    - acidity,  indigestion,  headache,  blurred_and_distorted_vision,  excessive_hunger,  stiff_neck,  depression,  visual_disturbances
-    - acidity,  indigestion,  headache,  blurred_and_distorted_vision,  excessive_hunger,  stiff_neck,  depression,  irritability
-    - headache, nausea, vomiting, light hurts
+    - [acidity] [indigestion] [headache] [blurred_and_distorted_vision] [excessive_hunger] [stiff_neck] [depression] [irritability] [visual_disturbances] (Symptoms)
+    - [indigestion] [headache] [blurred_and_distorted_vision] [excessive_hunger] [stiff_neck] [depression] [irritability] [visual_disturbances] (Symptoms)
+    - [acidity] [headache] [blurred_and_distorted_vision] [excessive_hunger] [stiff_neck] [depression] [irritability] [visual_disturbances] (Symptoms)
+    - [acidity] [indigestion] [blurred_and_distorted_vision] [excessive_hunger] [stiff_neck] [depression] [irritability] [visual_disturbances] (Symptoms)
+    - [acidity] [indigestion] [headache] [excessive_hunger] [stiff_neck] [depression] [irritability] [visual_disturbances] (Symptoms)
+    - [acidity] [indigestion] [headache] [blurred_and_distorted_vision] [stiff_neck] [depression] [irritability] [visual_disturbances] (Symptoms)
+    - [acidity] [indigestion] [headache] [blurred_and_distorted_vision] [excessive_hunger] [depression] [irritability] [visual_disturbances] (Symptoms)
+    - [acidity] [indigestion] [headache] [blurred_and_distorted_vision] [excessive_hunger] [stiff_neck] [irritability] [visual_disturbances] (Symptoms)
+    - [acidity] [indigestion] [headache] [blurred_and_distorted_vision] [excessive_hunger] [stiff_neck] [depression] [visual_disturbances] (Symptoms)
+    - [acidity] [indigestion] [headache] [blurred_and_distorted_vision] [excessive_hunger] [stiff_neck] [depression] [irritability] (Symptoms)
+    - [headache] [nausea] [vomiting] [light] [hurts] (Symptoms)
 
-- intent: cervical_spondylosis
+- intent:  cervical_spondylosis
   examples: |
-    - back_pain,  weakness_in_limbs,  neck_pain,  dizziness,  loss_of_balance
-    - weakness_in_limbs,  neck_pain,  dizziness,  loss_of_balance
-    - back_pain,  neck_pain,  dizziness,  loss_of_balance
-    - back_pain,  weakness_in_limbs,  dizziness,  loss_of_balance
-    - back_pain,  weakness_in_limbs,  neck_pain,  loss_of_balance
-    - back_pain,  weakness_in_limbs,  neck_pain,  dizziness
+    - [back_pain] [weakness_in_limbs] [neck_pain] [dizziness] [loss_of_balance] (Symptoms)
+    - [weakness_in_limbs] [neck_pain] [dizziness] [loss_of_balance] (Symptoms)
+    - [back_pain] [neck_pain] [dizziness] [loss_of_balance] (Symptoms)
+    - [back_pain] [weakness_in_limbs] [dizziness] [loss_of_balance] (Symptoms)
+    - [back_pain] [weakness_in_limbs] [neck_pain] [loss_of_balance] (Symptoms)
+    - [back_pain] [weakness_in_limbs] [neck_pain] [dizziness] (Symptoms)
 
-- intent: paralysis_(brain_hemorrhage)
+- intent:  paralysis_(brain_hemorrhage)
   examples: |
-    - vomiting,  headache,  weakness_of_one_body_side,  altered_sensorium
-    - headache,  weakness_of_one_body_side,  altered_sensorium
-    - vomiting,  weakness_of_one_body_side,  altered_sensorium
-    - vomiting,  headache,  altered_sensorium
-    - vomiting,  headache,  weakness_of_one_body_side
+    - [vomiting] [headache] [weakness_of_one_body_side] [altered_sensorium] (Symptoms)
+    - [headache] [weakness_of_one_body_side] [altered_sensorium] (Symptoms)
+    - [vomiting] [weakness_of_one_body_side] [altered_sensorium] (Symptoms)
+    - [vomiting] [headache] [altered_sensorium] (Symptoms)
+    - [vomiting] [headache] [weakness_of_one_body_side] (Symptoms)
 
-- intent: jaundice
+- intent:  jaundice
   examples: |
-    - itching,  vomiting,  fatigue,  weight_loss,  high_fever,  yellowish_skin,  dark_urine,  abdominal_pain
-    - vomiting,  fatigue,  weight_loss,  high_fever,  yellowish_skin,  dark_urine,  abdominal_pain
-    - itching,  fatigue,  weight_loss,  high_fever,  yellowish_skin,  dark_urine,  abdominal_pain
-    - itching,  vomiting,  weight_loss,  high_fever,  yellowish_skin,  dark_urine,  abdominal_pain
-    - itching,  vomiting,  fatigue,  high_fever,  yellowish_skin,  dark_urine,  abdominal_pain
-    - itching,  vomiting,  fatigue,  weight_loss,  yellowish_skin,  dark_urine,  abdominal_pain
-    - itching,  vomiting,  fatigue,  weight_loss,  high_fever,  dark_urine,  abdominal_pain
-    - itching,  vomiting,  fatigue,  weight_loss,  high_fever,  yellowish_skin,  abdominal_pain
-    - itching,  vomiting,  fatigue,  weight_loss,  high_fever,  yellowish_skin,  dark_urine
+    - [itching] [vomiting] [fatigue] [weight_loss] [high_fever] [yellowish_skin] [dark_urine] [abdominal_pain] (Symptoms)
+    - [vomiting] [fatigue] [weight_loss] [high_fever] [yellowish_skin] [dark_urine] [abdominal_pain] (Symptoms)
+    - [itching] [fatigue] [weight_loss] [high_fever] [yellowish_skin] [dark_urine] [abdominal_pain] (Symptoms)
+    - [itching] [vomiting] [weight_loss] [high_fever] [yellowish_skin] [dark_urine] [abdominal_pain] (Symptoms)
+    - [itching] [vomiting] [fatigue] [high_fever] [yellowish_skin] [dark_urine] [abdominal_pain] (Symptoms)
+    - [itching] [vomiting] [fatigue] [weight_loss] [yellowish_skin] [dark_urine] [abdominal_pain] (Symptoms)
+    - [itching] [vomiting] [fatigue] [weight_loss] [high_fever] [dark_urine] [abdominal_pain] (Symptoms)
+    - [itching] [vomiting] [fatigue] [weight_loss] [high_fever] [yellowish_skin] [abdominal_pain] (Symptoms)
+    - [itching] [vomiting] [fatigue] [weight_loss] [high_fever] [yellowish_skin] [dark_urine] (Symptoms)
 
-- intent: malaria
+- intent:  malaria
   examples: |
-    - chills,  vomiting,  high_fever,  sweating,  headache,  nausea,  muscle_pain
-    - chills,  vomiting,  high_fever,  sweating,  headache,  nausea,  diarrhoea,  muscle_pain
-    - vomiting,  high_fever,  sweating,  headache,  nausea,  diarrhoea,  muscle_pain
-    - chills,  high_fever,  sweating,  headache,  nausea,  diarrhoea,  muscle_pain
-    - chills,  vomiting,  sweating,  headache,  nausea,  diarrhoea,  muscle_pain
-    - chills,  vomiting,  high_fever,  headache,  nausea,  diarrhoea,  muscle_pain
-    - chills,  vomiting,  high_fever,  sweating,  nausea,  diarrhoea,  muscle_pain
-    - chills,  vomiting,  high_fever,  sweating,  headache,  diarrhoea,  muscle_pain
-    - temperature, shivering, headache, vomiting
+    - [chills] [vomiting] [high_fever] [sweating] [headache] [nausea] [muscle_pain] (Symptoms)
+    - [chills] [vomiting] [high_fever] [sweating] [headache] [nausea] [diarrhoea] [muscle_pain] (Symptoms)
+    - [vomiting] [high_fever] [sweating] [headache] [nausea] [diarrhoea] [muscle_pain] (Symptoms)
+    - [chills] [high_fever] [sweating] [headache] [nausea] [diarrhoea] [muscle_pain] (Symptoms)
+    - [chills] [vomiting] [sweating] [headache] [nausea] [diarrhoea] [muscle_pain] (Symptoms)
+    - [chills] [vomiting] [high_fever] [headache] [nausea] [diarrhoea] [muscle_pain] (Symptoms)
+    - [chills] [vomiting] [high_fever] [sweating] [nausea] [diarrhoea] [muscle_pain] (Symptoms)
+    - [chills] [vomiting] [high_fever] [sweating] [headache] [diarrhoea] [muscle_pain] (Symptoms)
+    - [temperature] [shivering] [headache] [vomiting] (Symptoms)
 
-- intent: chicken_pox
+- intent:  chicken_pox
   examples: |
-    - itching,  skin_rash,  fatigue,  lethargy,  high_fever,  headache,  loss_of_appetite,  mild_fever,  swelled_lymph_nodes,  malaise,  red_spots_over_body
-    - skin_rash,  fatigue,  lethargy,  high_fever,  headache,  loss_of_appetite,  mild_fever,  swelled_lymph_nodes,  malaise,  red_spots_over_body
-    - itching,  fatigue,  lethargy,  high_fever,  headache,  loss_of_appetite,  mild_fever,  swelled_lymph_nodes,  malaise,  red_spots_over_body
-    - itching,  skin_rash,  lethargy,  high_fever,  headache,  loss_of_appetite,  mild_fever,  swelled_lymph_nodes,  malaise,  red_spots_over_body
-    - itching,  skin_rash,  fatigue,  high_fever,  headache,  loss_of_appetite,  mild_fever,  swelled_lymph_nodes,  malaise,  red_spots_over_body
-    - itching,  skin_rash,  fatigue,  lethargy,  headache,  loss_of_appetite,  mild_fever,  swelled_lymph_nodes,  malaise,  red_spots_over_body
-    - itching,  skin_rash,  fatigue,  lethargy,  high_fever,  loss_of_appetite,  mild_fever,  swelled_lymph_nodes,  malaise,  red_spots_over_body
-    - itching,  skin_rash,  fatigue,  lethargy,  high_fever,  headache,  mild_fever,  swelled_lymph_nodes,  malaise,  red_spots_over_body
-    - itching,  skin_rash,  fatigue,  lethargy,  high_fever,  headache,  loss_of_appetite,  swelled_lymph_nodes,  malaise,  red_spots_over_body
-    - itching,  skin_rash,  fatigue,  lethargy,  high_fever,  headache,  loss_of_appetite,  mild_fever,  malaise,  red_spots_over_body
+    - [itching] [skin_rash] [fatigue] [lethargy] [high_fever] [headache] [loss_of_appetite] [mild_fever] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)
+    - [skin_rash] [fatigue] [lethargy] [high_fever] [headache] [loss_of_appetite] [mild_fever] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)
+    - [itching] [fatigue] [lethargy] [high_fever] [headache] [loss_of_appetite] [mild_fever] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)
+    - [itching] [skin_rash] [lethargy] [high_fever] [headache] [loss_of_appetite] [mild_fever] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)
+    - [itching] [skin_rash] [fatigue] [high_fever] [headache] [loss_of_appetite] [mild_fever] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)
+    - [itching] [skin_rash] [fatigue] [lethargy] [headache] [loss_of_appetite] [mild_fever] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)
+    - [itching] [skin_rash] [fatigue] [lethargy] [high_fever] [loss_of_appetite] [mild_fever] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)
+    - [itching] [skin_rash] [fatigue] [lethargy] [high_fever] [headache] [mild_fever] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)
+    - [itching] [skin_rash] [fatigue] [lethargy] [high_fever] [headache] [loss_of_appetite] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)
+    - [itching] [skin_rash] [fatigue] [lethargy] [high_fever] [headache] [loss_of_appetite] [mild_fever] [malaise] [red_spots_over_body] (Symptoms)
 
-- intent: dengue
+- intent:  dengue
   examples: |
-    - skin_rash,  chills,  joint_pain,  vomiting,  fatigue,  high_fever,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  muscle_pain,  red_spots_over_body
-    - skin_rash,  chills,  joint_pain,  vomiting,  fatigue,  high_fever,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  malaise,  red_spots_over_body
-    - skin_rash,  chills,  joint_pain,  vomiting,  fatigue,  high_fever,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  malaise,  muscle_pain
-    - skin_rash,  chills,  joint_pain,  vomiting,  fatigue,  high_fever,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  malaise,  muscle_pain,  red_spots_over_body
-    - chills,  joint_pain,  vomiting,  fatigue,  high_fever,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  malaise,  muscle_pain,  red_spots_over_body
-    - skin_rash,  joint_pain,  vomiting,  fatigue,  high_fever,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  malaise,  muscle_pain,  red_spots_over_body
-    - skin_rash,  chills,  vomiting,  fatigue,  high_fever,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  malaise,  muscle_pain,  red_spots_over_body
-    - skin_rash,  chills,  joint_pain,  fatigue,  high_fever,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  malaise,  muscle_pain,  red_spots_over_body
-    - skin_rash,  chills,  joint_pain,  vomiting,  high_fever,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  malaise,  muscle_pain,  red_spots_over_body
-    - skin_rash,  chills,  joint_pain,  vomiting,  fatigue,  headache,  nausea,  loss_of_appetite,  pain_behind_the_eyes,  back_pain,  malaise,  muscle_pain,  red_spots_over_body
-    - temperature, headache, pain, muscle ache
+    - [skin_rash] [chills] [joint_pain] [vomiting] [fatigue] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [muscle_pain] [red_spots_over_body] (Symptoms)
+    - [skin_rash] [chills] [joint_pain] [vomiting] [fatigue] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [red_spots_over_body] (Symptoms)
+    - [skin_rash] [chills] [joint_pain] [vomiting] [fatigue] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [muscle_pain] (Symptoms)
+    - [skin_rash] [chills] [joint_pain] [vomiting] [fatigue] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [muscle_pain] [red_spots_over_body] (Symptoms)
+    - [chills] [joint_pain] [vomiting] [fatigue] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [muscle_pain] [red_spots_over_body] (Symptoms)
+    - [skin_rash] [joint_pain] [vomiting] [fatigue] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [muscle_pain] [red_spots_over_body] (Symptoms)
+    - [skin_rash] [chills] [vomiting] [fatigue] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [muscle_pain] [red_spots_over_body] (Symptoms)
+    - [skin_rash] [chills] [joint_pain] [fatigue] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [muscle_pain] [red_spots_over_body] (Symptoms)
+    - [skin_rash] [chills] [joint_pain] [vomiting] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [muscle_pain] [red_spots_over_body] (Symptoms)
+    - [skin_rash] [chills] [joint_pain] [vomiting] [fatigue] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [muscle_pain] [red_spots_over_body] (Symptoms)
+    - [temperature] [headache] [pain] [muscle] [ache] (Symptoms)
 
-- intent: typhoid
+- intent:  typhoid
   examples: |
-    - chills,  vomiting,  fatigue,  high_fever,  nausea,  constipation,  abdominal_pain,  diarrhoea,  toxic_look_(typhos),  belly_pain
-    - chills,  vomiting,  fatigue,  high_fever,  headache,  constipation,  abdominal_pain,  diarrhoea,  toxic_look_(typhos),  belly_pain
-    - chills,  vomiting,  fatigue,  high_fever,  headache,  nausea,  abdominal_pain,  diarrhoea,  toxic_look_(typhos),  belly_pain
-    - chills,  vomiting,  fatigue,  high_fever,  headache,  nausea,  constipation,  diarrhoea,  toxic_look_(typhos),  belly_pain
-    - chills,  vomiting,  fatigue,  high_fever,  headache,  nausea,  constipation,  abdominal_pain,  toxic_look_(typhos),  belly_pain
-    - chills,  vomiting,  fatigue,  high_fever,  headache,  nausea,  constipation,  abdominal_pain,  diarrhoea,  belly_pain
-    - chills,  vomiting,  fatigue,  high_fever,  headache,  nausea,  constipation,  abdominal_pain,  diarrhoea,  toxic_look_(typhos)
-    - chills,  vomiting,  fatigue,  high_fever,  headache,  nausea,  constipation,  abdominal_pain,  diarrhoea,  toxic_look_(typhos),  belly_pain
-    - chills,  fatigue,  high_fever,  headache,  nausea,  constipation,  abdominal_pain,  diarrhoea,  toxic_look_(typhos),  belly_pain
+    - [chills] [vomiting] [fatigue] [high_fever] [nausea] [constipation] [abdominal_pain] [diarrhoea] [toxic_look_] [typhos] [belly_pain] (Symptoms)
+    - [chills] [vomiting] [fatigue] [high_fever] [headache] [constipation] [abdominal_pain] [diarrhoea] [toxic_look_] [typhos] [belly_pain] (Symptoms)
+    - [chills] [vomiting] [fatigue] [high_fever] [headache] [nausea] [abdominal_pain] [diarrhoea] [toxic_look_] [typhos] [belly_pain] (Symptoms)
+    - [chills] [vomiting] [fatigue] [high_fever] [headache] [nausea] [constipation] [diarrhoea] [toxic_look_] [typhos] [belly_pain] (Symptoms)
+    - [chills] [vomiting] [fatigue] [high_fever] [headache] [nausea] [constipation] [abdominal_pain] [toxic_look_] [typhos] [belly_pain] (Symptoms)
+    - [chills] [vomiting] [fatigue] [high_fever] [headache] [nausea] [constipation] [abdominal_pain] [diarrhoea] [belly_pain] (Symptoms)
+    - [chills] [vomiting] [fatigue] [high_fever] [headache] [nausea] [constipation] [abdominal_pain] [diarrhoea] [toxic_look_] [typhos] (Symptoms)
+    - [chills] [vomiting] [fatigue] [high_fever] [headache] [nausea] [constipation] [abdominal_pain] [diarrhoea] [toxic_look_] [typhos] [belly_pain] (Symptoms)
+    - [chills] [fatigue] [high_fever] [headache] [nausea] [constipation] [abdominal_pain] [diarrhoea] [toxic_look_] [typhos] [belly_pain] (Symptoms)
 
-- intent: hepatitis_a
+- intent:  hepatitis_a
   examples: |
-    - joint_pain,  vomiting,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  diarrhoea,  mild_fever,  yellowing_of_eyes,  muscle_pain
-    - vomiting,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  diarrhoea,  mild_fever,  yellowing_of_eyes,  muscle_pain
-    - joint_pain,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  diarrhoea,  mild_fever,  yellowing_of_eyes,  muscle_pain
-    - joint_pain,  vomiting,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  diarrhoea,  mild_fever,  yellowing_of_eyes,  muscle_pain
-    - joint_pain,  vomiting,  yellowish_skin,  nausea,  loss_of_appetite,  abdominal_pain,  diarrhoea,  mild_fever,  yellowing_of_eyes,  muscle_pain
-    - joint_pain,  vomiting,  yellowish_skin,  dark_urine,  loss_of_appetite,  abdominal_pain,  diarrhoea,  mild_fever,  yellowing_of_eyes,  muscle_pain
-    - joint_pain,  vomiting,  yellowish_skin,  dark_urine,  nausea,  abdominal_pain,  diarrhoea,  mild_fever,  yellowing_of_eyes,  muscle_pain
-    - joint_pain,  vomiting,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  diarrhoea,  mild_fever,  yellowing_of_eyes,  muscle_pain
-    - joint_pain,  vomiting,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  mild_fever,  yellowing_of_eyes,  muscle_pain
-    - temperature, jaundice, nausea, itch
+    - [joint_pain] [vomiting] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [diarrhoea] [mild_fever] [yellowing_of_eyes] [muscle_pain] (Symptoms)
+    - [vomiting] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [diarrhoea] [mild_fever] [yellowing_of_eyes] [muscle_pain] (Symptoms)
+    - [joint_pain] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [diarrhoea] [mild_fever] [yellowing_of_eyes] [muscle_pain] (Symptoms)
+    - [joint_pain] [vomiting] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [diarrhoea] [mild_fever] [yellowing_of_eyes] [muscle_pain] (Symptoms)
+    - [joint_pain] [vomiting] [yellowish_skin] [nausea] [loss_of_appetite] [abdominal_pain] [diarrhoea] [mild_fever] [yellowing_of_eyes] [muscle_pain] (Symptoms)
+    - [joint_pain] [vomiting] [yellowish_skin] [dark_urine] [loss_of_appetite] [abdominal_pain] [diarrhoea] [mild_fever] [yellowing_of_eyes] [muscle_pain] (Symptoms)
+    - [joint_pain] [vomiting] [yellowish_skin] [dark_urine] [nausea] [abdominal_pain] [diarrhoea] [mild_fever] [yellowing_of_eyes] [muscle_pain] (Symptoms)
+    - [joint_pain] [vomiting] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [diarrhoea] [mild_fever] [yellowing_of_eyes] [muscle_pain] (Symptoms)
+    - [joint_pain] [vomiting] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [mild_fever] [yellowing_of_eyes] [muscle_pain] (Symptoms)
+    - [temperature] [jaundice] [nausea] [itch] (Symptoms)
 
-- intent: hepatitis_b
+- intent:  hepatitis_b
   examples: |
-    - itching,  fatigue,  lethargy,  yellowish_skin,  dark_urine,  loss_of_appetite,  abdominal_pain,  yellow_urine,  yellowing_of_eyes,  malaise,  receiving_blood_transfusion,  receiving_unsterile_injections
-    - fatigue,  lethargy,  yellowish_skin,  dark_urine,  loss_of_appetite,  abdominal_pain,  yellow_urine,  yellowing_of_eyes,  malaise,  receiving_blood_transfusion,  receiving_unsterile_injections
-    - itching,  lethargy,  yellowish_skin,  dark_urine,  loss_of_appetite,  abdominal_pain,  yellow_urine,  yellowing_of_eyes,  malaise,  receiving_blood_transfusion,  receiving_unsterile_injections
-    - itching,  fatigue,  yellowish_skin,  dark_urine,  loss_of_appetite,  abdominal_pain,  yellow_urine,  yellowing_of_eyes,  malaise,  receiving_blood_transfusion,  receiving_unsterile_injections
-    - itching,  fatigue,  lethargy,  dark_urine,  loss_of_appetite,  abdominal_pain,  yellow_urine,  yellowing_of_eyes,  malaise,  receiving_blood_transfusion,  receiving_unsterile_injections
-    - itching,  fatigue,  lethargy,  yellowish_skin,  loss_of_appetite,  abdominal_pain,  yellow_urine,  yellowing_of_eyes,  malaise,  receiving_blood_transfusion,  receiving_unsterile_injections
-    - itching,  fatigue,  lethargy,  yellowish_skin,  dark_urine,  abdominal_pain,  yellow_urine,  yellowing_of_eyes,  malaise,  receiving_blood_transfusion,  receiving_unsterile_injections
-    - itching,  fatigue,  lethargy,  yellowish_skin,  dark_urine,  loss_of_appetite,  yellow_urine,  yellowing_of_eyes,  malaise,  receiving_blood_transfusion,  receiving_unsterile_injections
-    - itching,  fatigue,  lethargy,  yellowish_skin,  dark_urine,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  malaise,  receiving_blood_transfusion,  receiving_unsterile_injections
-    - temperature, tiredness, nausea, muscle pain
+    - [itching] [fatigue] [lethargy] [yellowish_skin] [dark_urine] [loss_of_appetite] [abdominal_pain] [yellow_urine] [yellowing_of_eyes] [malaise] [receiving_blood_transfusion] [receiving_unsterile_injections] (Symptoms)
+    - [fatigue] [lethargy] [yellowish_skin] [dark_urine] [loss_of_appetite] [abdominal_pain] [yellow_urine] [yellowing_of_eyes] [malaise] [receiving_blood_transfusion] [receiving_unsterile_injections] (Symptoms)
+    - [itching] [lethargy] [yellowish_skin] [dark_urine] [loss_of_appetite] [abdominal_pain] [yellow_urine] [yellowing_of_eyes] [malaise] [receiving_blood_transfusion] [receiving_unsterile_injections] (Symptoms)
+    - [itching] [fatigue] [yellowish_skin] [dark_urine] [loss_of_appetite] [abdominal_pain] [yellow_urine] [yellowing_of_eyes] [malaise] [receiving_blood_transfusion] [receiving_unsterile_injections] (Symptoms)
+    - [itching] [fatigue] [lethargy] [dark_urine] [loss_of_appetite] [abdominal_pain] [yellow_urine] [yellowing_of_eyes] [malaise] [receiving_blood_transfusion] [receiving_unsterile_injections] (Symptoms)
+    - [itching] [fatigue] [lethargy] [yellowish_skin] [loss_of_appetite] [abdominal_pain] [yellow_urine] [yellowing_of_eyes] [malaise] [receiving_blood_transfusion] [receiving_unsterile_injections] (Symptoms)
+    - [itching] [fatigue] [lethargy] [yellowish_skin] [dark_urine] [abdominal_pain] [yellow_urine] [yellowing_of_eyes] [malaise] [receiving_blood_transfusion] [receiving_unsterile_injections] (Symptoms)
+    - [itching] [fatigue] [lethargy] [yellowish_skin] [dark_urine] [loss_of_appetite] [yellow_urine] [yellowing_of_eyes] [malaise] [receiving_blood_transfusion] [receiving_unsterile_injections] (Symptoms)
+    - [itching] [fatigue] [lethargy] [yellowish_skin] [dark_urine] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [malaise] [receiving_blood_transfusion] [receiving_unsterile_injections] (Symptoms)
+    - [temperature] [tiredness] [nausea] [muscle] [pain] (Symptoms)
 
-- intent: hepatitis_c
+- intent:  hepatitis_c
   examples: |
-    - fatigue,  yellowish_skin,  nausea,  loss_of_appetite,  family_history
-    - fatigue,  yellowish_skin,  nausea,  loss_of_appetite,  yellowing_of_eyes,  family_history
-    - yellowish_skin,  nausea,  loss_of_appetite,  yellowing_of_eyes,  family_history
-    - fatigue,  nausea,  loss_of_appetite,  yellowing_of_eyes,  family_history
-    - fatigue,  yellowish_skin,  loss_of_appetite,  yellowing_of_eyes,  family_history
-    - fatigue,  yellowish_skin,  nausea,  yellowing_of_eyes,  family_history
-    - fatigue,  yellowish_skin,  nausea,  loss_of_appetite,  yellowing_of_eyes
+    - [fatigue] [yellowish_skin] [nausea] [loss_of_appetite] [family_history] (Symptoms)
+    - [fatigue] [yellowish_skin] [nausea] [loss_of_appetite] [yellowing_of_eyes] [family_history] (Symptoms)
+    - [yellowish_skin] [nausea] [loss_of_appetite] [yellowing_of_eyes] [family_history] (Symptoms)
+    - [fatigue] [nausea] [loss_of_appetite] [yellowing_of_eyes] [family_history] (Symptoms)
+    - [fatigue] [yellowish_skin] [loss_of_appetite] [yellowing_of_eyes] [family_history] (Symptoms)
+    - [fatigue] [yellowish_skin] [nausea] [yellowing_of_eyes] [family_history] (Symptoms)
+    - [fatigue] [yellowish_skin] [nausea] [loss_of_appetite] [yellowing_of_eyes] (Symptoms)
 
-- intent: hepatitis_d
+- intent:  hepatitis_d
   examples: |
-    - joint_pain,  vomiting,  fatigue,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - vomiting,  fatigue,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - joint_pain,  fatigue,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - joint_pain,  vomiting,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - joint_pain,  vomiting,  fatigue,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - joint_pain,  vomiting,  fatigue,  yellowish_skin,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - joint_pain,  vomiting,  fatigue,  yellowish_skin,  dark_urine,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes
-    - joint_pain,  vomiting,  fatigue,  yellowish_skin,  dark_urine,  nausea,  abdominal_pain,  yellowing_of_eyes
-    - joint_pain,  vomiting,  fatigue,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  yellowing_of_eyes
-    - joint_pain,  vomiting,  fatigue,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain
+    - [joint_pain] [vomiting] [fatigue] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [vomiting] [fatigue] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [joint_pain] [fatigue] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [joint_pain] [vomiting] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [yellowish_skin] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [yellowish_skin] [dark_urine] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [yellowish_skin] [dark_urine] [nausea] [abdominal_pain] [yellowing_of_eyes] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [yellowing_of_eyes] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] (Symptoms)
 
-- intent: hepatitis_e
+- intent:  hepatitis_e
   examples: |
-    - joint_pain,  vomiting,  fatigue,  high_fever,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  coma,  stomach_bleeding
-    - joint_pain,  vomiting,  fatigue,  high_fever,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  acute_liver_failure,  coma,  stomach_bleeding
-    - vomiting,  fatigue,  high_fever,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  acute_liver_failure,  coma,  stomach_bleeding
-    - joint_pain,  fatigue,  high_fever,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  acute_liver_failure,  coma,  stomach_bleeding
-    - joint_pain,  vomiting,  high_fever,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  acute_liver_failure,  coma,  stomach_bleeding
-    - joint_pain,  vomiting,  fatigue,  yellowish_skin,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  acute_liver_failure,  coma,  stomach_bleeding
-    - joint_pain,  vomiting,  fatigue,  high_fever,  dark_urine,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  acute_liver_failure,  coma,  stomach_bleeding
-    - joint_pain,  vomiting,  fatigue,  high_fever,  yellowish_skin,  nausea,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  acute_liver_failure,  coma,  stomach_bleeding
-    - joint_pain,  vomiting,  fatigue,  high_fever,  yellowish_skin,  dark_urine,  loss_of_appetite,  abdominal_pain,  yellowing_of_eyes,  acute_liver_failure,  coma,  stomach_bleeding
+    - [joint_pain] [vomiting] [fatigue] [high_fever] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [coma] [stomach_bleeding] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [high_fever] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [acute_liver_failure] [coma] [stomach_bleeding] (Symptoms)
+    - [vomiting] [fatigue] [high_fever] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [acute_liver_failure] [coma] [stomach_bleeding] (Symptoms)
+    - [joint_pain] [fatigue] [high_fever] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [acute_liver_failure] [coma] [stomach_bleeding] (Symptoms)
+    - [joint_pain] [vomiting] [high_fever] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [acute_liver_failure] [coma] [stomach_bleeding] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [acute_liver_failure] [coma] [stomach_bleeding] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [high_fever] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [acute_liver_failure] [coma] [stomach_bleeding] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [high_fever] [yellowish_skin] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [acute_liver_failure] [coma] [stomach_bleeding] (Symptoms)
+    - [joint_pain] [vomiting] [fatigue] [high_fever] [yellowish_skin] [dark_urine] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [acute_liver_failure] [coma] [stomach_bleeding] (Symptoms)
 
-- intent: alcoholic_hepatitis
+- intent:  alcoholic_hepatitis
   examples: |
-    - vomiting,  yellowish_skin,  abdominal_pain,  swelling_of_stomach,  distention_of_abdomen,  history_of_alcohol_consumption,  fluid_overload
-    - yellowish_skin,  abdominal_pain,  swelling_of_stomach,  distention_of_abdomen,  history_of_alcohol_consumption,  fluid_overload
-    - vomiting,  abdominal_pain,  swelling_of_stomach,  distention_of_abdomen,  history_of_alcohol_consumption,  fluid_overload
-    - vomiting,  yellowish_skin,  swelling_of_stomach,  distention_of_abdomen,  history_of_alcohol_consumption,  fluid_overload
-    - vomiting,  yellowish_skin,  abdominal_pain,  distention_of_abdomen,  history_of_alcohol_consumption,  fluid_overload
-    - vomiting,  yellowish_skin,  abdominal_pain,  swelling_of_stomach,  history_of_alcohol_consumption,  fluid_overload
-    - vomiting,  yellowish_skin,  abdominal_pain,  swelling_of_stomach,  distention_of_abdomen,  fluid_overload
-    - vomiting,  yellowish_skin,  abdominal_pain,  swelling_of_stomach,  distention_of_abdomen,  history_of_alcohol_consumption
+    - [vomiting] [yellowish_skin] [abdominal_pain] [swelling_of_stomach] [distention_of_abdomen] [history_of_alcohol_consumption] [fluid_overload] (Symptoms)
+    - [yellowish_skin] [abdominal_pain] [swelling_of_stomach] [distention_of_abdomen] [history_of_alcohol_consumption] [fluid_overload] (Symptoms)
+    - [vomiting] [abdominal_pain] [swelling_of_stomach] [distention_of_abdomen] [history_of_alcohol_consumption] [fluid_overload] (Symptoms)
+    - [vomiting] [yellowish_skin] [swelling_of_stomach] [distention_of_abdomen] [history_of_alcohol_consumption] [fluid_overload] (Symptoms)
+    - [vomiting] [yellowish_skin] [abdominal_pain] [distention_of_abdomen] [history_of_alcohol_consumption] [fluid_overload] (Symptoms)
+    - [vomiting] [yellowish_skin] [abdominal_pain] [swelling_of_stomach] [history_of_alcohol_consumption] [fluid_overload] (Symptoms)
+    - [vomiting] [yellowish_skin] [abdominal_pain] [swelling_of_stomach] [distention_of_abdomen] [fluid_overload] (Symptoms)
+    - [vomiting] [yellowish_skin] [abdominal_pain] [swelling_of_stomach] [distention_of_abdomen] [history_of_alcohol_consumption] (Symptoms)
 
-- intent: tuberculosis
+- intent:  tuberculosis
   examples: |
-    - chills,  vomiting,  fatigue,  weight_loss,  cough,  high_fever,  breathlessness,  sweating,  loss_of_appetite,  mild_fever,  yellowing_of_eyes,  swelled_lymph_nodes,  malaise,  phlegm,  chest_pain,  blood_in_sputum
-    - vomiting,  fatigue,  weight_loss,  cough,  high_fever,  breathlessness,  sweating,  loss_of_appetite,  mild_fever,  yellowing_of_eyes,  swelled_lymph_nodes,  malaise,  phlegm,  chest_pain,  blood_in_sputum
-    - chills,  fatigue,  weight_loss,  cough,  high_fever,  breathlessness,  sweating,  loss_of_appetite,  mild_fever,  yellowing_of_eyes,  swelled_lymph_nodes,  malaise,  phlegm,  chest_pain,  blood_in_sputum
-    - chills,  vomiting,  weight_loss,  cough,  high_fever,  breathlessness,  sweating,  loss_of_appetite,  mild_fever,  yellowing_of_eyes,  swelled_lymph_nodes,  malaise,  phlegm,  chest_pain,  blood_in_sputum
-    - chills,  vomiting,  fatigue,  cough,  high_fever,  breathlessness,  sweating,  loss_of_appetite,  mild_fever,  yellowing_of_eyes,  swelled_lymph_nodes,  malaise,  phlegm,  chest_pain,  blood_in_sputum
-    - chills,  vomiting,  fatigue,  weight_loss,  high_fever,  breathlessness,  sweating,  loss_of_appetite,  mild_fever,  yellowing_of_eyes,  swelled_lymph_nodes,  malaise,  phlegm,  chest_pain,  blood_in_sputum
-    - chills,  vomiting,  fatigue,  weight_loss,  cough,  breathlessness,  sweating,  loss_of_appetite,  mild_fever,  yellowing_of_eyes,  swelled_lymph_nodes,  malaise,  phlegm,  chest_pain,  blood_in_sputum
-    - chills,  vomiting,  fatigue,  weight_loss,  cough,  high_fever,  sweating,  loss_of_appetite,  mild_fever,  yellowing_of_eyes,  swelled_lymph_nodes,  malaise,  phlegm,  chest_pain,  blood_in_sputum
-    - chills,  vomiting,  fatigue,  weight_loss,  cough,  high_fever,  breathlessness,  loss_of_appetite,  mild_fever,  yellowing_of_eyes,  swelled_lymph_nodes,  malaise,  phlegm,  chest_pain,  blood_in_sputum
+    - [chills] [vomiting] [fatigue] [weight_loss] [cough] [high_fever] [breathlessness] [sweating] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)
+    - [vomiting] [fatigue] [weight_loss] [cough] [high_fever] [breathlessness] [sweating] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)
+    - [chills] [fatigue] [weight_loss] [cough] [high_fever] [breathlessness] [sweating] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)
+    - [chills] [vomiting] [weight_loss] [cough] [high_fever] [breathlessness] [sweating] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)
+    - [chills] [vomiting] [fatigue] [cough] [high_fever] [breathlessness] [sweating] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)
+    - [chills] [vomiting] [fatigue] [weight_loss] [high_fever] [breathlessness] [sweating] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)
+    - [chills] [vomiting] [fatigue] [weight_loss] [cough] [breathlessness] [sweating] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)
+    - [chills] [vomiting] [fatigue] [weight_loss] [cough] [high_fever] [sweating] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)
+    - [chills] [vomiting] [fatigue] [weight_loss] [cough] [high_fever] [breathlessness] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)
 
-- intent: common_cold
+- intent:  common_cold
   examples: |
-    - continuous_sneezing,  chills,  fatigue,  cough,  high_fever,  headache,  swelled_lymph_nodes,  malaise,  phlegm,  throat_irritation,  redness_of_eyes,  sinus_pressure,  runny_nose,  congestion,  chest_pain,  loss_of_smell,  muscle_pain
-    - chills,  fatigue,  cough,  high_fever,  headache,  swelled_lymph_nodes,  malaise,  phlegm,  throat_irritation,  redness_of_eyes,  sinus_pressure,  runny_nose,  congestion,  chest_pain,  loss_of_smell,  muscle_pain
-    - continuous_sneezing,  fatigue,  cough,  high_fever,  headache,  swelled_lymph_nodes,  malaise,  phlegm,  throat_irritation,  redness_of_eyes,  sinus_pressure,  runny_nose,  congestion,  chest_pain,  loss_of_smell,  muscle_pain
-    - continuous_sneezing,  chills,  cough,  high_fever,  headache,  swelled_lymph_nodes,  malaise,  phlegm,  throat_irritation,  redness_of_eyes,  sinus_pressure,  runny_nose,  congestion,  chest_pain,  loss_of_smell,  muscle_pain
-    - continuous_sneezing,  chills,  fatigue,  high_fever,  headache,  swelled_lymph_nodes,  malaise,  phlegm,  throat_irritation,  redness_of_eyes,  sinus_pressure,  runny_nose,  congestion,  chest_pain,  loss_of_smell,  muscle_pain
-    - continuous_sneezing,  chills,  fatigue,  cough,  headache,  swelled_lymph_nodes,  malaise,  phlegm,  throat_irritation,  redness_of_eyes,  sinus_pressure,  runny_nose,  congestion,  chest_pain,  loss_of_smell,  muscle_pain
-    - continuous_sneezing,  chills,  fatigue,  cough,  high_fever,  swelled_lymph_nodes,  malaise,  phlegm,  throat_irritation,  redness_of_eyes,  sinus_pressure,  runny_nose,  congestion,  chest_pain,  loss_of_smell,  muscle_pain
-    - continuous_sneezing,  chills,  fatigue,  cough,  high_fever,  headache,  malaise,  phlegm,  throat_irritation,  redness_of_eyes,  sinus_pressure,  runny_nose,  congestion,  chest_pain,  loss_of_smell,  muscle_pain
-    - continuous_sneezing,  chills,  fatigue,  cough,  high_fever,  headache,  swelled_lymph_nodes,  phlegm,  throat_irritation,  redness_of_eyes,  sinus_pressure,  runny_nose,  congestion,  chest_pain,  loss_of_smell,  muscle_pain
-    - cough, runny nose, sore throat, sneezing
+    - [continuous_sneezing] [chills] [fatigue] [cough] [high_fever] [headache] [swelled_lymph_nodes] [malaise] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)
+    - [chills] [fatigue] [cough] [high_fever] [headache] [swelled_lymph_nodes] [malaise] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)
+    - [continuous_sneezing] [fatigue] [cough] [high_fever] [headache] [swelled_lymph_nodes] [malaise] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)
+    - [continuous_sneezing] [chills] [cough] [high_fever] [headache] [swelled_lymph_nodes] [malaise] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)
+    - [continuous_sneezing] [chills] [fatigue] [high_fever] [headache] [swelled_lymph_nodes] [malaise] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)
+    - [continuous_sneezing] [chills] [fatigue] [cough] [headache] [swelled_lymph_nodes] [malaise] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)
+    - [continuous_sneezing] [chills] [fatigue] [cough] [high_fever] [swelled_lymph_nodes] [malaise] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)
+    - [continuous_sneezing] [chills] [fatigue] [cough] [high_fever] [headache] [malaise] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)
+    - [continuous_sneezing] [chills] [fatigue] [cough] [high_fever] [headache] [swelled_lymph_nodes] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)
+    - [cough] [runny] [nose] [sore] [throat] [sneezing] (Symptoms)
 
-- intent: pneumonia
+- intent:  pneumonia
   examples: |
-    - chills,  fatigue,  cough,  high_fever,  breathlessness,  sweating,  malaise,  chest_pain,  fast_heart_rate,  rusty_sputum
-    - chills,  fatigue,  cough,  high_fever,  breathlessness,  sweating,  malaise,  phlegm,  chest_pain,  fast_heart_rate,  rusty_sputum
-    - fatigue,  cough,  high_fever,  breathlessness,  sweating,  malaise,  phlegm,  chest_pain,  fast_heart_rate,  rusty_sputum
-    - chills,  cough,  high_fever,  breathlessness,  sweating,  malaise,  phlegm,  chest_pain,  fast_heart_rate,  rusty_sputum
-    - chills,  fatigue,  high_fever,  breathlessness,  sweating,  malaise,  phlegm,  chest_pain,  fast_heart_rate,  rusty_sputum
-    - chills,  fatigue,  cough,  breathlessness,  sweating,  malaise,  phlegm,  chest_pain,  fast_heart_rate,  rusty_sputum
-    - chills,  fatigue,  cough,  high_fever,  sweating,  malaise,  phlegm,  chest_pain,  fast_heart_rate,  rusty_sputum
-    - chills,  fatigue,  cough,  high_fever,  breathlessness,  malaise,  phlegm,  chest_pain,  fast_heart_rate,  rusty_sputum
-    - chills,  fatigue,  cough,  high_fever,  breathlessness,  sweating,  phlegm,  chest_pain,  fast_heart_rate,  rusty_sputum
-    - cough, mucus, short of breath, temperature
+    - [chills] [fatigue] [cough] [high_fever] [breathlessness] [sweating] [malaise] [chest_pain] [fast_heart_rate] [rusty_sputum] (Symptoms)
+    - [chills] [fatigue] [cough] [high_fever] [breathlessness] [sweating] [malaise] [phlegm] [chest_pain] [fast_heart_rate] [rusty_sputum] (Symptoms)
+    - [fatigue] [cough] [high_fever] [breathlessness] [sweating] [malaise] [phlegm] [chest_pain] [fast_heart_rate] [rusty_sputum] (Symptoms)
+    - [chills] [cough] [high_fever] [breathlessness] [sweating] [malaise] [phlegm] [chest_pain] [fast_heart_rate] [rusty_sputum] (Symptoms)
+    - [chills] [fatigue] [high_fever] [breathlessness] [sweating] [malaise] [phlegm] [chest_pain] [fast_heart_rate] [rusty_sputum] (Symptoms)
+    - [chills] [fatigue] [cough] [breathlessness] [sweating] [malaise] [phlegm] [chest_pain] [fast_heart_rate] [rusty_sputum] (Symptoms)
+    - [chills] [fatigue] [cough] [high_fever] [sweating] [malaise] [phlegm] [chest_pain] [fast_heart_rate] [rusty_sputum] (Symptoms)
+    - [chills] [fatigue] [cough] [high_fever] [breathlessness] [malaise] [phlegm] [chest_pain] [fast_heart_rate] [rusty_sputum] (Symptoms)
+    - [chills] [fatigue] [cough] [high_fever] [breathlessness] [sweating] [phlegm] [chest_pain] [fast_heart_rate] [rusty_sputum] (Symptoms)
+    - [cough] [mucus] [short] [of] [breath] [temperature] (Symptoms)
 
-- intent: dimorphic_hemmorhoids(piles)
+- intent:  dimorphic_hemmorhoids(piles)
   examples: |
-    - constipation,  pain_during_bowel_movements,  pain_in_anal_region,  bloody_stool,  irritation_in_anus
-    - pain_during_bowel_movements,  pain_in_anal_region,  bloody_stool,  irritation_in_anus
-    - constipation,  pain_in_anal_region,  bloody_stool,  irritation_in_anus
-    - constipation,  pain_during_bowel_movements,  bloody_stool,  irritation_in_anus
-    - constipation,  pain_during_bowel_movements,  pain_in_anal_region,  irritation_in_anus
-    - constipation,  pain_during_bowel_movements,  pain_in_anal_region,  bloody_stool
+    - [constipation] [pain_during_bowel_movements] [pain_in_anal_region] [bloody_stool] [irritation_in_anus] (Symptoms)
+    - [pain_during_bowel_movements] [pain_in_anal_region] [bloody_stool] [irritation_in_anus] (Symptoms)
+    - [constipation] [pain_in_anal_region] [bloody_stool] [irritation_in_anus] (Symptoms)
+    - [constipation] [pain_during_bowel_movements] [bloody_stool] [irritation_in_anus] (Symptoms)
+    - [constipation] [pain_during_bowel_movements] [pain_in_anal_region] [irritation_in_anus] (Symptoms)
+    - [constipation] [pain_during_bowel_movements] [pain_in_anal_region] [bloody_stool] (Symptoms)
 
-- intent: heart_attack
+- intent:  heart_attack
   examples: |
-    - vomiting,  breathlessness,  sweating,  chest_pain
-    - breathlessness,  sweating,  chest_pain
-    - vomiting,  sweating,  chest_pain
-    - vomiting,  breathlessness,  chest_pain
-    - vomiting,  breathlessness,  sweating
-    - pain, nausea, pale, short of breath
+    - [vomiting] [breathlessness] [sweating] [chest_pain] (Symptoms)
+    - [breathlessness] [sweating] [chest_pain] (Symptoms)
+    - [vomiting] [sweating] [chest_pain] (Symptoms)
+    - [vomiting] [breathlessness] [chest_pain] (Symptoms)
+    - [vomiting] [breathlessness] [sweating] (Symptoms)
+    - [pain] [nausea] [pale] [short] [of] [breath] (Symptoms)
 
-- intent: varicose_veins
+- intent:  varicose_veins
   examples: |
-    - fatigue,  cramps,  bruising,  obesity,  swollen_legs,  swollen_blood_vessels,  prominent_veins_on_calf
-    - cramps,  bruising,  obesity,  swollen_legs,  swollen_blood_vessels,  prominent_veins_on_calf
-    - fatigue,  bruising,  obesity,  swollen_legs,  swollen_blood_vessels,  prominent_veins_on_calf
-    - fatigue,  cramps,  obesity,  swollen_legs,  swollen_blood_vessels,  prominent_veins_on_calf
-    - fatigue,  cramps,  bruising,  swollen_legs,  swollen_blood_vessels,  prominent_veins_on_calf
-    - fatigue,  cramps,  bruising,  obesity,  swollen_blood_vessels,  prominent_veins_on_calf
-    - fatigue,  cramps,  bruising,  obesity,  swollen_legs,  prominent_veins_on_calf
-    - fatigue,  cramps,  bruising,  obesity,  swollen_legs,  swollen_blood_vessels
+    - [fatigue] [cramps] [bruising] [obesity] [swollen_legs] [swollen_blood_vessels] [prominent_veins_on_calf] (Symptoms)
+    - [cramps] [bruising] [obesity] [swollen_legs] [swollen_blood_vessels] [prominent_veins_on_calf] (Symptoms)
+    - [fatigue] [bruising] [obesity] [swollen_legs] [swollen_blood_vessels] [prominent_veins_on_calf] (Symptoms)
+    - [fatigue] [cramps] [obesity] [swollen_legs] [swollen_blood_vessels] [prominent_veins_on_calf] (Symptoms)
+    - [fatigue] [cramps] [bruising] [swollen_legs] [swollen_blood_vessels] [prominent_veins_on_calf] (Symptoms)
+    - [fatigue] [cramps] [bruising] [obesity] [swollen_blood_vessels] [prominent_veins_on_calf] (Symptoms)
+    - [fatigue] [cramps] [bruising] [obesity] [swollen_legs] [prominent_veins_on_calf] (Symptoms)
+    - [fatigue] [cramps] [bruising] [obesity] [swollen_legs] [swollen_blood_vessels] (Symptoms)
 
-- intent: hypothyroidism
+- intent:  hypothyroidism
   examples: |
-    - fatigue,  weight_gain,  cold_hands_and_feets,  mood_swings,  lethargy,  dizziness,  puffy_face_and_eyes,  enlarged_thyroid,  brittle_nails,  swollen_extremeties,  depression,  irritability,  abnormal_menstruation
-    - weight_gain,  cold_hands_and_feets,  mood_swings,  lethargy,  dizziness,  puffy_face_and_eyes,  enlarged_thyroid,  brittle_nails,  swollen_extremeties,  depression,  irritability,  abnormal_menstruation
-    - fatigue,  cold_hands_and_feets,  mood_swings,  lethargy,  dizziness,  puffy_face_and_eyes,  enlarged_thyroid,  brittle_nails,  swollen_extremeties,  depression,  irritability,  abnormal_menstruation
-    - fatigue,  weight_gain,  mood_swings,  lethargy,  dizziness,  puffy_face_and_eyes,  enlarged_thyroid,  brittle_nails,  swollen_extremeties,  depression,  irritability,  abnormal_menstruation
-    - fatigue,  weight_gain,  cold_hands_and_feets,  lethargy,  dizziness,  puffy_face_and_eyes,  enlarged_thyroid,  brittle_nails,  swollen_extremeties,  depression,  irritability,  abnormal_menstruation
-    - fatigue,  weight_gain,  cold_hands_and_feets,  mood_swings,  dizziness,  puffy_face_and_eyes,  enlarged_thyroid,  brittle_nails,  swollen_extremeties,  depression,  irritability,  abnormal_menstruation
-    - fatigue,  weight_gain,  cold_hands_and_feets,  mood_swings,  lethargy,  puffy_face_and_eyes,  enlarged_thyroid,  brittle_nails,  swollen_extremeties,  depression,  irritability,  abnormal_menstruation
-    - fatigue,  weight_gain,  cold_hands_and_feets,  mood_swings,  lethargy,  dizziness,  enlarged_thyroid,  brittle_nails,  swollen_extremeties,  depression,  irritability,  abnormal_menstruation
+    - [fatigue] [weight_gain] [cold_hands_and_feets] [mood_swings] [lethargy] [dizziness] [puffy_face_and_eyes] [enlarged_thyroid] [brittle_nails] [swollen_extremeties] [depression] [irritability] [abnormal_menstruation] (Symptoms)
+    - [weight_gain] [cold_hands_and_feets] [mood_swings] [lethargy] [dizziness] [puffy_face_and_eyes] [enlarged_thyroid] [brittle_nails] [swollen_extremeties] [depression] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [cold_hands_and_feets] [mood_swings] [lethargy] [dizziness] [puffy_face_and_eyes] [enlarged_thyroid] [brittle_nails] [swollen_extremeties] [depression] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [weight_gain] [mood_swings] [lethargy] [dizziness] [puffy_face_and_eyes] [enlarged_thyroid] [brittle_nails] [swollen_extremeties] [depression] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [weight_gain] [cold_hands_and_feets] [lethargy] [dizziness] [puffy_face_and_eyes] [enlarged_thyroid] [brittle_nails] [swollen_extremeties] [depression] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [weight_gain] [cold_hands_and_feets] [mood_swings] [dizziness] [puffy_face_and_eyes] [enlarged_thyroid] [brittle_nails] [swollen_extremeties] [depression] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [weight_gain] [cold_hands_and_feets] [mood_swings] [lethargy] [puffy_face_and_eyes] [enlarged_thyroid] [brittle_nails] [swollen_extremeties] [depression] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [weight_gain] [cold_hands_and_feets] [mood_swings] [lethargy] [dizziness] [enlarged_thyroid] [brittle_nails] [swollen_extremeties] [depression] [irritability] [abnormal_menstruation] (Symptoms)
 
-- intent: hyperthyroidism
+- intent:  hyperthyroidism
   examples: |
-    - fatigue,  mood_swings,  weight_loss,  restlessness,  sweating,  diarrhoea,  fast_heart_rate,  excessive_hunger,  muscle_weakness,  irritability,  abnormal_menstruation
-    - mood_swings,  weight_loss,  restlessness,  sweating,  diarrhoea,  fast_heart_rate,  excessive_hunger,  muscle_weakness,  irritability,  abnormal_menstruation
-    - fatigue,  weight_loss,  restlessness,  sweating,  diarrhoea,  fast_heart_rate,  excessive_hunger,  muscle_weakness,  irritability,  abnormal_menstruation
-    - fatigue,  mood_swings,  restlessness,  sweating,  diarrhoea,  fast_heart_rate,  excessive_hunger,  muscle_weakness,  irritability,  abnormal_menstruation
-    - fatigue,  mood_swings,  weight_loss,  sweating,  diarrhoea,  fast_heart_rate,  excessive_hunger,  muscle_weakness,  irritability,  abnormal_menstruation
-    - fatigue,  mood_swings,  weight_loss,  restlessness,  diarrhoea,  fast_heart_rate,  excessive_hunger,  muscle_weakness,  irritability,  abnormal_menstruation
-    - fatigue,  mood_swings,  weight_loss,  restlessness,  sweating,  fast_heart_rate,  excessive_hunger,  muscle_weakness,  irritability,  abnormal_menstruation
-    - fatigue,  mood_swings,  weight_loss,  restlessness,  sweating,  diarrhoea,  excessive_hunger,  muscle_weakness,  irritability,  abnormal_menstruation
-    - fatigue,  mood_swings,  weight_loss,  restlessness,  sweating,  diarrhoea,  fast_heart_rate,  muscle_weakness,  irritability,  abnormal_menstruation
+    - [fatigue] [mood_swings] [weight_loss] [restlessness] [sweating] [diarrhoea] [fast_heart_rate] [excessive_hunger] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)
+    - [mood_swings] [weight_loss] [restlessness] [sweating] [diarrhoea] [fast_heart_rate] [excessive_hunger] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [weight_loss] [restlessness] [sweating] [diarrhoea] [fast_heart_rate] [excessive_hunger] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [mood_swings] [restlessness] [sweating] [diarrhoea] [fast_heart_rate] [excessive_hunger] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [mood_swings] [weight_loss] [sweating] [diarrhoea] [fast_heart_rate] [excessive_hunger] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [mood_swings] [weight_loss] [restlessness] [diarrhoea] [fast_heart_rate] [excessive_hunger] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [mood_swings] [weight_loss] [restlessness] [sweating] [fast_heart_rate] [excessive_hunger] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [mood_swings] [weight_loss] [restlessness] [sweating] [diarrhoea] [excessive_hunger] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)
+    - [fatigue] [mood_swings] [weight_loss] [restlessness] [sweating] [diarrhoea] [fast_heart_rate] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)
 
-- intent: hypoglycemia
+- intent:  hypoglycemia
   examples: |
-    - vomiting,  fatigue,  anxiety,  sweating,  headache,  nausea,  blurred_and_distorted_vision,  excessive_hunger,  slurred_speech,  irritability,  palpitations
-    - vomiting,  fatigue,  anxiety,  sweating,  headache,  nausea,  blurred_and_distorted_vision,  excessive_hunger,  drying_and_tingling_lips,  slurred_speech,  irritability,  palpitations
-    - fatigue,  anxiety,  sweating,  headache,  nausea,  blurred_and_distorted_vision,  excessive_hunger,  drying_and_tingling_lips,  slurred_speech,  irritability,  palpitations
-    - vomiting,  anxiety,  sweating,  headache,  nausea,  blurred_and_distorted_vision,  excessive_hunger,  drying_and_tingling_lips,  slurred_speech,  irritability,  palpitations
-    - vomiting,  fatigue,  sweating,  headache,  nausea,  blurred_and_distorted_vision,  excessive_hunger,  drying_and_tingling_lips,  slurred_speech,  irritability,  palpitations
-    - vomiting,  fatigue,  anxiety,  headache,  nausea,  blurred_and_distorted_vision,  excessive_hunger,  drying_and_tingling_lips,  slurred_speech,  irritability,  palpitations
-    - vomiting,  fatigue,  anxiety,  sweating,  nausea,  blurred_and_distorted_vision,  excessive_hunger,  drying_and_tingling_lips,  slurred_speech,  irritability,  palpitations
-    - vomiting,  fatigue,  anxiety,  sweating,  headache,  blurred_and_distorted_vision,  excessive_hunger,  drying_and_tingling_lips,  slurred_speech,  irritability,  palpitations
-    - vomiting,  fatigue,  anxiety,  sweating,  headache,  nausea,  excessive_hunger,  drying_and_tingling_lips,  slurred_speech,  irritability,  palpitations
+    - [vomiting] [fatigue] [anxiety] [sweating] [headache] [nausea] [blurred_and_distorted_vision] [excessive_hunger] [slurred_speech] [irritability] [palpitations] (Symptoms)
+    - [vomiting] [fatigue] [anxiety] [sweating] [headache] [nausea] [blurred_and_distorted_vision] [excessive_hunger] [drying_and_tingling_lips] [slurred_speech] [irritability] [palpitations] (Symptoms)
+    - [fatigue] [anxiety] [sweating] [headache] [nausea] [blurred_and_distorted_vision] [excessive_hunger] [drying_and_tingling_lips] [slurred_speech] [irritability] [palpitations] (Symptoms)
+    - [vomiting] [anxiety] [sweating] [headache] [nausea] [blurred_and_distorted_vision] [excessive_hunger] [drying_and_tingling_lips] [slurred_speech] [irritability] [palpitations] (Symptoms)
+    - [vomiting] [fatigue] [sweating] [headache] [nausea] [blurred_and_distorted_vision] [excessive_hunger] [drying_and_tingling_lips] [slurred_speech] [irritability] [palpitations] (Symptoms)
+    - [vomiting] [fatigue] [anxiety] [headache] [nausea] [blurred_and_distorted_vision] [excessive_hunger] [drying_and_tingling_lips] [slurred_speech] [irritability] [palpitations] (Symptoms)
+    - [vomiting] [fatigue] [anxiety] [sweating] [nausea] [blurred_and_distorted_vision] [excessive_hunger] [drying_and_tingling_lips] [slurred_speech] [irritability] [palpitations] (Symptoms)
+    - [vomiting] [fatigue] [anxiety] [sweating] [headache] [blurred_and_distorted_vision] [excessive_hunger] [drying_and_tingling_lips] [slurred_speech] [irritability] [palpitations] (Symptoms)
+    - [vomiting] [fatigue] [anxiety] [sweating] [headache] [nausea] [excessive_hunger] [drying_and_tingling_lips] [slurred_speech] [irritability] [palpitations] (Symptoms)
 
-- intent: osteoarthristis
+- intent:  osteoarthristis
   examples: |
-    - joint_pain,  neck_pain,  knee_pain,  hip_joint_pain,  swelling_joints,  painful_walking
-    - neck_pain,  knee_pain,  hip_joint_pain,  swelling_joints,  painful_walking
-    - joint_pain,  knee_pain,  hip_joint_pain,  swelling_joints,  painful_walking
-    - joint_pain,  neck_pain,  hip_joint_pain,  swelling_joints,  painful_walking
-    - joint_pain,  neck_pain,  knee_pain,  swelling_joints,  painful_walking
-    - joint_pain,  neck_pain,  knee_pain,  hip_joint_pain,  painful_walking
-    - joint_pain,  neck_pain,  knee_pain,  hip_joint_pain,  swelling_joints
+    - [joint_pain] [neck_pain] [knee_pain] [hip_joint_pain] [swelling_joints] [painful_walking] (Symptoms)
+    - [neck_pain] [knee_pain] [hip_joint_pain] [swelling_joints] [painful_walking] (Symptoms)
+    - [joint_pain] [knee_pain] [hip_joint_pain] [swelling_joints] [painful_walking] (Symptoms)
+    - [joint_pain] [neck_pain] [hip_joint_pain] [swelling_joints] [painful_walking] (Symptoms)
+    - [joint_pain] [neck_pain] [knee_pain] [swelling_joints] [painful_walking] (Symptoms)
+    - [joint_pain] [neck_pain] [knee_pain] [hip_joint_pain] [painful_walking] (Symptoms)
+    - [joint_pain] [neck_pain] [knee_pain] [hip_joint_pain] [swelling_joints] (Symptoms)
 
-- intent: arthritis
+- intent:  arthritis
   examples: |
-    - muscle_weakness,  stiff_neck,  swelling_joints,  movement_stiffness,  painful_walking
-    - stiff_neck,  swelling_joints,  movement_stiffness,  painful_walking
-    - muscle_weakness,  swelling_joints,  movement_stiffness,  painful_walking
-    - muscle_weakness,  stiff_neck,  movement_stiffness,  painful_walking
-    - muscle_weakness,  stiff_neck,  swelling_joints,  painful_walking
-    - muscle_weakness,  stiff_neck,  swelling_joints,  movement_stiffness
+    - [muscle_weakness] [stiff_neck] [swelling_joints] [movement_stiffness] [painful_walking] (Symptoms)
+    - [stiff_neck] [swelling_joints] [movement_stiffness] [painful_walking] (Symptoms)
+    - [muscle_weakness] [swelling_joints] [movement_stiffness] [painful_walking] (Symptoms)
+    - [muscle_weakness] [stiff_neck] [movement_stiffness] [painful_walking] (Symptoms)
+    - [muscle_weakness] [stiff_neck] [swelling_joints] [painful_walking] (Symptoms)
+    - [muscle_weakness] [stiff_neck] [swelling_joints] [movement_stiffness] (Symptoms)
 
-- intent: (vertigo)_paroymsal_positional_vertigo
+- intent:  (vertigo)_paroymsal_positional_vertigo
   examples: |
-    - vomiting,  headache,  nausea,  spinning_movements,  loss_of_balance,  unsteadiness
-    - headache,  nausea,  spinning_movements,  loss_of_balance,  unsteadiness
-    - vomiting,  nausea,  spinning_movements,  loss_of_balance,  unsteadiness
-    - vomiting,  headache,  spinning_movements,  loss_of_balance,  unsteadiness
-    - vomiting,  headache,  nausea,  loss_of_balance,  unsteadiness
-    - vomiting,  headache,  nausea,  spinning_movements,  unsteadiness
-    - vomiting,  headache,  nausea,  spinning_movements,  loss_of_balance
+    - [vomiting] [headache] [nausea] [spinning_movements] [loss_of_balance] [unsteadiness] (Symptoms)
+    - [headache] [nausea] [spinning_movements] [loss_of_balance] [unsteadiness] (Symptoms)
+    - [vomiting] [nausea] [spinning_movements] [loss_of_balance] [unsteadiness] (Symptoms)
+    - [vomiting] [headache] [spinning_movements] [loss_of_balance] [unsteadiness] (Symptoms)
+    - [vomiting] [headache] [nausea] [loss_of_balance] [unsteadiness] (Symptoms)
+    - [vomiting] [headache] [nausea] [spinning_movements] [unsteadiness] (Symptoms)
+    - [vomiting] [headache] [nausea] [spinning_movements] [loss_of_balance] (Symptoms)
 
-- intent: acne
+- intent:  acne
   examples: |
-    - skin_rash,  pus_filled_pimples,  blackheads,  scurring
-    - pus_filled_pimples,  blackheads,  scurring
-    - skin_rash,  blackheads,  scurring
-    - skin_rash,  pus_filled_pimples,  scurring
-    - skin_rash,  pus_filled_pimples,  blackheads
+    - [skin_rash] [pus_filled_pimples] [blackheads] [scurring] (Symptoms)
+    - [pus_filled_pimples] [blackheads] [scurring] (Symptoms)
+    - [skin_rash] [blackheads] [scurring] (Symptoms)
+    - [skin_rash] [pus_filled_pimples] [scurring] (Symptoms)
+    - [skin_rash] [pus_filled_pimples] [blackheads] (Symptoms)
 
-- intent: urinary_tract_infection
+- intent:  urinary_tract_infection
   examples: |
-    - burning_micturition,  bladder_discomfort,  foul_smell_of urine,  continuous_feel_of_urine
-    - bladder_discomfort,  foul_smell_of urine,  continuous_feel_of_urine
-    - burning_micturition,  foul_smell_of urine,  continuous_feel_of_urine
-    - burning_micturition,  bladder_discomfort,  continuous_feel_of_urine
-    - burning_micturition,  bladder_discomfort,  foul_smell_of urine
+    - [burning_micturition] [bladder_discomfort] [foul_smell_of] [urine] [continuous_feel_of_urine] (Symptoms)
+    - [bladder_discomfort] [foul_smell_of] [urine] [continuous_feel_of_urine] (Symptoms)
+    - [burning_micturition] [foul_smell_of] [urine] [continuous_feel_of_urine] (Symptoms)
+    - [burning_micturition] [bladder_discomfort] [continuous_feel_of_urine] (Symptoms)
+    - [burning_micturition] [bladder_discomfort] [foul_smell_of] [urine] (Symptoms)
 
-- intent: psoriasis
+- intent:  psoriasis
   examples: |
-    - skin_rash,  joint_pain,  skin_peeling,  silver_like_dusting,  small_dents_in_nails,  inflammatory_nails
-    - joint_pain,  skin_peeling,  silver_like_dusting,  small_dents_in_nails,  inflammatory_nails
-    - skin_rash,  skin_peeling,  silver_like_dusting,  small_dents_in_nails,  inflammatory_nails
-    - skin_rash,  joint_pain,  silver_like_dusting,  small_dents_in_nails,  inflammatory_nails
-    - skin_rash,  joint_pain,  skin_peeling,  small_dents_in_nails,  inflammatory_nails
-    - skin_rash,  joint_pain,  skin_peeling,  silver_like_dusting,  inflammatory_nails
-    - skin_rash,  joint_pain,  skin_peeling,  silver_like_dusting,  small_dents_in_nails
-    - rash, white patches, redness, itch
+    - [skin_rash] [joint_pain] [skin_peeling] [silver_like_dusting] [small_dents_in_nails] [inflammatory_nails] (Symptoms)
+    - [joint_pain] [skin_peeling] [silver_like_dusting] [small_dents_in_nails] [inflammatory_nails] (Symptoms)
+    - [skin_rash] [skin_peeling] [silver_like_dusting] [small_dents_in_nails] [inflammatory_nails] (Symptoms)
+    - [skin_rash] [joint_pain] [silver_like_dusting] [small_dents_in_nails] [inflammatory_nails] (Symptoms)
+    - [skin_rash] [joint_pain] [skin_peeling] [small_dents_in_nails] [inflammatory_nails] (Symptoms)
+    - [skin_rash] [joint_pain] [skin_peeling] [silver_like_dusting] [inflammatory_nails] (Symptoms)
+    - [skin_rash] [joint_pain] [skin_peeling] [silver_like_dusting] [small_dents_in_nails] (Symptoms)
+    - [rash] [white] [patches] [redness] [itch] (Symptoms)
 
-- intent: impetigo
+- intent:  impetigo
   examples: |
-    - skin_rash,  high_fever,  blister,  red_sore_around_nose,  yellow_crust_ooze
-    - high_fever,  blister,  red_sore_around_nose,  yellow_crust_ooze
-    - skin_rash,  blister,  red_sore_around_nose,  yellow_crust_ooze
-    - skin_rash,  high_fever,  red_sore_around_nose,  yellow_crust_ooze
-    - skin_rash,  high_fever,  blister,  yellow_crust_ooze
-    - skin_rash,  high_fever,  blister,  red_sore_around_nose
-    - rash, itch, blistering
+    - [skin_rash] [high_fever] [blister] [red_sore_around_nose] [yellow_crust_ooze] (Symptoms)
+    - [high_fever] [blister] [red_sore_around_nose] [yellow_crust_ooze] (Symptoms)
+    - [skin_rash] [blister] [red_sore_around_nose] [yellow_crust_ooze] (Symptoms)
+    - [skin_rash] [high_fever] [red_sore_around_nose] [yellow_crust_ooze] (Symptoms)
+    - [skin_rash] [high_fever] [blister] [yellow_crust_ooze] (Symptoms)
+    - [skin_rash] [high_fever] [blister] [red_sore_around_nose] (Symptoms)
 
 - intent: visit_doctor
   examples: |
@@ -542,3 +541,18 @@ nlu:
     - i want to see a doctor, recommend to me which specialist i should go to ?
     - where i must go ?
     - how is the specialist doctor called ?
+
+- intent: patienţ_sick
+  examples: |
+    - I'am sick
+    - I'm not feeling well and I think I may have caught something. Can you please examine me?
+    - I have been feeling sick lately and I was hoping you could help me figure out what's wrong
+    - I've been experiencing a lot of symptoms recently and I'm concerned it could be something serious. Can you please help me?
+    - I'm feeling really unwell and I'm not sure what's causing it. Can you please give me a diagnosis ?
+    - I'm experiencing a lot of discomfort and pain, and I think it's time for me to see a doctor. Can you please help me figure out what's going on?
+    - I've been feeling sick for a few days now and the symptoms aren't improving. Can you please advise me on what to do?
+    - I'm feeling really weak and fatigued, and I'm not sure what's causing it. Can you please examine me and provide a diagnosis?
+    - I have been experiencing some unusual symptoms and I'm worried it could be something serious. Can you please help me get to the bottom of it?
+    - I have been experiencing some discomfort and pain in a certain area of my body. Can you please examine me and tell me what's going on?
+    - I've been coughing a lot and feeling short of breath, and I'm concerned it could be something more than just a cold. Can you please help me figure out what's causing it?
+    

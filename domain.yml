@@ -51,6 +51,7 @@ intents:
   - psoriasis
   - impetigo
   - visit_doctor
+  - patienţ_sick
 
 responses:
   utter_greet:
@@ -70,7 +71,17 @@ responses:
   - text: "Bye"
 
   utter_default:
-    - text: "i don't understend "
+    - text: "I don't understend "
+
+  utter_can_i_help:
+    - text: "How can i Help you !! "
+
+  utter_ask_informations:
+    - text: "Are you agree to provide to me some personal informations ?"
+
+  utter_whats_symptoms:
+    - text: "what is your symptoms ? "
+
   utter_iamabot:
   - text: "I am a bot, developed by Masters studients ,powered by Rasa."
 
@@ -326,6 +337,10 @@ actions:
 - utter_did_that_help
 - utter_happy
 - utter_goodbye
+- utter_whats_symptoms
+- utter_can_i_help
+- utter_ask_informations
+- utter_default
 - utter_iamabot
 - utter_fungal_infection
 - utter_allergy
@@ -409,6 +424,9 @@ actions:
 - utter_urinary_tract_infection_specialist
 - utter_psoriasis_specialist
 - utter_impetigo_specialist
+
+entities:
+  - Symptoms
 
 session_config:
   session_expiration_time: 60
