@@ -542,7 +542,7 @@ nlu:
     - where i must go ?
     - how is the specialist doctor called ?
 
-- intent: patienţ_sick
+- intent: patient_sick
   examples: |
     - I'am sick
     - I'm not feeling well and I think I may have caught something. Can you please examine me?
@@ -556,3 +556,59 @@ nlu:
     - I have been experiencing some discomfort and pain in a certain area of my body. Can you please examine me and tell me what's going on?
     - I've been coughing a lot and feeling short of breath, and I'm concerned it could be something more than just a cold. Can you please help me figure out what's causing it?
     
+- intent: help_me
+  examples: |
+    - Can you help me?
+    - I need your help.
+    - Can you assist me please?
+    - I'm having trouble, can you help?
+    - I'm lost, can you guide me?
+
+- intent: my_name
+  examples: |
+    - My name is [user's name] (Name)
+    - I'm [user's name] (Name)
+    - You can call me [user's name](Name)
+    - Hi, I'm [user's name](Name)
+    - This is [user's name] (Name)
+    - My name's actually [user's name] (Name)
+    - You may already know this, but my name is [user's name](Name)
+    - Just call me [nickname or informal name] (Name)
+    - I go by [nickname or informal name] (Name)
+
+- intent: my_phone_number
+  examples: |
+    - My phone number is [0777038502] (Phone_number)
+    - You can reach me at [0775896478] (Phone_number)
+    - Here's my phone number: [0656896248] (Phone_number)
+    - I can give you my phone number, it's [0665538704] (Phone_number)
+    - If you need to call me, my number is [0468792888] (Phone_number)
+    - Just in case, my phone number is [0559872928] (Phone_number)
+    - I'll give you my phone number, it's [0587952498] (Phone_number)
+
+- intent: chronic_diseases
+  examples: |
+    - I have type 2 diabetes.
+    - I've been diagnosed with hypertension.
+    - I suffer from rheumatoid arthritis.
+    - I have asthma.
+    - My doctor has told me that I have Crohn's disease.
+    - I was diagnosed with multiple sclerosis [time period] ago.
+    - I've been managing chronic obstructive pulmonary disease (COPD) for [time period].
+    - I have fibromyalgia as well as some other health issues.
+    - I have depression.
+    - I've been diagnosed with anxiety disorder.
+    - I suffer from bipolar disorder.
+    - I have chronic migraines.
+    - My doctor has told me that I have irritable bowel syndrome (IBS).
+    - I was diagnosed with Parkinson's disease [time period] ago.
+    - I've been managing chronic kidney disease for [time period].
+    - I have chronic fatigue syndrome as well as some other health issues.
+    - I have hypothyroidism.
+    - I've been diagnosed with ulcerative colitis.
+    - I suffer from chronic back pain.
+    - I have psoriasis.
+    - My doctor has told me that I have chronic obstructive pulmonary disease (COPD).
+    - I was diagnosed with endometriosis [time period] ago.
+    - I've been managing chronic pain for [time period].
+    - I have chronic sinusitis as well as some other health issues.

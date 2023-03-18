@@ -51,7 +51,11 @@ intents:
   - psoriasis
   - impetigo
   - visit_doctor
-  - patienţ_sick
+  - patient_sick
+  - help_me
+  - my_name
+  - my_phone_number
+  - chronic_diseases
 
 responses:
   utter_greet:
@@ -331,6 +335,24 @@ responses:
   utter_impetigo_specialist:
     - text: "You should visit a Dermatologist or General Practitioner"
 
+  utter_provide_info:
+    - text: "Can you provide me some personal informations ?"
+
+  utter_gives_name:
+    - text: "Give me your name please"
+
+  utter_gives_phone_number:
+    - text: "Give me your phone number"
+
+  utter_ask_chronics_diseases:
+    - text: "Do You have any chronics diseases ?"
+
+  utter_whats_chronics_diseases:
+    - text: "tell them to me ?"
+
+  utter_yes_of_course:
+    - text: "yes,of course!!"
+
 actions:
 - utter_greet
 - utter_cheer_up
@@ -424,9 +446,17 @@ actions:
 - utter_urinary_tract_infection_specialist
 - utter_psoriasis_specialist
 - utter_impetigo_specialist
+- utter_provide_info
+- utter_gives_name
+- utter_gives_phone_number
+- utter_ask_chronics_diseases
+- utter_whats_chronics_diseases
+- utter_yes_of_course
 
 entities:
   - Symptoms
+  - Phone_number
+  - Name
 
 session_config:
   session_expiration_time: 60

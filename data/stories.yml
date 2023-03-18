@@ -29,6 +29,8 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+### diagnostics storys
+
 - story: fungal infection
   steps:
   - intent: fungal_infection
@@ -233,6 +235,8 @@ stories:
   steps:
   - intent: impetigo
   - action: utter_impetigo
+
+###
 
 - story: fungal infection
   steps:
@@ -520,3 +524,39 @@ stories:
   - action: utter_impetigo
   - intent: visit_doctor
   - action: utter_impetigo_specialist
+
+###
+
+- story: main_asking
+  steps:
+    - intent: help_me
+    - action: utter_yes_of_course
+    - action: utter_provide_info
+    - intent: affirm
+    - action: utter_gives_name
+    - intent: my_name
+    - action: utter_gives_phone_number
+    - intent: my_phone_number
+    - action: utter_ask_chronics_diseases
+    - intent: affirm
+    - action: utter_whats_chronics_diseases
+    - intent: chronic_diseases
+    - action: utter_can_i_help
+
+- story: before_diagnostic
+  steps:
+    - intent: help_me
+    - action: utter_yes_of_course
+    - action: utter_provide_info
+    - intent: affirm
+    - action: utter_gives_name
+    - intent: my_name
+    - action: utter_gives_phone_number
+    - intent: my_phone_number
+    - action: utter_ask_chronics_diseases
+    - intent: affirm
+    - action: utter_whats_chronics_diseases
+    - intent: chronic_diseases
+    - action: utter_can_i_help
+    - intent: patient_sick
+    - action: utter_whats_symptoms
