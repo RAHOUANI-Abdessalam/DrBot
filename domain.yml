@@ -56,6 +56,7 @@ intents:
   - my_name
   - my_phone_number
   - chronic_diseases
+  - out_of_scope
 
 responses:
   utter_greet:
@@ -338,10 +339,10 @@ responses:
   utter_provide_info:
     - text: "Can you provide me some personal informations ?"
 
-  utter_gives_name:
+  utter_ask_name:
     - text: "Give me your name please"
 
-  utter_gives_phone_number:
+  utter_ask_phone_number:
     - text: "Give me your phone number"
 
   utter_ask_chronics_diseases:
@@ -352,6 +353,15 @@ responses:
 
   utter_yes_of_course:
     - text: "yes,of course!!"
+
+  utter_details_thanks:
+    - text: "Thanks for providing the given details \nName: {Name},\nMobile Number: {Mobile_number}"
+
+  utter_out_of_scope:
+    - text: "I'm sorry, I didn't quite understand what you're asking. Could you please rephrase your question?"
+    - text: "I'm sorry, but that is beyond the scope of my expertise. Can you please provide me with more details on what you need help with?"
+    - text: "I'm sorry, I don't have the knowledge to provide you with the information you're requesting. Can I help you with anything else?"
+    - text: "I'm sorry, I'm not programmed to answer that question. Can I help you with something else?"
 
 actions:
 - utter_greet
@@ -447,16 +457,40 @@ actions:
 - utter_psoriasis_specialist
 - utter_impetigo_specialist
 - utter_provide_info
-- utter_gives_name
-- utter_gives_phone_number
+- utter_ask_name
+- utter_ask_phone_number
 - utter_ask_chronics_diseases
 - utter_whats_chronics_diseases
 - utter_yes_of_course
+- action_hello_world
+- action_submit
+- utter_details_thanks
 
 entities:
   - Symptoms
-  - Phone_number
-  - Name
+  - name
+  - phone_number
+
+
+slots:
+  name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: name
+
+  phone_number:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: phone_number
+
+##to extract the symptoms in type we write from_text to take all the text instead of entity (video forms in detail 9:20 min)
+forms:
+  user_details_form:
+    required_slots:
+        - name
+        - phone_number
 
 session_config:
   session_expiration_time: 60

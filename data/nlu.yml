@@ -566,25 +566,31 @@ nlu:
 
 - intent: my_name
   examples: |
-    - My name is [user's name] (Name)
-    - I'm [user's name] (Name)
-    - You can call me [user's name](Name)
-    - Hi, I'm [user's name](Name)
-    - This is [user's name] (Name)
-    - My name's actually [user's name] (Name)
-    - You may already know this, but my name is [user's name](Name)
-    - Just call me [nickname or informal name] (Name)
-    - I go by [nickname or informal name] (Name)
+    - My name is [abdessalam](name)
+    - I'm [nassim](name)
+    - You can call me [ahmed](name)
+    - Hi, I'm [abdelkader](name)
+    - This is [karim](name)
+    - My name's actually [karim](name)
+    - You may already know this, but my name is [abdessalam](name)
+    - Just call me [mohammed](name)
+    - I go by [abdelkader](name)
+    - [abdessalam](name)
+    - [aek](name)
+    - [nassim](name)
+    - [frank](name)
 
 - intent: my_phone_number
   examples: |
-    - My phone number is [0777038502] (Phone_number)
-    - You can reach me at [0775896478] (Phone_number)
-    - Here's my phone number: [0656896248] (Phone_number)
-    - I can give you my phone number, it's [0665538704] (Phone_number)
-    - If you need to call me, my number is [0468792888] (Phone_number)
-    - Just in case, my phone number is [0559872928] (Phone_number)
-    - I'll give you my phone number, it's [0587952498] (Phone_number)
+    - My phone number is [0777038502](phone_number)
+    - You can reach me at [0777038502](phone_number)
+    - Here's my phone number: [0777038502](phone_number)
+    - I can give you my phone number, it's [0777038502](phone_number)
+    - If you need to call me, my number is [0777038502](phone_number)
+    - Just in case, my phone number is [0777038502](phone_number)
+    - I'll give you my phone number, it's [0777038502](phone_number)
+    - my number [0777038502](phone_number)
+    - [0777038502](phone_number)
 
 - intent: chronic_diseases
   examples: |
@@ -592,23 +598,51 @@ nlu:
     - I've been diagnosed with hypertension.
     - I suffer from rheumatoid arthritis.
     - I have asthma.
-    - My doctor has told me that I have Crohn's disease.
-    - I was diagnosed with multiple sclerosis [time period] ago.
-    - I've been managing chronic obstructive pulmonary disease (COPD) for [time period].
+    - My doctor has told me that I have crohn's disease.
+    - I was diagnosed with multiple sclerosis one years ago.
+    - I've been managing chronic obstructive pulmonary disease (COPD) for 4 years.
     - I have fibromyalgia as well as some other health issues.
     - I have depression.
     - I've been diagnosed with anxiety disorder.
     - I suffer from bipolar disorder.
     - I have chronic migraines.
     - My doctor has told me that I have irritable bowel syndrome (IBS).
-    - I was diagnosed with Parkinson's disease [time period] ago.
-    - I've been managing chronic kidney disease for [time period].
+    - I was diagnosed with Parkinson's disease 5 weeks ago.
+    - I've been managing chronic kidney disease for 2 years.
     - I have chronic fatigue syndrome as well as some other health issues.
     - I have hypothyroidism.
     - I've been diagnosed with ulcerative colitis.
     - I suffer from chronic back pain.
     - I have psoriasis.
     - My doctor has told me that I have chronic obstructive pulmonary disease (COPD).
-    - I was diagnosed with endometriosis [time period] ago.
-    - I've been managing chronic pain for [time period].
+    - I was diagnosed with endometriosis 2 years ago.
+    - I've been managing chronic pain for 3 months.
     - I have chronic sinusitis as well as some other health issues.
+
+- intent : out_of_scope
+  examples: |
+    - Can you tell me the meaning of life?
+    - I need help with my taxes
+    - What is the best type of car to buy?
+    - Can you recommend a good restaurant?
+    - What is the weather like in London?
+    - What is the best way to train for a marathon?
+    - Can you help me with my personal finances?
+    - What is the best way to learn a new language?
+    - Can you help me find a job?
+    - What is the best way to improve my credit score?
+    - What is the meaning of this quote?
+    - What is the history of this country?
+    - Can you explain this scientific concept to me?
+    - What is the origin of this saying?
+    - Can you explain the plot of this book?
+    - fdgdfhdfgdfg
+    - Can you hjklfhkjlsadfhj
+    - sdfdsf sjfksd?
+    - What jasjkdfksdj?
+    - I don't understand asjkdfjksad?
+    - Can you help me fix my car?
+    - What is the best way to bake a cake
+    - Can you help me install a new software?
+    - What is the best way to paint a room?
+    - Can you teach me how to play the guitar?

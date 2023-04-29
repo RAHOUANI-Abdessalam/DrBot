@@ -9,6 +9,22 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
+### this story for testing the actions with slots with entities
+- story: name and phone entities slots test
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: my_name
+    entities:
+    - name: "abdessalam"
+  - action: utter_ask_phone_number
+  - intent: my_phone_number
+    entities:
+    - phone_number: "0777038502"
+  - action: utter_happy
+  - intent: mood_great
+  - action: action_hello_world
+
 - story: sad path 1
   steps:
   - intent: greet
@@ -527,36 +543,44 @@ stories:
 
 ###
 
-- story: main_asking
-  steps:
-    - intent: help_me
-    - action: utter_yes_of_course
-    - action: utter_provide_info
-    - intent: affirm
-    - action: utter_gives_name
-    - intent: my_name
-    - action: utter_gives_phone_number
-    - intent: my_phone_number
-    - action: utter_ask_chronics_diseases
-    - intent: affirm
-    - action: utter_whats_chronics_diseases
-    - intent: chronic_diseases
-    - action: utter_can_i_help
+#- story: main_asking
+#  steps:
+#    - intent: help_me
+##    - action: utter_yes_of_course
+ #   - action: utter_provide_info
+ #   - intent: affirm
+#    - action: utter_ask_name
+#    - intent: my_name
+#      entities:
+#      - name: "abdessalam"
+#    - action: utter_ask_phone_number
+#    - intent: my_phone_number
+#      entities:
+#      - phone_number: "0777038502"
+#    - action: utter_ask_chronics_diseases
+#    - intent: affirm
+#    - action: utter_whats_chronics_diseases
+#    - intent: chronic_diseases
+#    - action: utter_can_i_help
 
-- story: before_diagnostic
-  steps:
-    - intent: help_me
-    - action: utter_yes_of_course
-    - action: utter_provide_info
-    - intent: affirm
-    - action: utter_gives_name
-    - intent: my_name
-    - action: utter_gives_phone_number
-    - intent: my_phone_number
-    - action: utter_ask_chronics_diseases
-    - intent: affirm
-    - action: utter_whats_chronics_diseases
-    - intent: chronic_diseases
-    - action: utter_can_i_help
-    - intent: patient_sick
-    - action: utter_whats_symptoms
+#- story: before_diagnostic
+#  steps:
+#    - intent: help_me
+#    - action: utter_yes_of_course
+#    - action: utter_provide_info
+#    - intent: affirm
+#    - action: utter_ask_name
+#    - intent: my_name
+#      entities:
+#      - name: "abdessalam"
+#    - action: utter_ask_phone_number
+#    - intent: my_phone_number
+#      entities:
+#      - phone_number: "0777038502"
+#    - action: utter_ask_chronics_diseases
+#    - intent: affirm
+#    - action: utter_whats_chronics_diseases
+#    - intent: chronic_diseases
+#    - action: utter_can_i_help
+#    - intent: patient_sick
+#    - action: utter_whats_symptoms
