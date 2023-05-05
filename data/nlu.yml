@@ -621,28 +621,28 @@ nlu:
 
 - intent : out_of_scope
   examples: |
-    - Can you tell me the meaning of life?
-    - I need help with my taxes
-    - What is the best type of car to buy?
-    - Can you recommend a good restaurant?
-    - What is the weather like in London?
-    - What is the best way to train for a marathon?
-    - Can you help me with my personal finances?
-    - What is the best way to learn a new language?
-    - Can you help me find a job?
     - What is the best way to improve my credit score?
-    - What is the meaning of this quote?
-    - What is the history of this country?
-    - Can you explain this scientific concept to me?
     - What is the origin of this saying?
-    - Can you explain the plot of this book?
     - fdgdfhdfgdfg
     - Can you hjklfhkjlsadfhj
-    - sdfdsf sjfksd?
-    - What jasjkdfksdj?
-    - I don't understand asjkdfjksad?
     - Can you help me fix my car?
-    - What is the best way to bake a cake
-    - Can you help me install a new software?
-    - What is the best way to paint a room?
-    - Can you teach me how to play the guitar?
+#  - What is the best way to bake a cake
+#  - Can you help me install a new software?
+#  - What is the best way to paint a room?
+#  - Can you teach me how to play the guitar?
+#   - Can you tell me the meaning of life?
+#   - I need help with my taxes
+#   - What is the best type of car to buy?
+#   - Can you recommend a good restaurant?
+#   - What is the weather like in London?
+#   - What is the best way to train for a marathon?
+#   - Can you help me with my personal finances?
+#   - What is the best way to learn a new language?
+#   - Can you help me find a job?
+#   - What is the meaning of this quote?
+#   - What is the history of this country?
+#   - Can you explain this scientific concept to me?
+#   - Can you explain the plot of this book?
+#   - sdfdsf sjfksd?
+#   - What jasjkdfksdj?
+#   - I don't understand asjkdfjksad?

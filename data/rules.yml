@@ -20,7 +20,7 @@ rules:
   steps:
   - intent: help_me
   - action: utter_provide_info
-  - action: utter_ask_name
+  ##- action: utter_ask_name
   - action: user_details_form
   - active_loop: user_details_form
 
