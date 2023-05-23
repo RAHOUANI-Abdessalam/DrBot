@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-name",
+      "2": "I-name",
+      "3": "L-name",
+      "4": "U-name",
+      "5": "B-phone_number",
+      "6": "I-phone_number",
+      "7": "L-phone_number",
+      "8": "U-phone_number",
+      "9": "B-symptoms",
+      "10": "I-symptoms",
+      "11": "L-symptoms",
+      "12": "U-symptoms",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-name": 1,
+      "I-name": 2,
+      "L-name": 3,
+      "U-name": 4,
+      "B-phone_number": 5,
+      "I-phone_number": 6,
+      "L-phone_number": 7,
+      "U-phone_number": 8,
+      "B-symptoms": 9,
+      "I-symptoms": 10,
+      "L-symptoms": 11,
+      "U-symptoms": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]

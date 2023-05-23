@@ -6,21 +6,34 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_default
+
 - rule: Say goodbye anytime the user says goodbye
   steps:
   - intent: bye
   - action: utter_goodbye
+
 - rule: Say 'I am a bot' anytime the user challenges
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
 
-###
+- rule: out_of_scope
+  steps:
+    - intent: nlu_fallback
+    - action: action_do_nothing
+
+###forms #################################
+#- rule: Activate form 2
+#  steps:
+#  - action: utter_same_informations
+#  - intent: affirm
+#  - action: user_details_form
+#  - active_loop: user_details_form
+
 - rule: Activate form
   steps:
-  - intent: help_me
   - action: utter_provide_info
-  ##- action: utter_ask_name
+  - intent: affirm
   - action: user_details_form
   - active_loop: user_details_form
 
@@ -36,8 +49,31 @@ rules:
     - requested_slot: null
   # The actions we want to run when the form is submitted.
   - action: action_submit
+  - action: action_slots_reset
+#  - action: action_restart
 
-- rule: out_of_scope
+#Symptoms form######
+
+- rule: Activate symptoms form
   steps:
-    - intent: nlu_fallback
-    - action: utter_out_of_scope
+  - action: utter_provide_symptoms_ask_mode
+  - intent: in_discussion
+#  - action: utter_provide_symptom_mode_one_by_one
+  - action: utter_diagnostic_began
+  - action: user_symptoms_form
+  - active_loop: user_symptoms_form
+#  - action: action_slots_reset
+
+- rule: Submit syptoms form
+  condition:
+  # Condition that form is active.
+  - active_loop: user_symptoms_form
+  steps:
+  # Form is deactivated
+  - action: user_symptoms_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  # The actions we want to run when the form is submitted.
+  - action: action_3symptoms_intent
+  - action: action_slots_reset

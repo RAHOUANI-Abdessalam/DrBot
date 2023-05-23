@@ -8,22 +8,23 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
+  - action: utter_can_i_help
 
 ### this story for testing the actions with slots with entities
-- story: name and phone entities slots test
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: my_name
-    entities:
-    - name: "abdessalam"
-  - action: utter_ask_phone_number
-  - intent: my_phone_number
-    entities:
-    - phone_number: "0777038502"
-  - action: utter_happy
-  - intent: mood_great
-  - action: action_hello_world
+#- story: name and phone entities slots test
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: my_name
+#    entities:
+#    - name: "abdessalam"
+#  - action: utter_ask_phone_number
+#  - intent: my_phone_number
+#    entities:
+#    - phone_number: "0777038502"
+#  - action: utter_happy
+#  - intent: mood_great
+#  - action: action_hello_world
 
 - story: sad path 1
   steps:
@@ -34,6 +35,7 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
+  - action: utter_can_i_help
 
 - story: sad path 2
   steps:
@@ -43,214 +45,378 @@ stories:
   - action: utter_cheer_up
   - action: utter_did_that_help
   - intent: deny
-  - action: utter_goodbye
+  - action: utter_can_i_help
 
-### diagnostics storys
+### diagnostics stories
 
 - story: fungal infection
   steps:
   - intent: fungal_infection
   - action: utter_fungal_infection
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: allergy
   steps:
   - intent: allergy
   - action: utter_allergy
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: gerd
   steps:
   - intent: gerd
   - action: utter_gerd
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: chronic cholestasis
   steps:
   - intent: chronic_cholestasis
   - action: utter_chronic_cholestasis
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: drug reaction
   steps:
   - intent: drug_reaction
   - action: utter_drug_reaction
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: peptic ulcer diseae
   steps:
   - intent: peptic_ulcer_diseae
   - action: utter_peptic_ulcer_diseae
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: aids
   steps:
   - intent: aids
   - action: utter_aids
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: diabetes
   steps:
   - intent: diabetes
   - action: utter_diabetes
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: gastroenteritis
   steps:
   - intent: gastroenteritis
   - action: utter_gastroenteritis
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: bronchial asthma
   steps:
   - intent: bronchial_asthma
   - action: utter_bronchial_asthma
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: hypertension
   steps:
   - intent: hypertension
   - action: utter_hypertension
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: migraine
   steps:
   - intent: migraine
   - action: utter_migraine
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: cervical spondylosis
   steps:
   - intent: cervical_spondylosis
   - action: utter_cervical_spondylosis
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: paralysis (brain hemorrhage)
   steps:
   - intent: paralysis_(brain_hemorrhage)
   - action: utter_paralysis_(brain_hemorrhage)
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: jaundice
   steps:
   - intent: jaundice
   - action: utter_jaundice
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: malaria
   steps:
   - intent: malaria
   - action: utter_malaria
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: chicken pox
   steps:
   - intent: chicken_pox
   - action: utter_chicken_pox
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: dengue
   steps:
   - intent: dengue
   - action: utter_dengue
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: typhoid
   steps:
   - intent: typhoid
   - action: utter_typhoid
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: hepatitis a
   steps:
   - intent: hepatitis_a
   - action: utter_hepatitis_a
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: hepatitis b
   steps:
   - intent: hepatitis_b
   - action: utter_hepatitis_b
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: hepatitis c
   steps:
   - intent: hepatitis_c
   - action: utter_hepatitis_c
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: hepatitis d
   steps:
   - intent: hepatitis_d
   - action: utter_hepatitis_d
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: hepatitis e
   steps:
   - intent: hepatitis_e
   - action: utter_hepatitis_e
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: alcoholic hepatitis
   steps:
   - intent: alcoholic_hepatitis
   - action: utter_alcoholic_hepatitis
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: tuberculosis
   steps:
   - intent: tuberculosis
   - action: utter_tuberculosis
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: common cold
   steps:
   - intent: common_cold
   - action: utter_common_cold
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: pneumonia
   steps:
   - intent: pneumonia
   - action: utter_pneumonia
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: dimorphic hemmorhoids(piles)
   steps:
   - intent: dimorphic_hemmorhoids(piles)
   - action: utter_dimorphic_hemmorhoids(piles)
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: heart attack
   steps:
   - intent: heart_attack
   - action: utter_heart_attack
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: varicose veins
   steps:
   - intent: varicose_veins
   - action: utter_varicose_veins
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: hypothyroidism
   steps:
   - intent: hypothyroidism
   - action: utter_hypothyroidism
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: hyperthyroidism
   steps:
   - intent: hyperthyroidism
   - action: utter_hyperthyroidism
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: hypoglycemia
   steps:
   - intent: hypoglycemia
   - action: utter_hypoglycemia
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: osteoarthristis
   steps:
   - intent: osteoarthristis
   - action: utter_osteoarthristis
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: arthritis
   steps:
   - intent: arthritis
   - action: utter_arthritis
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: (vertigo) paroymsal positional vertigo
   steps:
   - intent: (vertigo)_paroymsal_positional_vertigo
   - action: utter_(vertigo)_paroymsal_positional_vertigo
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: acne
   steps:
   - intent: acne
   - action: utter_acne
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: urinary tract infection
   steps:
   - intent: urinary_tract_infection
   - action: utter_urinary_tract_infection
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: psoriasis
   steps:
   - intent: psoriasis
   - action: utter_psoriasis
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 - story: impetigo
   steps:
   - intent: impetigo
   - action: utter_impetigo
+  - action: action_slots_reset
+  - slot_was_set:
+      - requested_slot: null
+  - action: action_deactivate_loop
 
 ###
 
@@ -260,6 +426,7 @@ stories:
   - action: utter_fungal_infection
   - intent: visit_doctor
   - action: utter_fungal_infection_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: allergy
   steps:
@@ -267,6 +434,7 @@ stories:
   - action: utter_allergy
   - intent: visit_doctor
   - action: utter_allergy_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: gerd
   steps:
@@ -274,6 +442,7 @@ stories:
   - action: utter_gerd
   - intent: visit_doctor
   - action: utter_gerd_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: chronic cholestasis
   steps:
@@ -281,6 +450,7 @@ stories:
   - action: utter_chronic_cholestasis
   - intent: visit_doctor
   - action: utter_chronic_cholestasis_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: drug reaction
   steps:
@@ -288,6 +458,7 @@ stories:
   - action: utter_drug_reaction
   - intent: visit_doctor
   - action: utter_drug_reaction_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: peptic ulcer diseae
   steps:
@@ -295,6 +466,7 @@ stories:
   - action: utter_peptic_ulcer_diseae
   - intent: visit_doctor
   - action: utter_peptic_ulcer_diseae_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: aids
   steps:
@@ -302,6 +474,7 @@ stories:
   - action: utter_aids
   - intent: visit_doctor
   - action: utter_aids_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: diabetes
   steps:
@@ -309,6 +482,7 @@ stories:
   - action: utter_diabetes
   - intent: visit_doctor
   - action: utter_diabetes_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: gastroenteritis
   steps:
@@ -316,6 +490,7 @@ stories:
   - action: utter_gastroenteritis
   - intent: visit_doctor
   - action: utter_gastroenteritis_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: bronchial asthma
   steps:
@@ -323,6 +498,7 @@ stories:
   - action: utter_bronchial_asthma
   - intent: visit_doctor
   - action: utter_bronchial_asthma_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: hypertension
   steps:
@@ -330,6 +506,7 @@ stories:
   - action: utter_hypertension
   - intent: visit_doctor
   - action: utter_hypertension_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: migraine
   steps:
@@ -337,6 +514,7 @@ stories:
   - action: utter_migraine
   - intent: visit_doctor
   - action: utter_migraine_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: cervical spondylosis
   steps:
@@ -344,6 +522,7 @@ stories:
   - action: utter_cervical_spondylosis
   - intent: visit_doctor
   - action: utter_cervical_spondylosis_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: paralysis (brain hemorrhage)
   steps:
@@ -351,6 +530,7 @@ stories:
   - action: utter_paralysis_(brain_hemorrhage)
   - intent: visit_doctor
   - action: utter_paralysis_(brain_hemorrhage)_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: jaundice
   steps:
@@ -358,6 +538,7 @@ stories:
   - action: utter_jaundice
   - intent: visit_doctor
   - action: utter_jaundice_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: malaria
   steps:
@@ -365,6 +546,7 @@ stories:
   - action: utter_malaria
   - intent: visit_doctor
   - action: utter_malaria_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: chicken pox
   steps:
@@ -372,6 +554,7 @@ stories:
   - action: utter_chicken_pox
   - intent: visit_doctor
   - action: utter_chicken_pox_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: dengue
   steps:
@@ -379,6 +562,7 @@ stories:
   - action: utter_dengue
   - intent: visit_doctor
   - action: utter_dengue_specialist
+# - checkpoint: check_doctor_is_known
 
 - story: typhoid
   steps:
@@ -386,6 +570,7 @@ stories:
   - action: utter_typhoid
   - intent: visit_doctor
   - action: utter_typhoid_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: hepatitis a
   steps:
@@ -393,6 +578,7 @@ stories:
   - action: utter_hepatitis_a
   - intent: visit_doctor
   - action: utter_hepatitis_a_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: hepatitis b
   steps:
@@ -400,6 +586,7 @@ stories:
   - action: utter_hepatitis_b
   - intent: visit_doctor
   - action: utter_hepatitis_b_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: hepatitis c
   steps:
@@ -407,6 +594,7 @@ stories:
   - action: utter_hepatitis_c
   - intent: visit_doctor
   - action: utter_hepatitis_c_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: hepatitis d
   steps:
@@ -414,6 +602,7 @@ stories:
   - action: utter_hepatitis_d
   - intent: visit_doctor
   - action: utter_hepatitis_d_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: hepatitis e
   steps:
@@ -421,6 +610,7 @@ stories:
   - action: utter_hepatitis_e
   - intent: visit_doctor
   - action: utter_hepatitis_e_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: alcoholic hepatitis
   steps:
@@ -428,6 +618,7 @@ stories:
   - action: utter_alcoholic_hepatitis
   - intent: visit_doctor
   - action: utter_alcoholic_hepatitis_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: tuberculosis
   steps:
@@ -435,6 +626,7 @@ stories:
   - action: utter_tuberculosis
   - intent: visit_doctor
   - action: utter_tuberculosis_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: common cold
   steps:
@@ -442,6 +634,7 @@ stories:
   - action: utter_common_cold
   - intent: visit_doctor
   - action: utter_common_cold_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: pneumonia
   steps:
@@ -449,6 +642,7 @@ stories:
   - action: utter_pneumonia
   - intent: visit_doctor
   - action: utter_pneumonia_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: dimorphic hemmorhoids(piles)
   steps:
@@ -456,6 +650,7 @@ stories:
   - action: utter_dimorphic_hemmorhoids(piles)
   - intent: visit_doctor
   - action: utter_dimorphic_hemmorhoids(piles)_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: heart attack
   steps:
@@ -463,6 +658,7 @@ stories:
   - action: utter_heart_attack
   - intent: visit_doctor
   - action: utter_heart_attack_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: varicose veins
   steps:
@@ -470,6 +666,7 @@ stories:
   - action: utter_varicose_veins
   - intent: visit_doctor
   - action: utter_varicose_veins_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: hypothyroidism
   steps:
@@ -477,6 +674,7 @@ stories:
   - action: utter_hypothyroidism
   - intent: visit_doctor
   - action: utter_hypothyroidism_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: hyperthyroidism
   steps:
@@ -484,6 +682,7 @@ stories:
   - action: utter_hyperthyroidism
   - intent: visit_doctor
   - action: utter_hyperthyroidism_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: hypoglycemia
   steps:
@@ -491,6 +690,7 @@ stories:
   - action: utter_hypoglycemia
   - intent: visit_doctor
   - action: utter_hypoglycemia_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: osteoarthristis
   steps:
@@ -498,6 +698,7 @@ stories:
   - action: utter_osteoarthristis
   - intent: visit_doctor
   - action: utter_osteoarthristis_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: arthritis
   steps:
@@ -505,6 +706,7 @@ stories:
   - action: utter_arthritis
   - intent: visit_doctor
   - action: utter_arthritis_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: (vertigo) paroymsal positional vertigo
   steps:
@@ -512,6 +714,7 @@ stories:
   - action: utter_(vertigo)_paroymsal_positional_vertigo
   - intent: visit_doctor
   - action: utter_(vertigo)_paroymsal_positional_vertigo_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: acne
   steps:
@@ -519,6 +722,7 @@ stories:
   - action: utter_acne
   - intent: visit_doctor
   - action: utter_acne_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: urinary tract infection
   steps:
@@ -526,6 +730,7 @@ stories:
   - action: utter_urinary_tract_infection
   - intent: visit_doctor
   - action: utter_urinary_tract_infection_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: psoriasis
   steps:
@@ -533,6 +738,7 @@ stories:
   - action: utter_psoriasis
   - intent: visit_doctor
   - action: utter_psoriasis_specialist
+#  - checkpoint: check_doctor_is_known
 
 - story: impetigo
   steps:
@@ -540,15 +746,48 @@ stories:
   - action: utter_impetigo
   - intent: visit_doctor
   - action: utter_impetigo_specialist
+#  - checkpoint: check_doctor_is_known
 
 ###
+- story: reserve an appointment
+  steps:
+#  - checkpoint: check_doctor_is_known
+  - intent: reserve_an_appointment
+#  - action: action_slots_reset
+#  - slot_was_set:
+#      - requested_slot: null
+#  - action: action_deactivate_loop
+#  - active_loop: null
+  - action: utter_yes_of_course
+  - action: utter_provide_info
+ # - checkpoint: check_slots_filled
 
-#- story: main_asking
+#- story: reserve an appointment slots filled same info affirm
 #  steps:
-#    - intent: help_me
-##    - action: utter_yes_of_course
- #   - action: utter_provide_info
- #   - intent: affirm
+#  - checkpoint: check_slots_filled
+#  - intent: reserve_an_appointment
+#  - action: utter_same_informations
+
+#- story: reserve an appointment slots filled same info deny
+#  steps:
+#  - checkpoint: check_slots_filled
+#  - intent: reserve_an_appointment
+#  - action: utter_same_informations
+#  - intent: deny
+#  - action: action_slots_reset
+#  - action: utter_provide_info
+
+
+- story: main_asking
+  steps:
+  - intent: help_me
+  - action: utter_yes_of_course
+  - action: utter_can_i_help
+  - intent: patient_sick
+  - action: utter_provide_symptoms_ask_mode
+  - intent: all_at_once
+  - action: utter_provide_symptom_mode_once
+#  - action: utter_whats_symptoms
 #    - action: utter_ask_name
 #    - intent: my_name
 #      entities:
@@ -584,3 +823,9 @@ stories:
 #    - action: utter_can_i_help
 #    - intent: patient_sick
 #    - action: utter_whats_symptoms
+
+- story: testing our custom action
+  steps:
+  - intent: testing_3symptoms
+#  - action: text="Please wait for the result while we check in our data"
+  - action: action_3symptoms_intent

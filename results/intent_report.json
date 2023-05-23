@@ -1,4 +1,39 @@
 {
+  "chicken_pox": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "deny": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "gerd": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "pneumonia": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "reserve_an_appointment": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 11,
+    "confused_with": {}
+  },
   "arthritis": {
     "precision": 1.0,
     "recall": 1.0,
@@ -6,46 +41,74 @@
     "support": 6,
     "confused_with": {}
   },
-  "drug_reaction": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "fungal_infection": {
-    "precision": 0.8333333333333334,
-    "recall": 1.0,
-    "f1-score": 0.9090909090909091,
-    "support": 5,
-    "confused_with": {}
-  },
-  "gastroenteritis": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 5,
-    "confused_with": {}
-  },
-  "varicose_veins": {
+  "psoriasis": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 8,
     "confused_with": {}
   },
-  "allergy": {
+  "visit_doctor": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
     "confused_with": {}
   },
-  "hypoglycemia": {
+  "my_phone_number": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 9,
+    "confused_with": {}
+  },
+  "my_name": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 13,
+    "confused_with": {}
+  },
+  "typhoid": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
+  "paralysis_(brain_hemorrhage)": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "chronic_diseases": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 24,
+    "confused_with": {}
+  },
+  "hypothyroidism": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "mood_unhappy": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 14,
+    "confused_with": {}
+  },
+  "hepatitis_b": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
     "confused_with": {}
   },
   "tuberculosis": {
@@ -55,31 +118,117 @@
     "support": 9,
     "confused_with": {}
   },
-  "urinary_tract_infection": {
+  "chronic_cholestasis": {
+    "precision": 0.8888888888888888,
+    "recall": 1.0,
+    "f1-score": 0.9411764705882353,
+    "support": 8,
+    "confused_with": {}
+  },
+  "aids": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
     "confused_with": {}
   },
-  "deny": {
+  "migraine": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 7,
+    "support": 11,
     "confused_with": {}
   },
-  "cervical_spondylosis": {
+  "greet": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 6,
+    "support": 13,
+    "confused_with": {}
+  },
+  "bot_challenge": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 4,
     "confused_with": {}
   },
   "alcoholic_hepatitis": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
+    "support": 8,
+    "confused_with": {}
+  },
+  "peptic_ulcer_diseae": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "bye": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
+    "support": 10,
+    "confused_with": {}
+  },
+  "hypertension": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "goodbye": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 5,
+    "confused_with": {
+      "bye": 5
+    }
+  },
+  "common_cold": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "dimorphic_hemmorhoids(piles)": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "impetigo": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "diabetes": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
+  "hepatitis_e": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
+  "varicose_veins": {
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1-score": 0.8,
     "support": 8,
     "confused_with": {}
   },
@@ -90,175 +239,25 @@
     "support": 7,
     "confused_with": {}
   },
-  "hyperthyroidism": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 9,
-    "confused_with": {}
-  },
-  "gerd": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "affirm": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "heart_attack": {
-    "precision": 1.0,
-    "recall": 0.8333333333333334,
-    "f1-score": 0.9090909090909091,
-    "support": 6,
-    "confused_with": {
-      "dengue": 1
-    }
-  },
-  "pneumonia": {
-    "precision": 1.0,
-    "recall": 0.9,
-    "f1-score": 0.9473684210526316,
-    "support": 10,
-    "confused_with": {
-      "psoriasis": 1
-    }
-  },
-  "goodbye": {
-    "precision": 0.8333333333333334,
-    "recall": 1.0,
-    "f1-score": 0.9090909090909091,
-    "support": 10,
-    "confused_with": {}
-  },
-  "common_cold": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 10,
-    "confused_with": {}
-  },
-  "greet": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 13,
-    "confused_with": {}
-  },
-  "migraine": {
-    "precision": 1.0,
-    "recall": 0.9090909090909091,
-    "f1-score": 0.9523809523809523,
-    "support": 11,
-    "confused_with": {
-      "malaria": 1
-    }
-  },
-  "dimorphic_hemmorhoids(piles)": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "hepatitis_c": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "chronic_cholestasis": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
-    "confused_with": {}
-  },
-  "hypertension": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 6,
-    "confused_with": {}
-  },
-  "bot_challenge": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 4,
-    "confused_with": {}
-  },
-  "bronchial_asthma": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 7,
-    "confused_with": {}
-  },
-  "typhoid": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 9,
-    "confused_with": {}
-  },
-  "aids": {
+  "gastroenteritis": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
     "confused_with": {}
   },
-  "mood_unhappy": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 14,
-    "confused_with": {}
-  },
-  "jaundice": {
-    "precision": 1.0,
-    "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 9,
-    "confused_with": {}
-  },
-  "dengue": {
-    "precision": 0.8333333333333334,
-    "recall": 0.9090909090909091,
-    "f1-score": 0.8695652173913043,
-    "support": 11,
-    "confused_with": {
-      "malaria": 1
-    }
-  },
-  "acne": {
+  "fungal_infection": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 5,
     "confused_with": {}
   },
-  "hepatitis_b": {
-    "precision": 1.0,
-    "recall": 0.9,
-    "f1-score": 0.9473684210526316,
-    "support": 10,
-    "confused_with": {
-      "dengue": 1
-    }
-  },
-  "paralysis_(brain_hemorrhage)": {
+  "drug_reaction": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 5,
+    "support": 6,
     "confused_with": {}
   },
   "osteoarthristis": {
@@ -268,106 +267,162 @@
     "support": 7,
     "confused_with": {}
   },
-  "chicken_pox": {
+  "patient_sick": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 10,
+    "support": 11,
     "confused_with": {}
   },
-  "hepatitis_a": {
-    "precision": 1.0,
-    "recall": 0.9,
-    "f1-score": 0.9473684210526316,
-    "support": 10,
-    "confused_with": {
-      "goodbye": 1
-    }
-  },
-  "hypothyroidism": {
-    "precision": 1.0,
+  "cervical_spondylosis": {
+    "precision": 0.35294117647058826,
     "recall": 1.0,
-    "f1-score": 1.0,
-    "support": 8,
+    "f1-score": 0.5217391304347826,
+    "support": 6,
     "confused_with": {}
   },
-  "impetigo": {
+  "affirm": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 7,
+    "support": 9,
     "confused_with": {}
   },
   "mood_great": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
-    "support": 14,
+    "support": 16,
     "confused_with": {}
   },
-  "diabetes": {
+  "hepatitis_d": {
+    "precision": 0.7142857142857143,
+    "recall": 1.0,
+    "f1-score": 0.8333333333333333,
+    "support": 10,
+    "confused_with": {}
+  },
+  "malaria": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 9,
     "confused_with": {}
   },
-  "peptic_ulcer_diseae": {
+  "bronchial_asthma": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 7,
     "confused_with": {}
   },
-  "hepatitis_d": {
+  "urinary_tract_infection": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "acne": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "allergy": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "help_me": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "hyperthyroidism": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
+  },
+  "dengue": {
+    "precision": 1.0,
+    "recall": 0.09090909090909091,
+    "f1-score": 0.16666666666666669,
+    "support": 11,
+    "confused_with": {
+      "cervical_spondylosis": 10
+    }
+  },
+  "hepatitis_c": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "out_of_scope": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "hepatitis_a": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
     "support": 10,
-    "confused_with": {}
-  },
-  "malaria": {
-    "precision": 0.8,
-    "recall": 0.8888888888888888,
-    "f1-score": 0.8421052631578948,
-    "support": 9,
     "confused_with": {
-      "goodbye": 1
+      "varicose_veins": 4,
+      "hepatitis_d": 4,
+      "cervical_spondylosis": 1
     }
   },
-  "hepatitis_e": {
+  "hypoglycemia": {
     "precision": 1.0,
     "recall": 1.0,
     "f1-score": 1.0,
     "support": 9,
     "confused_with": {}
   },
-  "psoriasis": {
-    "precision": 0.875,
-    "recall": 0.875,
-    "f1-score": 0.875,
-    "support": 8,
-    "confused_with": {
-      "fungal_infection": 1
-    }
+  "jaundice": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 9,
+    "confused_with": {}
   },
-  "accuracy": 0.9790575916230366,
+  "heart_attack": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "accuracy": 0.9475890985324947,
   "macro avg": {
-    "precision": 0.9828125,
-    "recall": 0.9815709175084176,
-    "f1-score": 0.9814256129866828,
-    "support": 382
+    "precision": 0.9349026160171671,
+    "recall": 0.94896331738437,
+    "f1-score": 0.9309283438775967,
+    "support": 477
   },
   "weighted avg": {
-    "precision": 0.981326352530541,
-    "recall": 0.9790575916230366,
-    "f1-score": 0.9794039710952981,
-    "support": 382
+    "precision": 0.9399824220393957,
+    "recall": 0.9475890985324947,
+    "f1-score": 0.9312924805324554,
+    "support": 477
   },
   "micro avg": {
-    "precision": 0.9790575916230366,
-    "recall": 0.9790575916230366,
-    "f1-score": 0.9790575916230366,
-    "support": 382
+    "precision": 0.9475890985324947,
+    "recall": 0.9475890985324947,
+    "f1-score": 0.9475890985324947,
+    "support": 477
   }
 }

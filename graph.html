@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rasa Core Visualisation</title>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://dagrejs.github.io/project/graphlib-dot/v0.6.3/graphlib-dot.js"></script>
+</head>
+<body>
+<div id="errormsg" style="color: #b00"></div>
+<svg>
+    <style id="graph-style">
+        .node.invisible > rect {
+            display: none;
+        }
+
+        .node.start > rect {
+            fill: #7f7;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node.end > rect {
+            fill: #f77;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node:not(.active) > rect, .node:not(.active) > .label {
+            opacity: 0.4;
+        }
+
+        .edgePath:not(.active) path {
+            opacity: 0.4;
+        }
+
+        .node.ellipsis > rect {
+            fill: #CCC;
+        }
+
+        .node.intent > rect {
+            fill: #7ff;
+        }
+
+        .node.dashed > rect {
+            stroke-dasharray: 5;
+        }
+
+        text {
+            font-weight: 300;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+            font-size: 14px;
+            color: #1f1d1d;
+        }
+
+        .node rect {
+            stroke: #444;
+            fill: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <g></g>
+</svg>
+<script>
+
+  function serveGraph() {
+    let oldInputGraphValue;
+
+    const url = 'visualization.dot';
+    const refreshInterval = 500;
+
+    // trigger a refresh by fetching an updated graph
+    setInterval(function () {
+      fetch(url).then(r => r.text()).then(dot => {
+        document.getElementById('errormsg').innerHTML = '';
+        if (oldInputGraphValue === dot) return;
+
+        oldInputGraphValue = dot;
+        drawGraph(dot);
+      }).catch(err => {
+        document.getElementById('errormsg').innerHTML =
+          'Failed to update plot. (' + err.message + ')';
+      });
+    }, refreshInterval);
+  }
+
+  function drawGraph(graph) {
+    let g = graphlibDot.read(graph);
+    // Set margins, if not present
+    if (!g.graph().hasOwnProperty("marginx") &&
+      !g.graph().hasOwnProperty("marginy")) {
+      g.graph().marginx = 20;
+      g.graph().marginy = 20;
+    }
+    g.graph().transition = function (selection) {
+      return selection.transition().duration(300);
+    };
+    // Render the graph into svg g
+    d3.select("svg g").call(render, g);
+  }
+  // Set up zoom support
+  const svg = d3.select("svg"),
+    inner = d3.select("svg g"),
+    zoom = d3.zoom().on("zoom", function () {
+      inner.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom);
+
+  // Create and configure the renderer
+  const render = dagreD3.render();
+
+  let isClient = false;
+  isClient = true;
+
+  if (isClient) {
+    // Mark all nodes and their edges as active
+    cssRules = document.getElementById('graph-style').sheet.cssRules;
+    cssRules[3].style.opacity = 1;
+    cssRules[4].style.opacity = 1;
+
+    let graph;
+    graph = `digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=utter_greet];
+2 [class="", fontsize=12, label=utter_cheer_up];
+3 [class="", fontsize=12, label=utter_did_that_help];
+4 [class="", fontsize=12, label=utter_can_i_help];
+5 [class="", fontsize=12, label=utter_fungal_infection];
+6 [class="", fontsize=12, label=utter_allergy];
+7 [class="", fontsize=12, label=utter_gerd];
+8 [class="", fontsize=12, label=utter_chronic_cholestasis];
+9 [class="", fontsize=12, label=utter_drug_reaction];
+10 [class="", fontsize=12, label=utter_peptic_ulcer_diseae];
+11 [class="", fontsize=12, label=utter_aids];
+12 [class="", fontsize=12, label=utter_diabetes];
+13 [class="", fontsize=12, label=utter_gastroenteritis];
+14 [class="", fontsize=12, label=utter_bronchial_asthma];
+15 [class="", fontsize=12, label=utter_hypertension];
+16 [class="", fontsize=12, label=utter_migraine];
+17 [class="", fontsize=12, label=utter_cervical_spondylosis];
+18 [class="", fontsize=12, label="utter_paralysis_(brain_hemorrhage)"];
+19 [class="", fontsize=12, label=utter_jaundice];
+20 [class="", fontsize=12, label=utter_malaria];
+21 [class="", fontsize=12, label=utter_chicken_pox];
+22 [class="", fontsize=12, label=utter_dengue];
+23 [class="", fontsize=12, label=utter_typhoid];
+24 [class="", fontsize=12, label=utter_hepatitis_a];
+25 [class="", fontsize=12, label=utter_hepatitis_b];
+26 [class="", fontsize=12, label=utter_hepatitis_c];
+27 [class="", fontsize=12, label=utter_hepatitis_d];
+28 [class="", fontsize=12, label=utter_hepatitis_e];
+29 [class="", fontsize=12, label=utter_alcoholic_hepatitis];
+30 [class="", fontsize=12, label=utter_tuberculosis];
+31 [class="", fontsize=12, label=utter_common_cold];
+32 [class="", fontsize=12, label=utter_pneumonia];
+33 [class="", fontsize=12, label="utter_dimorphic_hemmorhoids(piles)"];
+34 [class="", fontsize=12, label=utter_heart_attack];
+35 [class="", fontsize=12, label=utter_varicose_veins];
+36 [class="", fontsize=12, label=utter_hypothyroidism];
+37 [class="", fontsize=12, label=utter_hyperthyroidism];
+38 [class="", fontsize=12, label=utter_hypoglycemia];
+39 [class="", fontsize=12, label=utter_osteoarthristis];
+40 [class="", fontsize=12, label=utter_arthritis];
+41 [class="", fontsize=12, label="utter_(vertigo)_paroymsal_positional_vertigo"];
+42 [class="", fontsize=12, label=utter_acne];
+43 [class="", fontsize=12, label=utter_urinary_tract_infection];
+44 [class="", fontsize=12, label=utter_psoriasis];
+45 [class="", fontsize=12, label=utter_impetigo];
+47 [class="", fontsize=12, label=utter_fungal_infection_specialist];
+49 [class="", fontsize=12, label=utter_allergy_specialist];
+51 [class="", fontsize=12, label=utter_gerd_specialist];
+53 [class="", fontsize=12, label=utter_chronic_cholestasis_specialist];
+55 [class="", fontsize=12, label=utter_drug_reaction_specialist];
+57 [class="", fontsize=12, label=utter_peptic_ulcer_diseae_specialist];
+59 [class="", fontsize=12, label=utter_aids_specialist];
+61 [class="", fontsize=12, label=utter_diabetes_specialist];
+63 [class="", fontsize=12, label=utter_gastroenteritis_specialist];
+65 [class="", fontsize=12, label=utter_bronchial_asthma_specialist];
+67 [class="", fontsize=12, label=utter_hypertension_specialist];
+69 [class="", fontsize=12, label=utter_migraine_specialist];
+71 [class="", fontsize=12, label=utter_cervical_spondylosis_specialist];
+73 [class="", fontsize=12, label="utter_paralysis_(brain_hemorrhage)_specialist"];
+75 [class="", fontsize=12, label=utter_jaundice_specialist];
+77 [class="", fontsize=12, label=utter_malaria_specialist];
+79 [class="", fontsize=12, label=utter_chicken_pox_specialist];
+81 [class="", fontsize=12, label=utter_dengue_specialist];
+83 [class="", fontsize=12, label=utter_typhoid_specialist];
+85 [class="", fontsize=12, label=utter_hepatitis_a_specialist];
+87 [class="", fontsize=12, label=utter_hepatitis_b_specialist];
+89 [class="", fontsize=12, label=utter_hepatitis_c_specialist];
+91 [class="", fontsize=12, label=utter_hepatitis_d_specialist];
+93 [class="", fontsize=12, label=utter_hepatitis_e_specialist];
+95 [class="", fontsize=12, label=utter_alcoholic_hepatitis_specialist];
+97 [class="", fontsize=12, label=utter_tuberculosis_specialist];
+99 [class="", fontsize=12, label=utter_common_cold_specialist];
+101 [class="", fontsize=12, label=utter_pneumonia_specialist];
+103 [class="", fontsize=12, label="utter_dimorphic_hemmorhoids(piles)_specialist"];
+105 [class="", fontsize=12, label=utter_heart_attack_specialist];
+107 [class="", fontsize=12, label=utter_varicose_veins_specialist];
+109 [class="", fontsize=12, label=utter_hypothyroidism_specialist];
+111 [class="", fontsize=12, label=utter_hyperthyroidism_specialist];
+113 [class="", fontsize=12, label=utter_hypoglycemia_specialist];
+115 [class="", fontsize=12, label=utter_osteoarthristis_specialist];
+117 [class="", fontsize=12, label=utter_arthritis_specialist];
+119 [class="", fontsize=12, label="utter_(vertigo)_paroymsal_positional_vertigo_specialist"];
+121 [class="", fontsize=12, label=utter_acne_specialist];
+123 [class="", fontsize=12, label=utter_happy];
+126 [class="", fontsize=12, label=utter_urinary_tract_infection_specialist];
+128 [class="", fontsize=12, label=utter_psoriasis_specialist];
+130 [class="", fontsize=12, label=utter_impetigo_specialist];
+131 [class="", fontsize=12, label=utter_yes_of_course];
+132 [class="", fontsize=12, label=utter_provide_info];
+133 [class="", fontsize=12, label=utter_same_informations];
+137 [class="", fontsize=12, label=action_slots_reset];
+138 [class="", fontsize=12, label=utter_provide_info];
+139 [class="", fontsize=12, label=utter_yes_of_course];
+140 [class="", fontsize=12, label=utter_can_i_help];
+141 [class="", fontsize=12, label=utter_whats_symptoms];
+147 [class="", fontsize=12, label="..."];
+148 [class="", fontsize=12, label=utter_default];
+150 [class="", fontsize=12, label=utter_goodbye];
+152 [class="", fontsize=12, label=utter_iamabot];
+154 [class="", fontsize=12, label=utter_provide_info];
+155 [class="", fontsize=12, label=user_details_form];
+157 [class="", fontsize=12, label=utter_same_informations];
+160 [class="", fontsize=12, label=user_details_form];
+161 [class="", fontsize=12, label=action_submit];
+163 [class="", fontsize=12, label=utter_out_of_scope];
+164 [class=intent, fillcolor=lightblue, label="hey dude", shape=rect, style=filled];
+165 [class=intent, fillcolor=lightblue, label="[itching] [nodal_skin_eruptions] [dischromic_patches] (Symptoms)", shape=rect, style=filled];
+166 [class=intent, fillcolor=lightblue, label="[continuous_sneezing] [chills] [watering_from_eyes] (Symptoms)", shape=rect, style=filled];
+167 [class=intent, fillcolor=lightblue, label="[stomach_pain] [acidity] [ulcers_on_tongue] [vomiting] [chest_pain] (Symptoms)", shape=rect, style=filled];
+168 [class=intent, fillcolor=lightblue, label="[itching] [vomiting] [yellowish_skin] [nausea] [loss_of_appetite] [yellowing_of_eyes] (Symptoms)", shape=rect, style=filled];
+169 [class=intent, fillcolor=lightblue, label="[itching] [skin_rash] [stomach_pain] [burning_micturition] [spotting_urination] (Symptoms)", shape=rect, style=filled];
+170 [class=intent, fillcolor=lightblue, label="[vomiting] [loss_of_appetite] [abdominal_pain] [passage_of_gases] [internal_itching] (Symptoms)", shape=rect, style=filled];
+171 [class=intent, fillcolor=lightblue, label="[patches_in_throat] [high_fever] [extra_marital_contacts] (Symptoms)", shape=rect, style=filled];
+172 [class=intent, fillcolor=lightblue, label="[fatigue] [weight_loss] [restlessness] [lethargy] [irregular_sugar_level] [blurred_and_distorted_vision] [excessive_hunger] [increased_appetite] [polyuria] (Symptoms)", shape=rect, style=filled];
+173 [class=intent, fillcolor=lightblue, label="[vomiting] [sunken_eyes] [dehydration] [diarrhoea] (Symptoms)", shape=rect, style=filled];
+174 [class=intent, fillcolor=lightblue, label="[fatigue] [cough] [high_fever] [breathlessness] [family_history] [mucoid_sputum] (Symptoms)", shape=rect, style=filled];
+175 [class=intent, fillcolor=lightblue, label="[headache] [chest_pain] [dizziness] [loss_of_balance] [lack_of_concentration] (Symptoms)", shape=rect, style=filled];
+176 [class=intent, fillcolor=lightblue, label="[acidity] [indigestion] [headache] [blurred_and_distorted_vision] [excessive_hunger] [stiff_neck] [depression] [irritability] (Symptoms)", shape=rect, style=filled];
+177 [class=intent, fillcolor=lightblue, label="[weakness_in_limbs] [neck_pain] [dizziness] [loss_of_balance] (Symptoms)", shape=rect, style=filled];
+178 [class=intent, fillcolor=lightblue, label="[vomiting] [weakness_of_one_body_side] [altered_sensorium] (Symptoms)", shape=rect, style=filled];
+179 [class=intent, fillcolor=lightblue, label="[itching] [vomiting] [fatigue] [high_fever] [yellowish_skin] [dark_urine] [abdominal_pain] (Symptoms)", shape=rect, style=filled];
+180 [class=intent, fillcolor=lightblue, label="[chills] [vomiting] [high_fever] [sweating] [headache] [diarrhoea] [muscle_pain] (Symptoms)", shape=rect, style=filled];
+181 [class=intent, fillcolor=lightblue, label="[itching] [skin_rash] [fatigue] [lethargy] [high_fever] [headache] [loss_of_appetite] [mild_fever] [swelled_lymph_nodes] [malaise] [red_spots_over_body] (Symptoms)", shape=rect, style=filled];
+182 [class=intent, fillcolor=lightblue, label="[skin_rash] [chills] [joint_pain] [vomiting] [fatigue] [high_fever] [headache] [nausea] [loss_of_appetite] [pain_behind_the_eyes] [back_pain] [malaise] [muscle_pain] [red_spots_over_body] (Symptoms)", shape=rect, style=filled];
+183 [class=intent, fillcolor=lightblue, label="[chills] [vomiting] [fatigue] [high_fever] [headache] [nausea] [constipation] [abdominal_pain] [toxic_look_] [typhos] [belly_pain] (Symptoms)", shape=rect, style=filled];
+184 [class=intent, fillcolor=lightblue, label="[temperature] [jaundice] [nausea] [itch] (Symptoms)", shape=rect, style=filled];
+185 [class=intent, fillcolor=lightblue, label="[temperature] [tiredness] [nausea] [muscle] [pain] (Symptoms)", shape=rect, style=filled];
+186 [class=intent, fillcolor=lightblue, label="[fatigue] [nausea] [loss_of_appetite] [yellowing_of_eyes] [family_history] (Symptoms)", shape=rect, style=filled];
+187 [class=intent, fillcolor=lightblue, label="[joint_pain] [vomiting] [fatigue] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] (Symptoms)", shape=rect, style=filled];
+188 [class=intent, fillcolor=lightblue, label="[joint_pain] [vomiting] [fatigue] [high_fever] [yellowish_skin] [dark_urine] [nausea] [loss_of_appetite] [abdominal_pain] [yellowing_of_eyes] [acute_liver_failure] [coma] [stomach_bleeding] (Symptoms)", shape=rect, style=filled];
+189 [class=intent, fillcolor=lightblue, label="[vomiting] [yellowish_skin] [abdominal_pain] [swelling_of_stomach] [history_of_alcohol_consumption] [fluid_overload] (Symptoms)", shape=rect, style=filled];
+190 [class=intent, fillcolor=lightblue, label="[chills] [vomiting] [weight_loss] [cough] [high_fever] [breathlessness] [sweating] [loss_of_appetite] [mild_fever] [yellowing_of_eyes] [swelled_lymph_nodes] [malaise] [phlegm] [chest_pain] [blood_in_sputum] (Symptoms)", shape=rect, style=filled];
+191 [class=intent, fillcolor=lightblue, label="[continuous_sneezing] [chills] [fatigue] [high_fever] [headache] [swelled_lymph_nodes] [malaise] [phlegm] [throat_irritation] [redness_of_eyes] [sinus_pressure] [runny_nose] [congestion] [chest_pain] [loss_of_smell] [muscle_pain] (Symptoms)", shape=rect, style=filled];
+192 [class=intent, fillcolor=lightblue, label="[cough] [mucus] [short] [of] [breath] [temperature] (Symptoms)", shape=rect, style=filled];
+193 [class=intent, fillcolor=lightblue, label="[constipation] [pain_during_bowel_movements] [pain_in_anal_region] [irritation_in_anus] (Symptoms)", shape=rect, style=filled];
+194 [class=intent, fillcolor=lightblue, label="[vomiting] [breathlessness] [chest_pain] (Symptoms)", shape=rect, style=filled];
+195 [class=intent, fillcolor=lightblue, label="[fatigue] [cramps] [bruising] [swollen_legs] [swollen_blood_vessels] [prominent_veins_on_calf] (Symptoms)", shape=rect, style=filled];
+196 [class=intent, fillcolor=lightblue, label="[fatigue] [cold_hands_and_feets] [mood_swings] [lethargy] [dizziness] [puffy_face_and_eyes] [enlarged_thyroid] [brittle_nails] [swollen_extremeties] [depression] [irritability] [abnormal_menstruation] (Symptoms)", shape=rect, style=filled];
+197 [class=intent, fillcolor=lightblue, label="[fatigue] [mood_swings] [weight_loss] [restlessness] [sweating] [diarrhoea] [excessive_hunger] [muscle_weakness] [irritability] [abnormal_menstruation] (Symptoms)", shape=rect, style=filled];
+198 [class=intent, fillcolor=lightblue, label="[vomiting] [fatigue] [anxiety] [sweating] [headache] [nausea] [excessive_hunger] [drying_and_tingling_lips] [slurred_speech] [irritability] [palpitations] (Symptoms)", shape=rect, style=filled];
+199 [class=intent, fillcolor=lightblue, label="[joint_pain] [neck_pain] [knee_pain] [hip_joint_pain] [swelling_joints] (Symptoms)", shape=rect, style=filled];
+200 [class=intent, fillcolor=lightblue, label="[muscle_weakness] [swelling_joints] [movement_stiffness] [painful_walking] (Symptoms)", shape=rect, style=filled];
+201 [class=intent, fillcolor=lightblue, label="[vomiting] [nausea] [spinning_movements] [loss_of_balance] [unsteadiness] (Symptoms)", shape=rect, style=filled];
+202 [class=intent, fillcolor=lightblue, label="[skin_rash] [pus_filled_pimples] [blackheads] [scurring] (Symptoms)", shape=rect, style=filled];
+203 [class=intent, fillcolor=lightblue, label="[burning_micturition] [bladder_discomfort] [foul_smell_of] [urine] [continuous_feel_of_urine] (Symptoms)", shape=rect, style=filled];
+204 [class=intent, fillcolor=lightblue, label="[skin_rash] [joint_pain] [skin_peeling] [small_dents_in_nails] [inflammatory_nails] (Symptoms)", shape=rect, style=filled];
+205 [class=intent, fillcolor=lightblue, label="[skin_rash] [high_fever] [blister] [red_sore_around_nose] [yellow_crust_ooze] (Symptoms)", shape=rect, style=filled];
+206 [class=intent, fillcolor=lightblue, label="I'm looking to book an appointment.", shape=rect, style=filled];
+207 [class=intent, fillcolor=lightblue, label="Can you help me?", shape=rect, style=filled];
+208 [class=intent, fillcolor=lightblue, label="so sad", shape=rect, style=filled];
+209 [class=intent, fillcolor=lightblue, label=perfect, shape=rect, style=filled];
+210 [class=intent, fillcolor=lightblue, label="not really", shape=rect, style=filled];
+211 [class=intent, fillcolor=lightblue, label=yes, shape=rect, style=filled];
+212 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+213 [class=intent, fillcolor=lightblue, label="i want to see a doctor, recommend to me which specialist i should go to ?", shape=rect, style=filled];
+214 [class=intent, fillcolor=lightblue, label="which doctor should i visit ?", shape=rect, style=filled];
+215 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+216 [class=intent, fillcolor=lightblue, label="what is the name of the specialist ?", shape=rect, style=filled];
+217 [class=intent, fillcolor=lightblue, label="what is the name of the specialist ?", shape=rect, style=filled];
+218 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+219 [class=intent, fillcolor=lightblue, label="what is the name of the specialist ?", shape=rect, style=filled];
+220 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+221 [class=intent, fillcolor=lightblue, label="which doctor should i visit ?", shape=rect, style=filled];
+222 [class=intent, fillcolor=lightblue, label="how is the specialist doctor called ?", shape=rect, style=filled];
+223 [class=intent, fillcolor=lightblue, label="which doctor should i visit ?", shape=rect, style=filled];
+224 [class=intent, fillcolor=lightblue, label="i want to see a doctor, recommend to me which specialist i should go to ?", shape=rect, style=filled];
+225 [class=intent, fillcolor=lightblue, label="what is the name of the specialist ?", shape=rect, style=filled];
+226 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+227 [class=intent, fillcolor=lightblue, label="i want to see a doctor, recommend to me which specialist i should go to ?", shape=rect, style=filled];
+228 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+229 [class=intent, fillcolor=lightblue, label="what is the name of the specialist ?", shape=rect, style=filled];
+230 [class=intent, fillcolor=lightblue, label="how is the specialist doctor called ?", shape=rect, style=filled];
+231 [class=intent, fillcolor=lightblue, label="i want to see a doctor, recommend to me which specialist i should go to ?", shape=rect, style=filled];
+232 [class=intent, fillcolor=lightblue, label="which doctor should i visit ?", shape=rect, style=filled];
+233 [class=intent, fillcolor=lightblue, label="how is the specialist doctor called ?", shape=rect, style=filled];
+234 [class=intent, fillcolor=lightblue, label="what is the name of the specialist ?", shape=rect, style=filled];
+235 [class=intent, fillcolor=lightblue, label="how is the specialist doctor called ?", shape=rect, style=filled];
+236 [class=intent, fillcolor=lightblue, label="what is the name of the specialist ?", shape=rect, style=filled];
+237 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+238 [class=intent, fillcolor=lightblue, label="what is the name of the specialist ?", shape=rect, style=filled];
+239 [class=intent, fillcolor=lightblue, label="i want to see a doctor, recommend to me which specialist i should go to ?", shape=rect, style=filled];
+240 [class=intent, fillcolor=lightblue, label="which doctor should i visit ?", shape=rect, style=filled];
+241 [class=intent, fillcolor=lightblue, label="how is the specialist doctor called ?", shape=rect, style=filled];
+242 [class=intent, fillcolor=lightblue, label="how is the specialist doctor called ?", shape=rect, style=filled];
+243 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+244 [class=intent, fillcolor=lightblue, label="i want to see a doctor, recommend to me which specialist i should go to ?", shape=rect, style=filled];
+245 [class=intent, fillcolor=lightblue, label="how is the specialist doctor called ?", shape=rect, style=filled];
+246 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+247 [class=intent, fillcolor=lightblue, label="how is the specialist doctor called ?", shape=rect, style=filled];
+248 [class=intent, fillcolor=lightblue, label="i want to see a doctor, recommend to me which specialist i should go to ?", shape=rect, style=filled];
+249 [class=intent, fillcolor=lightblue, label="what is the name of the specialist ?", shape=rect, style=filled];
+250 [class=intent, fillcolor=lightblue, label="where i must go ?", shape=rect, style=filled];
+251 [class=intent, fillcolor=lightblue, label="how is the specialist doctor called ?", shape=rect, style=filled];
+252 [class=intent, fillcolor=lightblue, label="i want to see a doctor, recommend to me which specialist i should go to ?", shape=rect, style=filled];
+253 [class=intent, fillcolor=lightblue, label="I'm looking to book an appointment.", shape=rect, style=filled];
+254 [class=intent, fillcolor=lightblue, label=never, shape=rect, style=filled];
+255 [class=intent, fillcolor=lightblue, label="I have been experiencing some discomfort and pain in a certain area of my body. Can you please examine me and tell me what's going on?", shape=rect, style=filled];
+256 [class=intent, fillcolor=lightblue, label="good by", shape=rect, style=filled];
+257 [class=intent, fillcolor=lightblue, label="cee you later", shape=rect, style=filled];
+258 [class=intent, fillcolor=lightblue, label="are you a bot?", shape=rect, style=filled];
+259 [class=intent, fillcolor=lightblue, label="/nlu_fallback", shape=rect, style=filled];
+260 [class=intent, fillcolor=lightblue, label=yes, shape=rect, style=filled];
+261 [class=intent, fillcolor=lightblue, label="of course", shape=rect, style=filled];
+0 -> 147  [class="", key=NONE, label=""];
+0 -> 164  [class="", key=0];
+0 -> 165  [class="", key=0];
+0 -> 166  [class="", key=0];
+0 -> 167  [class="", key=0];
+0 -> 168  [class="", key=0];
+0 -> 169  [class="", key=0];
+0 -> 170  [class="", key=0];
+0 -> 171  [class="", key=0];
+0 -> 172  [class="", key=0];
+0 -> 173  [class="", key=0];
+0 -> 174  [class="", key=0];
+0 -> 175  [class="", key=0];
+0 -> 176  [class="", key=0];
+0 -> 177  [class="", key=0];
+0 -> 178  [class="", key=0];
+0 -> 179  [class="", key=0];
+0 -> 180  [class="", key=0];
+0 -> 181  [class="", key=0];
+0 -> 182  [class="", key=0];
+0 -> 183  [class="", key=0];
+0 -> 184  [class="", key=0];
+0 -> 185  [class="", key=0];
+0 -> 186  [class="", key=0];
+0 -> 187  [class="", key=0];
+0 -> 188  [class="", key=0];
+0 -> 189  [class="", key=0];
+0 -> 190  [class="", key=0];
+0 -> 191  [class="", key=0];
+0 -> 192  [class="", key=0];
+0 -> 193  [class="", key=0];
+0 -> 194  [class="", key=0];
+0 -> 195  [class="", key=0];
+0 -> 196  [class="", key=0];
+0 -> 197  [class="", key=0];
+0 -> 198  [class="", key=0];
+0 -> 199  [class="", key=0];
+0 -> 200  [class="", key=0];
+0 -> 201  [class="", key=0];
+0 -> 202  [class="", key=0];
+0 -> 203  [class="", key=0];
+0 -> 204  [class="", key=0];
+0 -> 205  [class="", key=0];
+0 -> 206  [class="", key=0];
+0 -> 207  [class="", key=0];
+1 -> 208  [class="", key=0];
+1 -> 209  [class="", key=0];
+2 -> 3  [class="", key=NONE, label=""];
+3 -> 210  [class="", key=0];
+3 -> 211  [class="", key=0];
+4 -> "-1"  [class="", key=NONE, label=""];
+5 -> "-1"  [class="", key=NONE, label=""];
+5 -> 212  [class="", key=0];
+6 -> "-1"  [class="", key=NONE, label=""];
+6 -> 213  [class="", key=0];
+7 -> "-1"  [class="", key=NONE, label=""];
+7 -> 214  [class="", key=0];
+8 -> "-1"  [class="", key=NONE, label=""];
+8 -> 215  [class="", key=0];
+9 -> "-1"  [class="", key=NONE, label=""];
+9 -> 216  [class="", key=0];
+10 -> "-1"  [class="", key=NONE, label=""];
+10 -> 217  [class="", key=0];
+11 -> "-1"  [class="", key=NONE, label=""];
+11 -> 218  [class="", key=0];
+12 -> "-1"  [class="", key=NONE, label=""];
+12 -> 219  [class="", key=0];
+13 -> "-1"  [class="", key=NONE, label=""];
+13 -> 220  [class="", key=0];
+14 -> "-1"  [class="", key=NONE, label=""];
+14 -> 221  [class="", key=0];
+15 -> "-1"  [class="", key=NONE, label=""];
+15 -> 222  [class="", key=0];
+16 -> "-1"  [class="", key=NONE, label=""];
+16 -> 223  [class="", key=0];
+17 -> "-1"  [class="", key=NONE, label=""];
+17 -> 224  [class="", key=0];
+18 -> "-1"  [class="", key=NONE, label=""];
+18 -> 225  [class="", key=0];
+19 -> "-1"  [class="", key=NONE, label=""];
+19 -> 226  [class="", key=0];
+20 -> "-1"  [class="", key=NONE, label=""];
+20 -> 227  [class="", key=0];
+21 -> "-1"  [class="", key=NONE, label=""];
+21 -> 228  [class="", key=0];
+22 -> "-1"  [class="", key=NONE, label=""];
+22 -> 229  [class="", key=0];
+23 -> "-1"  [class="", key=NONE, label=""];
+23 -> 230  [class="", key=0];
+24 -> "-1"  [class="", key=NONE, label=""];
+24 -> 231  [class="", key=0];
+25 -> "-1"  [class="", key=NONE, label=""];
+25 -> 232  [class="", key=0];
+26 -> "-1"  [class="", key=NONE, label=""];
+26 -> 233  [class="", key=0];
+27 -> "-1"  [class="", key=NONE, label=""];
+27 -> 234  [class="", key=0];
+28 -> "-1"  [class="", key=NONE, label=""];
+28 -> 235  [class="", key=0];
+29 -> "-1"  [class="", key=NONE, label=""];
+29 -> 236  [class="", key=0];
+30 -> "-1"  [class="", key=NONE, label=""];
+30 -> 237  [class="", key=0];
+31 -> "-1"  [class="", key=NONE, label=""];
+31 -> 238  [class="", key=0];
+32 -> "-1"  [class="", key=NONE, label=""];
+32 -> 239  [class="", key=0];
+33 -> "-1"  [class="", key=NONE, label=""];
+33 -> 240  [class="", key=0];
+34 -> "-1"  [class="", key=NONE, label=""];
+34 -> 241  [class="", key=0];
+35 -> "-1"  [class="", key=NONE, label=""];
+35 -> 242  [class="", key=0];
+36 -> "-1"  [class="", key=NONE, label=""];
+36 -> 243  [class="", key=0];
+37 -> "-1"  [class="", key=NONE, label=""];
+37 -> 244  [class="", key=0];
+38 -> "-1"  [class="", key=NONE, label=""];
+38 -> 245  [class="", key=0];
+39 -> "-1"  [class="", key=NONE, label=""];
+39 -> 246  [class="", key=0];
+40 -> "-1"  [class="", key=NONE, label=""];
+40 -> 247  [class="", key=0];
+41 -> "-1"  [class="", key=NONE, label=""];
+41 -> 248  [class="", key=0];
+42 -> "-1"  [class="", key=NONE, label=""];
+42 -> 249  [class="", key=0];
+43 -> "-1"  [class="", key=NONE, label=""];
+43 -> 250  [class="", key=0];
+44 -> "-1"  [class="", key=NONE, label=""];
+44 -> 251  [class="", key=0];
+45 -> "-1"  [class="", key=NONE, label=""];
+45 -> 252  [class="", key=0];
+47 -> "-1"  [class="", key=NONE, label=""];
+49 -> "-1"  [class="", key=NONE, label=""];
+51 -> "-1"  [class="", key=NONE, label=""];
+53 -> "-1"  [class="", key=NONE, label=""];
+55 -> "-1"  [class="", key=NONE, label=""];
+57 -> "-1"  [class="", key=NONE, label=""];
+59 -> "-1"  [class="", key=NONE, label=""];
+61 -> "-1"  [class="", key=NONE, label=""];
+63 -> "-1"  [class="", key=NONE, label=""];
+65 -> "-1"  [class="", key=NONE, label=""];
+67 -> "-1"  [class="", key=NONE, label=""];
+69 -> "-1"  [class="", key=NONE, label=""];
+71 -> "-1"  [class="", key=NONE, label=""];
+73 -> "-1"  [class="", key=NONE, label=""];
+75 -> "-1"  [class="", key=NONE, label=""];
+77 -> "-1"  [class="", key=NONE, label=""];
+79 -> "-1"  [class="", key=NONE, label=""];
+81 -> "-1"  [class="", key=NONE, label=""];
+83 -> "-1"  [class="", key=NONE, label=""];
+85 -> "-1"  [class="", key=NONE, label=""];
+87 -> "-1"  [class="", key=NONE, label=""];
+89 -> "-1"  [class="", key=NONE, label=""];
+91 -> "-1"  [class="", key=NONE, label=""];
+93 -> "-1"  [class="", key=NONE, label=""];
+95 -> "-1"  [class="", key=NONE, label=""];
+97 -> "-1"  [class="", key=NONE, label=""];
+99 -> "-1"  [class="", key=NONE, label=""];
+101 -> "-1"  [class="", key=NONE, label=""];
+103 -> "-1"  [class="", key=NONE, label=""];
+105 -> "-1"  [class="", key=NONE, label=""];
+107 -> "-1"  [class="", key=NONE, label=""];
+109 -> "-1"  [class="", key=NONE, label=""];
+111 -> "-1"  [class="", key=NONE, label=""];
+113 -> "-1"  [class="", key=NONE, label=""];
+115 -> "-1"  [class="", key=NONE, label=""];
+117 -> "-1"  [class="", key=NONE, label=""];
+119 -> "-1"  [class="", key=NONE, label=""];
+121 -> "-1"  [class="", key=NONE, label=""];
+123 -> 4  [class="", key=NONE, label=""];
+126 -> "-1"  [class="", key=NONE, label=""];
+128 -> "-1"  [class="", key=NONE, label=""];
+130 -> "-1"  [class="", key=NONE, label=""];
+131 -> 132  [class="", key=NONE, label=""];
+132 -> 253  [class="", key=0];
+133 -> "-1"  [class="", key=NONE, label=""];
+133 -> 254  [class="", key=0];
+137 -> 138  [class="", key=NONE, label=""];
+138 -> "-1"  [class="", key=NONE, label=""];
+139 -> 140  [class="", key=NONE, label=""];
+140 -> 255  [class="", key=0];
+141 -> "-1"  [class="", key=NONE, label=""];
+147 -> 154  [class="", key=NONE, label=""];
+147 -> 157  [class="", key=NONE, label=""];
+147 -> 160  [class="", key=NONE, label=""];
+147 -> 256  [class="", key=0];
+147 -> 257  [class="", key=0];
+147 -> 258  [class="", key=0];
+147 -> 259  [class="", key=0];
+148 -> "-1"  [class="", key=NONE, label=""];
+150 -> "-1"  [class="", key=NONE, label=""];
+152 -> "-1"  [class="", key=NONE, label=""];
+154 -> 260  [class="", key=0];
+155 -> "-1"  [class="", key=NONE, label=""];
+157 -> 261  [class="", key=0];
+160 -> 161  [class="", key=NONE, label=""];
+161 -> "-1"  [class="", key=NONE, label=""];
+163 -> "-1"  [class="", key=NONE, label=""];
+164 -> 1  [class="", key=0];
+165 -> 5  [class="", key=0];
+166 -> 6  [class="", key=0];
+167 -> 7  [class="", key=0];
+168 -> 8  [class="", key=0];
+169 -> 9  [class="", key=0];
+170 -> 10  [class="", key=0];
+171 -> 11  [class="", key=0];
+172 -> 12  [class="", key=0];
+173 -> 13  [class="", key=0];
+174 -> 14  [class="", key=0];
+175 -> 15  [class="", key=0];
+176 -> 16  [class="", key=0];
+177 -> 17  [class="", key=0];
+178 -> 18  [class="", key=0];
+179 -> 19  [class="", key=0];
+180 -> 20  [class="", key=0];
+181 -> 21  [class="", key=0];
+182 -> 22  [class="", key=0];
+183 -> 23  [class="", key=0];
+184 -> 24  [class="", key=0];
+185 -> 25  [class="", key=0];
+186 -> 26  [class="", key=0];
+187 -> 27  [class="", key=0];
+188 -> 28  [class="", key=0];
+189 -> 29  [class="", key=0];
+190 -> 30  [class="", key=0];
+191 -> 31  [class="", key=0];
+192 -> 32  [class="", key=0];
+193 -> 33  [class="", key=0];
+194 -> 34  [class="", key=0];
+195 -> 35  [class="", key=0];
+196 -> 36  [class="", key=0];
+197 -> 37  [class="", key=0];
+198 -> 38  [class="", key=0];
+199 -> 39  [class="", key=0];
+200 -> 40  [class="", key=0];
+201 -> 41  [class="", key=0];
+202 -> 42  [class="", key=0];
+203 -> 43  [class="", key=0];
+204 -> 44  [class="", key=0];
+205 -> 45  [class="", key=0];
+206 -> 131  [class="", key=0];
+207 -> 139  [class="", key=0];
+208 -> 2  [class="", key=0];
+209 -> 123  [class="", key=0];
+210 -> 4  [class="", key=0];
+211 -> 123  [class="", key=0];
+212 -> 47  [class="", key=0];
+213 -> 49  [class="", key=0];
+214 -> 51  [class="", key=0];
+215 -> 53  [class="", key=0];
+216 -> 55  [class="", key=0];
+217 -> 57  [class="", key=0];
+218 -> 59  [class="", key=0];
+219 -> 61  [class="", key=0];
+220 -> 63  [class="", key=0];
+221 -> 65  [class="", key=0];
+222 -> 67  [class="", key=0];
+223 -> 69  [class="", key=0];
+224 -> 71  [class="", key=0];
+225 -> 73  [class="", key=0];
+226 -> 75  [class="", key=0];
+227 -> 77  [class="", key=0];
+228 -> 79  [class="", key=0];
+229 -> 81  [class="", key=0];
+230 -> 83  [class="", key=0];
+231 -> 85  [class="", key=0];
+232 -> 87  [class="", key=0];
+233 -> 89  [class="", key=0];
+234 -> 91  [class="", key=0];
+235 -> 93  [class="", key=0];
+236 -> 95  [class="", key=0];
+237 -> 97  [class="", key=0];
+238 -> 99  [class="", key=0];
+239 -> 101  [class="", key=0];
+240 -> 103  [class="", key=0];
+241 -> 105  [class="", key=0];
+242 -> 107  [class="", key=0];
+243 -> 109  [class="", key=0];
+244 -> 111  [class="", key=0];
+245 -> 113  [class="", key=0];
+246 -> 115  [class="", key=0];
+247 -> 117  [class="", key=0];
+248 -> 119  [class="", key=0];
+249 -> 121  [class="", key=0];
+250 -> 126  [class="", key=0];
+251 -> 128  [class="", key=0];
+252 -> 130  [class="", key=0];
+253 -> 133  [class="", key=0];
+254 -> 137  [class="", key=0];
+255 -> 141  [class="", key=0];
+256 -> 148  [class="", key=0];
+257 -> 150  [class="", key=0];
+258 -> 152  [class="", key=0];
+259 -> 163  [class="", key=0];
+260 -> 155  [class="", key=0];
+261 -> 155  [class="", key=0];
+}
+`;
+    drawGraph(graph);
+  } else {
+    serveGraph();
+  }
+
+
+</script>
+</body>
+</html>

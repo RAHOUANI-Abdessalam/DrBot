@@ -57,6 +57,10 @@ intents:
   - my_phone_number
   - chronic_diseases
   - out_of_scope
+  - reserve_an_appointment
+  - testing_3symptoms
+  - all_at_once
+  - in_discussion
 
 responses:
   utter_greet:
@@ -81,8 +85,8 @@ responses:
   utter_can_i_help:
     - text: "How can i Help you !! "
 
-  utter_ask_informations:
-    - text: "Are you agree to provide to me some personal informations ?"
+  utter_ask_new_informations:
+    - text: "Are you agree to provide the new personal informations ? Affirm or Deny "
 
   utter_whats_symptoms:
     - text: "what is your symptoms ? "
@@ -337,31 +341,62 @@ responses:
     - text: "You should visit a Dermatologist or General Practitioner"
 
   utter_provide_info:
-    - text: "Can you provide me some personal informations ?"
+    - text: "Can you provide to me some personal informations (Name and Phone number)? Yes or No"
+    - text: "I need some personal information such as Name a and Phone number, Are you agree ?"
+    - text: "Are you in to give me basics informations ?"
 
   utter_ask_name:
-    - text: "Give me your name please"
+    - text: "Give me your name and phone number please"
+    - text: "Provide the name please"
+    - text: "what is the name"
 
   utter_ask_phone_number:
-    - text: "Give me your phone number"
+    - text: "Give me the Phone number"
 
   utter_ask_chronics_diseases:
     - text: "Do You have any chronics diseases ?"
 
   utter_whats_chronics_diseases:
-    - text: "tell them to me ?"
+    - text: "Tell them to me ?"
 
   utter_yes_of_course:
-    - text: "yes,of course!!"
+    - text: "Yes of course!!"
+    - text: "With pleasure"
+    - text: "With happiest"
 
   utter_details_thanks:
-    - text: "Thanks for providing the given details \nName: {Name},\nMobile Number: {Mobile_number}"
+    #- text: "Thanks for providing the given details \nName: {Name},\nMobile Number: {Mobile_number}"
+    - text: "Your request for an appointment was sent successfully to the number (+213777038502) with the given details \nName: {Name},\nMobile Number: {Mobile_number}\nDo you want somthing else ?"
 
   utter_out_of_scope:
     - text: "I'm sorry, I didn't quite understand what you're asking. Could you please rephrase your question?"
     - text: "I'm sorry, but that is beyond the scope of my expertise. Can you please provide me with more details on what you need help with?"
     - text: "I'm sorry, I don't have the knowledge to provide you with the information you're requesting. Can I help you with anything else?"
     - text: "I'm sorry, I'm not programmed to answer that question. Can I help you with something else?"
+
+  utter_same_informations:
+    - text: "With the same last given informations ?"
+
+  utter_you_reach_out_reservation:
+    - text: "You've reach out more then 3 reservations, Please start over"
+
+  utter_ask_symptoms:
+    - text: "more symptoms"
+
+  utter_provide_symptoms_ask_mode:
+    - text: "I need you to tell me what is your symptoms \nhow do you want to tell me, all at once (faster in my model) or we discuss them (more precision)"
+
+  utter_provide_symptom_mode_once:
+    - text: "Please type all your suspects symptoms at once"
+
+  utter_provide_symptom_mode_one_by_one:
+    - text: "provide symptoms one by one"
+
+  utter_empty:
+    - text: " "
+
+  utter_diagnostic_began:
+    - text: "Your diagnosis is currently in progress \n"
 
 actions:
 - utter_greet
@@ -371,7 +406,7 @@ actions:
 - utter_goodbye
 - utter_whats_symptoms
 - utter_can_i_help
-- utter_ask_informations
+- utter_ask_new_informations
 - utter_default
 - utter_iamabot
 - utter_fungal_infection
@@ -459,22 +494,43 @@ actions:
 - utter_provide_info
 - utter_ask_name
 - utter_ask_phone_number
+- utter_ask_symptoms
 - utter_ask_chronics_diseases
 - utter_whats_chronics_diseases
 - utter_yes_of_course
 - action_hello_world
 - action_submit
 - utter_details_thanks
+- action_restart
+- action_slots_reset
+- action_loop_reset
+- utter_same_informations
+- utter_you_reach_out_reservation
+- action_3symptoms_intent
+- utter_provide_symptoms_ask_mode
+- utter_provide_symptom_mode_once
+- utter_provide_symptom_mode_one_by_one
+- utter_empty
+- utter_diagnostic_began
+- action_do_nothing
+
 
 entities:
-  - Symptoms
+  - symptoms
   - name
   - phone_number
 
 
 slots:
+  symptoms:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: symptoms
+
   name:
     type: text
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: name
@@ -485,12 +541,19 @@ slots:
       - type: from_entity
         entity: phone_number
 
+#  entity_filled:
+#    type: bool
+#    influence_conversation: true
+
 ##to extract the symptoms in type we write from_text to take all the text instead of entity (video forms in detail 9:20 min)
 forms:
   user_details_form:
     required_slots:
         - name
         - phone_number
+  user_symptoms_form:
+    required_slots:
+        - symptoms
 
 session_config:
   session_expiration_time: 60
