@@ -1,6 +1,15 @@
 version: "3.1"
 
 rules:
+- rule: User expresses gratitude
+  steps:
+    - intent: thanks
+    - action: utter_thanks
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: start
+  - action: utter_greet
 
 - rule: Say goodbye anytime the user says goodbye
   steps:
@@ -22,6 +31,11 @@ rules:
     - intent: nlu_fallback
     - action: action_do_nothing
 
+- rule: how can you assist me
+  steps:
+    - intent: what_can_you_do
+    - action: utter_i_can_do
+
 ###forms #################################
 #- rule: Activate form 2
 #  steps:
@@ -33,6 +47,7 @@ rules:
 - rule: Activate form
   steps:
   - action: utter_provide_info
+  - action: utter_yes_or_no
   - intent: affirm
   - action: user_details_form
   - active_loop: user_details_form
@@ -49,7 +64,7 @@ rules:
     - requested_slot: null
   # The actions we want to run when the form is submitted.
   - action: action_submit
-  - action: action_slots_reset
+#  - action: action_slots_reset
 #  - action: action_restart
 
 #Symptoms form######

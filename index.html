@@ -1,16 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>DrBot</title>
     <link rel="stylesheet" type="text/css" href="chatbot.css" />
+
+
 </head>
 <body>
+    <header>
+        <input  type="text" id="search" placeholder="  searche for a disease">
+        <img class="icon-magnifying-glass" src="search_icon.png" alt='icon "magnifying glass"'/>
+
+    </header>
     <div id="chat-widget">
-      <div id="chat-title">Chat with our assistant</div>
-      <div id="chat-container">
+      <div id="chat-title">chat with our assistant </div>
+       <div id="chat-container">
         <div id="chat-messages"></div>
-        <div id="chat-input-container">
-          <input type="text" id="chat-input" placeholder="type your message here...">
-          <button id="chat-send-button">Envoyer</button>
-        </div>
+           <div id="chat-input-container">
+                <input type="text" id="chat-input" placeholder="type your message here...">
+                <button id="chat-send-button">Send</button>
+                <img class="imgsend" src="send_icon.svg" alt='icon "magnifying glass"'/>
+           </div>
+
+
       </div>
     </div>
-    <script src="chatbot.js"/></script>
+    <div id="textDRoit">
+        <p id="p1">Meet your</p>
+        <p id="p2">VIRTUAL</p>
+        <P id="p3">DOCTOR!</P>
+        <p id="p4">Welcome to our website! Here's what our advanced medical assistant bot can do for you:<br>
+- Accurately predict possible diseases based on your symptoms.<br>
+- Assist you in booking appointments with specialized doctors.<br>
+- Send confirmation messages directly to your phone for your appointments.<br>
+- Provide addresses of doctors on an interactive map.<br>
+- Offer accurate information and support based on your symptoms.<br>
+Experience seamless healthcare assistance with our intelligent bot right here on our website!</p>
+            <div class="rect1"></div>
+    </div>
+<script src="chatbot.js"/></script>
 </body>
+</html>

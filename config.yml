@@ -19,11 +19,11 @@ pipeline:
      min_ngram: 1
      max_ngram: 4
    - name: DIETClassifier
-     epochs: 100
+     epochs: 300
      constrain_similarities: true
    - name: EntitySynonymMapper
    - name: ResponseSelector
-     epochs: 100
+     epochs: 500
      constrain_similarities: true
    - name: FallbackClassifier
      threshold: 0.5
@@ -39,8 +39,8 @@ policies:
    - name: RulePolicy
    - name: UnexpecTEDIntentPolicy
      max_history: 5
-     epochs: 100
+     epochs: 300
    - name: TEDPolicy
      max_history: 5
-     epochs: 100
+     epochs: 300
      constrain_similarities: true

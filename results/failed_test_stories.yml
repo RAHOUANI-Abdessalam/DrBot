@@ -6,16 +6,17 @@ stories:
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
-  - action: action_listen  # predicted: utter_can_i_help
+  - action: action_listen  # predicted: utter_can_i_assist_you
 - story: happy path 2 (.\tests\test_stories.yml)
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
-  - action: action_listen  # predicted: utter_can_i_help
+  - action: action_listen  # predicted: utter_can_i_assist_you
   - intent: goodbye  # predicted: bye: bye-bye!
   - action: utter_goodbye  # predicted: utter_default
+  - action: action_listen  # predicted: action_default_fallback
 - story: sad path 1 (.\tests\test_stories.yml)
   steps:
   - intent: greet
@@ -23,9 +24,10 @@ stories:
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
+  - action: action_listen  # predicted: utter_yes_or_no
   - intent: affirm
   - action: utter_happy
-  - action: action_listen  # predicted: utter_can_i_help
+  - action: action_listen  # predicted: utter_can_i_assist_you
 - story: sad path 2 (.\tests\test_stories.yml)
   steps:
   - intent: greet
@@ -33,8 +35,10 @@ stories:
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
+  - action: action_listen  # predicted: utter_yes_or_no
   - intent: deny
   - action: utter_goodbye  # predicted: utter_can_i_help
+  - action: action_listen  # predicted: action_deactivate_loop
 - story: sad path 3 (.\tests\test_stories.yml)
   steps:
   - intent: greet
@@ -42,9 +46,12 @@ stories:
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
+  - action: action_listen  # predicted: utter_yes_or_no
   - intent: deny
   - action: utter_goodbye  # predicted: utter_can_i_help
+  - action: action_listen  # predicted: action_deactivate_loop
 - story: say goodbye (.\tests\test_stories.yml)
   steps:
   - intent: goodbye  # predicted: bye: bye-bye!
   - action: utter_goodbye  # predicted: utter_default
+  - action: action_listen  # predicted: action_default_fallback

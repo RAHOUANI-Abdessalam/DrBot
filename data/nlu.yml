@@ -78,6 +78,8 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - fine thanks
+    - fine thank you
     - i am fine and you ?
     - i am doing great, what about you ?
 
@@ -551,7 +553,15 @@ nlu:
 
 - intent: patient_sick
   examples: |
-    - I'am sick
+    - I'm sick
+    - I'm not feeling well
+    - Can you please examine me ?
+    - Can you please give me a diagnosis ?
+    - i need diagnosis.
+    - i need to figure out what is my disease
+    - can you predict my disease ?
+    - i have health troubles
+    - i'm illness 
     - I'm not feeling well and I think I may have caught something. Can you please examine me?
     - I have been feeling sick lately and I was hoping you could help me figure out what's wrong
     - I've been experiencing a lot of symptoms recently and I'm concerned it could be something serious. Can you please help me?
@@ -685,3 +695,35 @@ nlu:
     - one by one
     - i want to tell them one by one
     - provide them in discussion
+
+- intent : what_can_you_do
+  examples: |
+    - What are your capabilities?
+    - what can you do for me ?
+    - how can you assist me ?
+    - Can you tell me what you're capable of?
+    - What services do you offer?
+    - I'm curious about your functionalities. Could you please explain?
+    - What kind of assistance can I expect from you?
+    - Do you have any specific abilities or features?
+    - Could you provide an overview of your functionalities?
+    - Tell me more about what you can do.
+    - How can you help me with my health concerns?
+    - What are the tasks you're programmed to handle?
+
+- intent: start
+  examples: |
+    - start
+    - start conversation
+    - begin
+
+- intent: thanks
+  examples: |
+    - Thanks a lot!
+    - I appreciate your help.
+    - Thank you for being so helpful.
+    - Grateful for your assistance.
+    - thank you
+    - thx
+    - thanks for your help
+    - thank you so much

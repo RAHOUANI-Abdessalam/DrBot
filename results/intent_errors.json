@@ -4,7 +4,7 @@
     "intent": "goodbye",
     "intent_prediction": {
       "name": "bye",
-      "confidence": 0.5064111948013306
+      "confidence": 0.49093618988990784
     }
   },
   {
@@ -12,7 +12,7 @@
     "intent": "goodbye",
     "intent_prediction": {
       "name": "bye",
-      "confidence": 0.5814218521118164
+      "confidence": 0.5334004163742065
     }
   },
   {
@@ -20,7 +20,7 @@
     "intent": "goodbye",
     "intent_prediction": {
       "name": "bye",
-      "confidence": 0.5885241031646729
+      "confidence": 0.5262162089347839
     }
   },
   {
@@ -28,7 +28,7 @@
     "intent": "goodbye",
     "intent_prediction": {
       "name": "bye",
-      "confidence": 0.6283392310142517
+      "confidence": 0.570536732673645
     }
   },
   {
@@ -36,167 +36,15 @@
     "intent": "goodbye",
     "intent_prediction": {
       "name": "bye",
-      "confidence": 0.7582395672798157
+      "confidence": 0.6703516244888306
     }
   },
   {
-    "text": "[skin_rash] (Symptoms) [chills] (Symptoms) [joint_pain] (Symptoms) [vomiting] (Symptoms) [fatigue] (Symptoms) [high_fever] (Symptoms) [headache] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [pain_behind_the_eyes] (Symptoms) [back_pain] (Symptoms) [muscle_pain] (Symptoms) [red_spots_over_body] (Symptoms)",
-    "intent": "dengue",
+    "text": "i want to tell them in one time",
+    "intent": "all_at_once",
     "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.2518083155155182
-    }
-  },
-  {
-    "text": "[skin_rash] (Symptoms) [chills] (Symptoms) [joint_pain] (Symptoms) [vomiting] (Symptoms) [fatigue] (Symptoms) [high_fever] (Symptoms) [headache] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [pain_behind_the_eyes] (Symptoms) [back_pain] (Symptoms) [malaise] (Symptoms) [red_spots_over_body] (Symptoms)",
-    "intent": "dengue",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.3297729790210724
-    }
-  },
-  {
-    "text": "[skin_rash] (Symptoms) [chills] (Symptoms) [joint_pain] (Symptoms) [vomiting] (Symptoms) [fatigue] (Symptoms) [high_fever] (Symptoms) [headache] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [pain_behind_the_eyes] (Symptoms) [back_pain] (Symptoms) [malaise] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "dengue",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.32087236642837524
-    }
-  },
-  {
-    "text": "[skin_rash] (Symptoms) [chills] (Symptoms) [joint_pain] (Symptoms) [vomiting] (Symptoms) [fatigue] (Symptoms) [high_fever] (Symptoms) [headache] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [pain_behind_the_eyes] (Symptoms) [back_pain] (Symptoms) [malaise] (Symptoms) [muscle_pain] (Symptoms) [red_spots_over_body] (Symptoms)",
-    "intent": "dengue",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.28140684962272644
-    }
-  },
-  {
-    "text": "[chills] (Symptoms) [joint_pain] (Symptoms) [vomiting] (Symptoms) [fatigue] (Symptoms) [high_fever] (Symptoms) [headache] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [pain_behind_the_eyes] (Symptoms) [back_pain] (Symptoms) [malaise] (Symptoms) [muscle_pain] (Symptoms) [red_spots_over_body] (Symptoms)",
-    "intent": "dengue",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.24053174257278442
-    }
-  },
-  {
-    "text": "[skin_rash] (Symptoms) [joint_pain] (Symptoms) [vomiting] (Symptoms) [fatigue] (Symptoms) [high_fever] (Symptoms) [headache] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [pain_behind_the_eyes] (Symptoms) [back_pain] (Symptoms) [malaise] (Symptoms) [muscle_pain] (Symptoms) [red_spots_over_body] (Symptoms)",
-    "intent": "dengue",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.2483445256948471
-    }
-  },
-  {
-    "text": "[skin_rash] (Symptoms) [chills] (Symptoms) [vomiting] (Symptoms) [fatigue] (Symptoms) [high_fever] (Symptoms) [headache] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [pain_behind_the_eyes] (Symptoms) [back_pain] (Symptoms) [malaise] (Symptoms) [muscle_pain] (Symptoms) [red_spots_over_body] (Symptoms)",
-    "intent": "dengue",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.3013657331466675
-    }
-  },
-  {
-    "text": "[skin_rash] (Symptoms) [chills] (Symptoms) [joint_pain] (Symptoms) [fatigue] (Symptoms) [high_fever] (Symptoms) [headache] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [pain_behind_the_eyes] (Symptoms) [back_pain] (Symptoms) [malaise] (Symptoms) [muscle_pain] (Symptoms) [red_spots_over_body] (Symptoms)",
-    "intent": "dengue",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.25146767497062683
-    }
-  },
-  {
-    "text": "[skin_rash] (Symptoms) [chills] (Symptoms) [joint_pain] (Symptoms) [vomiting] (Symptoms) [fatigue] (Symptoms) [headache] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [pain_behind_the_eyes] (Symptoms) [back_pain] (Symptoms) [malaise] (Symptoms) [muscle_pain] (Symptoms) [red_spots_over_body] (Symptoms)",
-    "intent": "dengue",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.2731657028198242
-    }
-  },
-  {
-    "text": "[temperature] (Symptoms) [headache] (Symptoms) [pain] (Symptoms) [muscle] (Symptoms) [ache] (Symptoms)",
-    "intent": "dengue",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.296972393989563
-    }
-  },
-  {
-    "text": "[joint_pain] (Symptoms) [vomiting] (Symptoms) [yellowish_skin] (Symptoms) [dark_urine] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [abdominal_pain] (Symptoms) [diarrhoea] (Symptoms) [mild_fever] (Symptoms) [yellowing_of_eyes] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "hepatitis_d",
-      "confidence": 0.11311081796884537
-    }
-  },
-  {
-    "text": "[vomiting] (Symptoms) [yellowish_skin] (Symptoms) [dark_urine] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [abdominal_pain] (Symptoms) [diarrhoea] (Symptoms) [mild_fever] (Symptoms) [yellowing_of_eyes] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "cervical_spondylosis",
-      "confidence": 0.07907016575336456
-    }
-  },
-  {
-    "text": "[joint_pain] (Symptoms) [yellowish_skin] (Symptoms) [dark_urine] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [abdominal_pain] (Symptoms) [diarrhoea] (Symptoms) [mild_fever] (Symptoms) [yellowing_of_eyes] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "hepatitis_d",
-      "confidence": 0.1705099493265152
-    }
-  },
-  {
-    "text": "[joint_pain] (Symptoms) [vomiting] (Symptoms) [dark_urine] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [abdominal_pain] (Symptoms) [diarrhoea] (Symptoms) [mild_fever] (Symptoms) [yellowing_of_eyes] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "varicose_veins",
-      "confidence": 0.13496975600719452
-    }
-  },
-  {
-    "text": "[joint_pain] (Symptoms) [vomiting] (Symptoms) [yellowish_skin] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [abdominal_pain] (Symptoms) [diarrhoea] (Symptoms) [mild_fever] (Symptoms) [yellowing_of_eyes] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "chronic_cholestasis",
-      "confidence": 0.1055428683757782
-    }
-  },
-  {
-    "text": "[joint_pain] (Symptoms) [vomiting] (Symptoms) [yellowish_skin] (Symptoms) [dark_urine] (Symptoms) [loss_of_appetite] (Symptoms) [abdominal_pain] (Symptoms) [diarrhoea] (Symptoms) [mild_fever] (Symptoms) [yellowing_of_eyes] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "hepatitis_d",
-      "confidence": 0.12278689444065094
-    }
-  },
-  {
-    "text": "[joint_pain] (Symptoms) [vomiting] (Symptoms) [yellowish_skin] (Symptoms) [dark_urine] (Symptoms) [nausea] (Symptoms) [abdominal_pain] (Symptoms) [diarrhoea] (Symptoms) [mild_fever] (Symptoms) [yellowing_of_eyes] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "varicose_veins",
-      "confidence": 0.17461836338043213
-    }
-  },
-  {
-    "text": "[joint_pain] (Symptoms) [vomiting] (Symptoms) [yellowish_skin] (Symptoms) [dark_urine] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [diarrhoea] (Symptoms) [mild_fever] (Symptoms) [yellowing_of_eyes] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "varicose_veins",
-      "confidence": 0.13518333435058594
-    }
-  },
-  {
-    "text": "[joint_pain] (Symptoms) [vomiting] (Symptoms) [yellowish_skin] (Symptoms) [dark_urine] (Symptoms) [nausea] (Symptoms) [loss_of_appetite] (Symptoms) [abdominal_pain] (Symptoms) [mild_fever] (Symptoms) [yellowing_of_eyes] (Symptoms) [muscle_pain] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "hepatitis_d",
-      "confidence": 0.21028906106948853
-    }
-  },
-  {
-    "text": "[temperature] (Symptoms) [jaundice] (Symptoms) [nausea] (Symptoms) [itch] (Symptoms)",
-    "intent": "hepatitis_a",
-    "intent_prediction": {
-      "name": "varicose_veins",
-      "confidence": 0.2405596673488617
+      "name": "in_discussion",
+      "confidence": 0.578518807888031
     }
   }
 ]

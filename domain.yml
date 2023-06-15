@@ -61,6 +61,9 @@ intents:
   - testing_3symptoms
   - all_at_once
   - in_discussion
+  - what_can_you_do
+  - start
+  - thanks
 
 responses:
   utter_greet:
@@ -68,7 +71,12 @@ responses:
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
+    channel: "facebook"
     image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Here is something to cheer you up:"
+    channel: "telegram"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+  - text: "Here is something to cheer you up:\n <a href=https://i.imgur.com/nGF1K8f.jpg  target=_blank>https://i.imgur.com/nGF1K8f.jpg</a>"
 
   utter_did_that_help:
   - text: "Did that help you?"
@@ -85,6 +93,13 @@ responses:
   utter_can_i_help:
     - text: "How can i Help you !! "
 
+  utter_can_i_assist_you:
+    - text: "How can i assist you today ? "
+    - text: "What can i do for you today ? "
+
+  utter_i_can_do:
+    - text: "I'm an advanced medical assistant bot designed to help you with your health concerns. \nI can accurately predict possible diseases based on the symptoms you provide. \nAdditionally, I can assist you in booking appointments with specialized doctors, sending confirmation messages directly to your phones. \nIf you're unsure about the location of the doctors, I can also provide you with their addresses on a map. \nFeel free to share your symptoms, and I'll do my best to provide you with accurate information and support."
+
   utter_ask_new_informations:
     - text: "Are you agree to provide the new personal informations ? Affirm or Deny "
 
@@ -95,127 +110,127 @@ responses:
   - text: "I am a bot, developed by Masters studients ,powered by Rasa."
 
   utter_fungal_infection:
-  - text: "You have Fungal infection"
+  - text: "I think that you may have Fungal infection"
 
   utter_allergy:
-  - text: "You have Allergy"
+  - text: "I think that you may have Allergy"
 
   utter_gerd:
-    - text: "You have GERD"
+    - text: "I think that you may have hGERD"
 
   utter_chronic_cholestasis:
-    - text: "You have Chronic cholestasis"
+    - text: "I think that you may have Chronic cholestasis"
 
   utter_drug_reaction:
-    - text: "You have Drug Reaction"
+    - text: "I think that you may have Drug Reaction"
 
   utter_peptic_ulcer_diseae:
-    - text: "You have Peptic ulcer diseae"
+    - text: "I think that you may have Peptic ulcer diseae"
 
   utter_aids:
-    - text: "You have AIDS"
+    - text: "I think that you may have AIDS"
 
   utter_diabetes:
-    - text: "You have Diabetes"
+    - text: "I think that you may have Diabetes"
 
   utter_gastroenteritis:
-    - text: "You have Gastroenteritis"
+    - text: "I think that you may have Gastroenteritis"
 
   utter_bronchial_asthma:
-    - text: "You have Bronchial Asthma"
+    - text: "I think that you may have Bronchial Asthma"
 
   utter_hypertension:
-    - text: "You have Hypertension"
+    - text: "I think that you may have Hypertension"
 
   utter_migraine:
-    - text: "You have Migraine"
+    - text: "I think that you may have Migraine"
 
   utter_cervical_spondylosis:
-    - text: "You have Cervical spondylosis"
+    - text: "I think that you may have Cervical spondylosis"
 
   utter_paralysis_(brain_hemorrhage):
-    - text: "You have Paralysis (brain hemorrhage)"
+    - text: "I think that you may have Paralysis (brain hemorrhage)"
 
   utter_jaundice:
-    - text: "You have Jaundice"
+    - text: "I think that you may have Jaundice"
 
   utter_malaria:
-    - text: "You have Malaria"
+    - text: "I think that you may have Malaria"
 
   utter_chicken_pox:
-    - text: "You have Chicken pox"
+    - text: "I think that you may have Chicken pox"
 
   utter_dengue:
-    - text: "You have Dengue"
+    - text: "I think that you may have Dengue"
 
   utter_typhoid:
-    - text: "You have Typhoid"
+    - text: "I think that you may have Typhoid"
 
   utter_hepatitis_a:
-    - text: "You have hepatitis A"
+    - text: "I think that you may have hepatitis A"
 
   utter_hepatitis_b:
-    - text: "You have Hepatitis B"
+    - text: "I think that you may have Hepatitis B"
 
   utter_hepatitis_c:
-    - text: "You have Hepatitis C"
+    - text: "I think that you may have Hepatitis C"
 
   utter_hepatitis_d:
-    - text: "You have Hepatitis D"
+    - text: "I think that you may have Hepatitis D"
 
   utter_hepatitis_e:
-    - text: "You have Hepatitis E"
+    - text: "I think that you may have Hepatitis E"
 
   utter_alcoholic_hepatitis:
-    - text: "You have Alcoholic hepatitis"
+    - text: "I think that you may have Alcoholic hepatitis"
 
   utter_tuberculosis:
-    - text: "You have Tuberculosis"
+    - text: "I think that you may have Tuberculosis"
 
   utter_common_cold:
-    - text: "You have Common Cold"
+    - text: "I think that you may have Common Cold"
 
   utter_pneumonia:
-    - text: "You have Pneumonia"
+    - text: "I think that you may have Pneumonia"
 
   utter_dimorphic_hemmorhoids(piles):
-    - text: "You have Dimorphic hemmorhoids(piles)"
+    - text: "I think that you may have Dimorphic hemmorhoids(piles)"
 
   utter_heart_attack:
-    - text: "You have Heart attack"
+    - text: "I think that you may have Heart attack"
 
   utter_varicose_veins:
-    - text: "You have Varicose veins"
+    - text: "I think that you may have Varicose veins"
 
   utter_hypothyroidism:
-    - text: "You have Hypothyroidism"
+    - text: "I think that you may have Hypothyroidism"
 
   utter_hyperthyroidism:
-    - text: "You have Hyperthyroidism"
+    - text: "I think that you may have Hyperthyroidism"
 
   utter_hypoglycemia:
-    - text: "You have Hypoglycemia"
+    - text: "I think that you may have Hypoglycemia"
 
   utter_osteoarthristis:
-    - text: "You have Osteoarthristis"
+    - text: "I think that you may have Osteoarthristis"
 
   utter_arthritis:
-    - text: "You have Arthritis"
+    - text: "I think that you may have Arthritis"
 
   utter_(vertigo)_paroymsal_positional_vertigo:
-    - text: "You have (vertigo) Paroymsal  Positional Vertigo"
+    - text: "I think that you may have (vertigo) Paroymsal  Positional Vertigo"
 
   utter_acne:
-    - text: "You have Acne"
+    - text: "I think that you may have Acne"
 
   utter_urinary_tract_infection:
-    - text: "You have Urinary tract infection"
+    - text: "I think that you may have Urinary tract infection"
 
   utter_psoriasis:
-    - text: "You have Psoriasis"
+    - text: "I think that you may have Psoriasis"
 
   utter_impetigo:
-    - text: "You have Impetigo"
+    - text: "I think that you may have Impetigo"
 
   utter_fungal_infection_specialist:
   - text: "You should visit a Dermatologist or General practitioner"
@@ -341,9 +356,9 @@ responses:
     - text: "You should visit a Dermatologist or General Practitioner"
 
   utter_provide_info:
-    - text: "Can you provide to me some personal informations (Name and Phone number)? Yes or No"
+    - text: "Can you provide to me some personal informations (Name and Phone number)?"
     - text: "I need some personal information such as Name a and Phone number, Are you agree ?"
-    - text: "Are you in to give me basics informations ?"
+    - text: "Are you in to give me your contact informations ?"
 
   utter_ask_name:
     - text: "Give me your name and phone number please"
@@ -369,10 +384,10 @@ responses:
     - text: "Your request for an appointment was sent successfully to the number (+213777038502) with the given details \nName: {Name},\nMobile Number: {Mobile_number}\nDo you want somthing else ?"
 
   utter_out_of_scope:
-    - text: "I'm sorry, I didn't quite understand what you're asking. Could you please rephrase your question?"
-    - text: "I'm sorry, but that is beyond the scope of my expertise. Can you please provide me with more details on what you need help with?"
-    - text: "I'm sorry, I don't have the knowledge to provide you with the information you're requesting. Can I help you with anything else?"
-    - text: "I'm sorry, I'm not programmed to answer that question. Can I help you with something else?"
+    - text: "I'm sorry, I didn't quite understand what you're asking.\nCould you please rephrase your question?"
+    - text: "I'm sorry, but that is beyond the scope of my expertise.\nCan you please provide me with more details on what you need help with?"
+    - text: "I'm sorry, I don't have the knowledge to provide you with the information you're requesting.\nCan I help you with anything else?"
+    - text: "I'm sorry, I'm not programmed to answer that question.\nCan I help you with something else?"
 
   utter_same_informations:
     - text: "With the same last given informations ?"
@@ -384,7 +399,21 @@ responses:
     - text: "more symptoms"
 
   utter_provide_symptoms_ask_mode:
-    - text: "I need you to tell me what is your symptoms \nhow do you want to tell me, all at once (faster in my model) or we discuss them (more precision)"
+    - text: "I need you to tell me what is your symptoms \nhow do you want to tell me:\nall at once (faster in my model) or we discuss them (more precision)"
+      channel: "telegram"
+      buttons:
+        - title: "one by one"
+          payload: "/in_discussion"
+        - title: "all at once"
+          payload: "/all_at_once"
+    - text: "I need you to tell me what is your symptoms \nhow do you want to tell me:\nall at once (faster in my model) or we discuss them (more precision)"
+      channel: "facebook"
+      buttons:
+        - title: "one by one"
+          payload: "/in_discussion"
+        - title: "all at once"
+          payload: "/all_at_once"
+    - text: "I need you to tell me what is your symptoms \nhow do you want to tell me:\nall at once (faster in my model) or we discuss them (more precision)\n\n <button id=button_one_by_one>One by one</button> <button id=button_all_at_once >All at once</button>"
 
   utter_provide_symptom_mode_once:
     - text: "Please type all your suspects symptoms at once"
@@ -396,7 +425,53 @@ responses:
     - text: " "
 
   utter_diagnostic_began:
-    - text: "Your diagnosis is currently in progress \n"
+    - text: "Your diagnosis is currently in progress... \n"
+
+  utter_ask_to_check_nearst_dr:
+    - text: "Do you want me to check for you the nearst ones on the map?"
+      channel: "telegram"
+      buttons:
+        - title: "Yes"
+          payload: "/affirm"
+        - title: "No"
+          payload: "/deny"
+    - text: "Do you want me to check for you the nearst ones on the map?"
+      channel: "facebook"
+      buttons:
+        - title: "Yes"
+          payload: "/affirm"
+        - title: "No"
+          payload: "/deny"
+    - text: "Do you want me to check for you the nearst ones on the map? \n\n <button id=button_yes>Yes</button> <button id=button_no >No</button>"
+
+  utter_please_wait:
+    - text: "Please wait while we processing..."
+
+  utter_yes_or_no:
+    - text: "Please select one :"
+      channel: "telegram"
+      buttons:
+        - title: "Yes"
+          payload: "/affirm"
+        - title: "No"
+          payload: "/deny"
+    - text: "Please select one :"
+      channel: "facebook"
+      buttons:
+        - title: "Yes"
+          payload: "/affirm"
+        - title: "No"
+          payload: "/deny"
+    - text: "<button id=button_yes>Yes</button> <button id=button_no >No</button>"
+
+  utter_thanks:
+    - text: "You're welcome! I'm here to help. Let me know if there's anything else I can assist you with."
+    - text: "You're welcome!"
+    - text: "Glad I could help!"
+    - text: "No problem!"
+    - text: "Anytime!"
+    - text: "Happy to assist!"
+    - text: "Thank you for your kind words! I'm glad I could be of help. How else may I assist you?"
 
 actions:
 - utter_greet
@@ -406,6 +481,8 @@ actions:
 - utter_goodbye
 - utter_whats_symptoms
 - utter_can_i_help
+- utter_can_i_assist_you
+- utter_i_can_do
 - utter_ask_new_informations
 - utter_default
 - utter_iamabot
@@ -513,7 +590,28 @@ actions:
 - utter_empty
 - utter_diagnostic_began
 - action_do_nothing
-
+- utter_ask_to_check_nearst_dr
+- utter_please_wait
+- action_nearst_dermatologue
+- action_nearst_medecin_generaliste
+- action_nearst_allergologue
+- action_nearst_immunologue
+- action_nearst_gastro_enterologue
+- action_nearst_hepatologue
+- action_nearst_infectiologue
+- action_nearst_pneumologue
+- action_nearst_cardiologue
+- action_nearst_neurologue
+- action_nearst_orthopediste
+- action_nearst_proctologue
+- action_nearst_chirurgien_generaliste
+- action_nearst_chirurgien_vasculaire
+- action_nearst_endocrinologue
+- action_nearst_rhumatologue
+- action_nearst_orl_specialist
+- action_nearst_urologue
+- utter_yes_or_no
+- utter_thanks
 
 entities:
   - symptoms
