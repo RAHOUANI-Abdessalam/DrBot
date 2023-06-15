@@ -1,0 +1,9 @@
+{
+  "rule_only_slots": [
+    "logged_in"
+  ],
+  "rule_only_loops": [
+    "user_details_form",
+    "user_symptoms_form"
+  ]
+}

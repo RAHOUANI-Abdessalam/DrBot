@@ -1,0 +1,6 @@
+[
+  {
+    "name": "specialist",
+    "pattern": "(\\bdermatologue\\b|\\bmedecin_generaliste\\b|\\ballergologue\\b|\\bimmunologue\\b|\\bgastro_enterologue\\b|\\bhepatologue\\b|\\binfectiologue\\b|\\bpneumologue\\b|\\bcardiologue\\b|\\bneurologue\\b|\\borthopediste\\b|\\bproctologue\\b|\\bchirurgien_generaliste\\b|\\bchirurgien_vasculaire\\b|\\bendocrinologue\\b|\\brhumatologue\\b|\\borl_specialist\\b|\\burologue\\b)"
+  }
+]
