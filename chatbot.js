@@ -54,17 +54,38 @@ chatInput.addEventListener('keydown', function (event) {
 
 // Fonction pour envoyer un message
 function sendMessage() {
-  // Récupération du message saisi par l'utilisateur
+   // Récupération du message saisi par l'utilisateur
   var message = chatInput.value;
 
-  // Ajout du message à la liste des messages
-  var chatMessages = document.getElementById('chat-messages');
-  chatMessages.innerHTML += '<p><strong>You :</strong> ' + message + '</p>';
+  // Check if the message is "/restart"
+  if (message === "/restart") {
+    // Clear the input field without displaying the message
+    // Envoi du message au chatbot
+    sendMessageToChatbot(message);
+    chatInput.value = '';
+  } else {
+    // Ajout du message à la liste des messages
+    var chatMessages = document.getElementById('chat-messages');
+    chatMessages.innerHTML += '<p><strong>You :</strong> ' + message + '</p>';
 
-  // Effacement du champ de saisie de texte
-  chatInput.value = '';
+    // Effacement du champ de saisie de texte
+    chatInput.value = '';
 
-  // Envoi du message au chatbot
-  sendMessageToChatbot(message);
-  scrollChatContainer();
+    // Envoi du message au chatbot
+    sendMessageToChatbot(message);
+    scrollChatContainer();
+  }
+}
+
+function button_one_by_one(){
+  sendMessageToChatbot("one by one");
+}
+function button_all_at_once(){
+  sendMessageToChatbot("all at one");
+}
+function button_yes(){
+  sendMessageToChatbot("yes");
+}
+function button_no(){
+  sendMessageToChatbot("no");
 }

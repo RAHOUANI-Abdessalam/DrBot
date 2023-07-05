@@ -47,7 +47,7 @@ stories:
   - action: utter_did_that_help
   - action: utter_yes_or_no
   - intent: deny
-  - action: utter_can_i_help
+  - action: utter_help_you_som_else
 
 
 ### diagnostics stories
@@ -62,6 +62,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_dermatologue
   - intent: visit_doctor
   - action: utter_fungal_infection_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -80,6 +81,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_allergologue
   - intent: visit_doctor
   - action: utter_allergy_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -98,12 +100,14 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_gastro_enterologue
   - intent: visit_doctor
   - action: utter_gerd_specialist
   - action: utter_ask_to_check_nearst_dr
   - intent: affirm
   - action: utter_please_wait
   - action: action_nearst_gastro_enterologue
+
 #  - checkpoint: check_doctor_is_known
 
 - story: chronic cholestasis
@@ -114,6 +118,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_hepatologue
   - intent: visit_doctor
   - action: utter_chronic_cholestasis_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -132,6 +137,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_immunologue
   - intent: visit_doctor
   - action: utter_drug_reaction_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -150,6 +156,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_gastro_enterologue
   - intent: visit_doctor
   - action: utter_peptic_ulcer_diseae_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -166,6 +173,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_infectiologue
   - intent: visit_doctor
   - action: utter_aids_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -182,6 +190,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_endocrinologue
   - intent: visit_doctor
   - action: utter_diabetes_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -198,6 +207,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_gastro_enterologue
   - intent: visit_doctor
   - action: utter_gastroenteritis_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -214,6 +224,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_pneumologue
   - intent: visit_doctor
   - action: utter_bronchial_asthma_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -230,6 +241,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_cardiologue
   - intent: visit_doctor
   - action: utter_hypertension_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -246,6 +258,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_neurologue
   - intent: visit_doctor
   - action: utter_migraine_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -262,6 +275,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_neurologue
   - intent: visit_doctor
   - action: utter_cervical_spondylosis_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -278,6 +292,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_neurologue
   - intent: visit_doctor
   - action: utter_paralysis_(brain_hemorrhage)_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -294,6 +309,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_gastro_enterologue
   - intent: visit_doctor
   - action: utter_jaundice_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -310,6 +326,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_infectiologue
   - intent: visit_doctor
   - action: utter_malaria_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -326,6 +343,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_dermatologue
   - intent: visit_doctor
   - action: utter_chicken_pox_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -342,6 +360,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_infectiologue
   - intent: visit_doctor
   - action: utter_dengue_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -358,6 +377,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_infectiologue
   - intent: visit_doctor
   - action: utter_typhoid_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -374,6 +394,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_gastro_enterologue
   - intent: visit_doctor
   - action: utter_hepatitis_a_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -390,6 +411,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_gastro_enterologue
   - intent: visit_doctor
   - action: utter_hepatitis_b_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -406,6 +428,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_hepatologue
   - intent: visit_doctor
   - action: utter_hepatitis_c_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -422,6 +445,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_hepatologue
   - intent: visit_doctor
   - action: utter_hepatitis_d_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -438,6 +462,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_hepatologue
   - intent: visit_doctor
   - action: utter_hepatitis_e_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -454,6 +479,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_gastro_enterologue
   - intent: visit_doctor
   - action: utter_alcoholic_hepatitis_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -472,6 +498,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_pneumologue
   - intent: visit_doctor
   - action: utter_tuberculosis_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -488,6 +515,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_medecin_generaliste
   - intent: visit_doctor
   - action: utter_common_cold_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -504,6 +532,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_pneumologue
   - intent: visit_doctor
   - action: utter_pneumonia_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -520,6 +549,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_chirurgien_generaliste
   - intent: visit_doctor
   - action: utter_dimorphic_hemmorhoids(piles)_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -536,6 +566,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_cardiologue
   - intent: visit_doctor
   - action: utter_heart_attack_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -552,6 +583,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_chirurgien_vasculaire
   - intent: visit_doctor
   - action: utter_varicose_veins_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -568,6 +600,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_endocrinologue
   - intent: visit_doctor
   - action: utter_hypothyroidism_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -584,6 +617,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_endocrinologue
   - intent: visit_doctor
   - action: utter_hyperthyroidism_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -600,6 +634,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_endocrinologue
   - intent: visit_doctor
   - action: utter_hypoglycemia_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -616,6 +651,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_rhumatologue
   - intent: visit_doctor
   - action: utter_osteoarthristis_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -632,6 +668,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_rhumatologue
   - intent: visit_doctor
   - action: utter_arthritis_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -648,6 +685,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_orl_specialist
   - intent: visit_doctor
   - action: utter_(vertigo)_paroymsal_positional_vertigo_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -664,6 +702,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_dermatologue
   - intent: visit_doctor
   - action: utter_acne_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -680,6 +719,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_urologue
   - intent: visit_doctor
   - action: utter_urinary_tract_infection_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -696,6 +736,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_rhumatologue
   - intent: visit_doctor
   - action: utter_psoriasis_specialist
   - action: utter_ask_to_check_nearst_dr
@@ -712,6 +753,7 @@ stories:
     - requested_slot: null
   - action: action_deactivate_loop
   - active_loop: null
+  - action: action_dermatologue
   - intent: visit_doctor
   - action: utter_impetigo_specialist
   - action: utter_ask_to_check_nearst_dr

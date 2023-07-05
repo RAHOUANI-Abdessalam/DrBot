@@ -85,7 +85,16 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Goodbye! Have a great day!"
+  - text: "Farewell! If you have any more questions, feel free to ask."
+  - text: "Take care and see you next time!"
+  - text: "Thank you for using our services. Goodbye!"
+  - text: "Until we meet again, goodbye!"
+  - text: "Goodbye! Remember, I'm always here to assist you."
+  - text: "Signing off for now. Goodbye and take care!"
+  - text: "Wishing you a wonderful day ahead. Goodbye!"
+  - text: "Goodbye! Don't hesitate to reach out if you need further assistance."
+  - text: "It's been a pleasure helping you. Goodbye and have a great one!"
 
   utter_default:
     - text: "I don't understend "
@@ -379,9 +388,11 @@ responses:
     - text: "With pleasure"
     - text: "With happiest"
 
+## we found another utter from the action.py run before this utter_details_thanks
   utter_details_thanks:
     #- text: "Thanks for providing the given details \nName: {Name},\nMobile Number: {Mobile_number}"
-    - text: "Your request for an appointment was sent successfully to the number (+213777038502) with the given details \nName: {Name},\nMobile Number: {Mobile_number}\nDo you want somthing else ?"
+    #Your request for an appointment was sent successfully to the {specialist}
+    - text: "Your request for an appointment was sent successfully to the {Specialit} in the number (+213777038502)\nwith the given details :\nName: {Name},\nMobile Number: {Mobile_number}\nDo you want somthing else ?"
 
   utter_out_of_scope:
     - text: "I'm sorry, I didn't quite understand what you're asking.\nCould you please rephrase your question?"
@@ -397,6 +408,7 @@ responses:
 
   utter_ask_symptoms:
     - text: "more symptoms"
+    - text: "provide more symptoms"
 
   utter_provide_symptoms_ask_mode:
     - text: "I need you to tell me what is your symptoms \nhow do you want to tell me:\nall at once (faster in my model) or we discuss them (more precision)"
@@ -413,7 +425,7 @@ responses:
           payload: "/in_discussion"
         - title: "all at once"
           payload: "/all_at_once"
-    - text: "I need you to tell me what is your symptoms \nhow do you want to tell me:\nall at once (faster in my model) or we discuss them (more precision)\n\n <button id=button_one_by_one>One by one</button> <button id=button_all_at_once >All at once</button>"
+    - text: "I need you to tell me what is your symptoms \nhow do you want to tell me:\nall at once (faster in my model) or we discuss them (more precision)\n\n <button id=button_one_by_one onclick=button_one_by_one()>One by one</button> <button id=button_all_at_once onclick=button_all_at_once()>All at once</button>"
 
   utter_provide_symptom_mode_once:
     - text: "Please type all your suspects symptoms at once"
@@ -423,6 +435,9 @@ responses:
 
   utter_empty:
     - text: " "
+
+  utter_help_you_som_else:
+    - text: "How can i help you with somthing else ?"
 
   utter_diagnostic_began:
     - text: "Your diagnosis is currently in progress... \n"
@@ -442,7 +457,7 @@ responses:
           payload: "/affirm"
         - title: "No"
           payload: "/deny"
-    - text: "Do you want me to check for you the nearst ones on the map? \n\n <button id=button_yes>Yes</button> <button id=button_no >No</button>"
+    - text: "Do you want me to check for you the nearst ones on the map? \n\n <button id=button_yes onclick=button_yes()>Yes</button> <button id=button_no onclick=button_no()>No</button>"
 
   utter_please_wait:
     - text: "Please wait while we processing..."
@@ -462,7 +477,7 @@ responses:
           payload: "/affirm"
         - title: "No"
           payload: "/deny"
-    - text: "<button id=button_yes>Yes</button> <button id=button_no >No</button>"
+    - text: "<button id=button_yes onclick=button_yes()>Yes</button> <button id=button_no onclick=button_no()>No</button>"
 
   utter_thanks:
     - text: "You're welcome! I'm here to help. Let me know if there's anything else I can assist you with."
@@ -483,6 +498,7 @@ actions:
 - utter_can_i_help
 - utter_can_i_assist_you
 - utter_i_can_do
+- utter_help_you_som_else
 - utter_ask_new_informations
 - utter_default
 - utter_iamabot
@@ -612,6 +628,24 @@ actions:
 - action_nearst_urologue
 - utter_yes_or_no
 - utter_thanks
+- action_dermatologue
+- action_medecin_generaliste
+- action_allergologue
+- action_immunologue
+- action_gastro_enterologue
+- action_hepatologue
+- action_infectiologue
+- action_pneumologue
+- action_cardiologue
+- action_neurologue
+- action_orthopediste
+- action_proctologue
+- action_chirurgien_generaliste
+- action_chirurgien_vasculaire
+- action_endocrinologue
+- action_rhumatologue
+- action_orl_specialist
+- action_urologue
 
 entities:
   - symptoms

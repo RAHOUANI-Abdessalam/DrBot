@@ -61,6 +61,8 @@ nlu:
     - deny
     - no i don't
     - no i am not
+    - no thank you
+    - no thanks
 
 - intent: mood_great
   examples: |
@@ -77,6 +79,8 @@ nlu:
     - extremely good
     - so so perfect
     - so good
+    - good
+    - fine
     - so perfect
     - fine thanks
     - fine thank you
@@ -596,6 +600,10 @@ nlu:
     - [aek](name)
     - [nassim](name)
     - [frank](name)
+    - [omar](name)
+    - [talbi](name)
+    - [merati](name)
+    - [medjaded](name)
 
 - intent: my_phone_number
   examples: |

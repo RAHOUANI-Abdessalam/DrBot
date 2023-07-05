@@ -25,6 +25,8 @@ class Sentence:
     sentence = ""
 class Times:
     time = 4
+class Specialist:
+    specialist = ""
 class Model:
 
     def __init__(self, model_path: str) -> None:
@@ -214,19 +216,21 @@ class ActionSubmit(Action):
         tracker: Tracker,
         domain: "DomainDict",
     ) -> List[EventType]:
+        ##dispatcher.utter_message(text="Your request for an appointment was sent successfully to the "+ Specialist.specialist )
         dispatcher.utter_message(template="utter_details_thanks",
+                                 Specialit=Specialist.specialist + " clinic",
                                  Name=tracker.get_slot("name"),
                                  Mobile_number=tracker.get_slot("phone_number"))
         ##test sending message ////////////////////////////////////////////////////
-        account_sid = 'ACd275031e6553d3cd9e344d56eec57a09'
-        auth_token = 'cbf52f9db5b2d83219e74f98cde197e1'
+        account_sid = 'ACc06ad8b3ab50b7e65da4991fc38215d3'
+        auth_token = 'cb3a993597688c68fb29e0e6f9074f10'
         client = Client(account_sid, auth_token)
 
         ## messag to doctor
         message = client.messages.create(
-            from_='+16075233346',
+            from_='+12058519746',
             body="Patient "+ tracker.get_slot("name") +" with the Mobile number "+ tracker.get_slot("phone_number") +" want an appointment",
-            to='+213777038502')
+            to='+213665538704')
         #.utter_message(text="message of reserving an appointment has been sent seccessefully to {}".string.format(tracker.get_slot("phone_number")))
 
         ### mssage to patient
@@ -234,8 +238,9 @@ class ActionSubmit(Action):
          #   from_='+16075233346',
           #  body="your request for an appointment was sent seccessfully to the number +213777038502, if u didn't get a response please call in the mentioned number",
            # to=tracker.get_slot("phone_number"))
+        Specialist.specialist = ""
 
-        return [SlotSet("requested_slot", None) and ActiveLoop(None) and print("slot submited resets")]
+        return [SlotSet("requested_slot", None) and ActiveLoop(None)]
 class ActionHelloWorld(Action):
 
      def name(self) -> Text:
@@ -298,166 +303,207 @@ class ActionDoNothing(Action):
             print('intent: '+results)
             if results == "fungal_infection":
                 dispatcher.utter_message(response="utter_fungal_infection")
-                Sentence.sentence=""
+                Times.time = 4
+                Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "allergy":
                 dispatcher.utter_message(response="utter_allergy")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "gerd":
                 dispatcher.utter_message(response="utter_gerd")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "chronic_cholestasis":
                 dispatcher.utter_message(response="utter_chronic_cholestasis")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "drug_reaction":
                 dispatcher.utter_message(response="utter_drug_reaction")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "peptic_ulcer_diseae":
                 dispatcher.utter_message(response="utter_peptic_ulcer_diseae")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "aids":
                 dispatcher.utter_message(response="utter_aids")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "diabetes":
                 dispatcher.utter_message(response="utter_diabetes")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "gastroenteritis":
                 dispatcher.utter_message(response="utter_gastroenteritis")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "bronchial_asthma":
                 dispatcher.utter_message(response="utter_bronchial_asthma")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "hypertension":
                 dispatcher.utter_message(response="utter_hypertension")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "migraine":
                 dispatcher.utter_message(response="utter_migraine")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "cervical_spondylosis":
                 dispatcher.utter_message(response="utter_cervical_spondylosis")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "paralysis_(brain_hemorrhage)":
                 dispatcher.utter_message(response="utter_paralysis_(brain_hemorrhage)")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "jaundice":
                 dispatcher.utter_message(response="utter_jaundice")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "malaria":
                 dispatcher.utter_message(response="utter_malaria")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "chicken_pox":
                 dispatcher.utter_message(response="utter_chicken_pox")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "dengue":
                 dispatcher.utter_message(response="utter_dengue")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "typhoid":
                 dispatcher.utter_message(response="utter_typhoid")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "hepatitis_a":
                 dispatcher.utter_message(response="utter_hepatitis_a")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "hepatitis_b":
                 dispatcher.utter_message(response="utter_hepatitis_b")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "hepatitis_c":
                 dispatcher.utter_message(response="utter_hepatitis_c")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "hepatitis_d":
                 dispatcher.utter_message(response="utter_hepatitis_d")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "hepatitis_e":
                 dispatcher.utter_message(response="utter_hepatitis_e")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "alcoholic_hepatitis":
                 dispatcher.utter_message(response="utter_alcoholic_hepatitis")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "tuberculosis":
                 dispatcher.utter_message(response="utter_tuberculosis")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "common_cold":
                 dispatcher.utter_message(response="utter_common_cold")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "pneumonia":
                 dispatcher.utter_message(response="utter_pneumonia")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "dimorphic_hemmorhoids(piles)":
                 dispatcher.utter_message(response="utter_dimorphic_hemmorhoids(piles)")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "heart_attack":
                 dispatcher.utter_message(response="utter_heart_attack")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "varicose_veins":
                 dispatcher.utter_message(response="utter_varicose_veins")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "hypothyroidism":
                 dispatcher.utter_message(response="utter_hypothyroidism")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "hyperthyroidism":
                 dispatcher.utter_message(response="utter_hyperthyroidism")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "hypoglycemia":
                 dispatcher.utter_message(response="utter_hypoglycemia")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "osteoarthristis":
                 dispatcher.utter_message(response="utter_osteoarthristis")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "arthritis":
                 dispatcher.utter_message(response="utter_arthritis")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "(vertigo)_paroymsal_positional_vertigo":
                 dispatcher.utter_message(response="utter_(vertigo)_paroymsal_positional_vertigo")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "acne":
                 dispatcher.utter_message(response="utter_acne")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "urinary_tract_infection":
                 dispatcher.utter_message(response="utter_urinary_tract_infection")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "psoriasis":
                 dispatcher.utter_message(response="utter_psoriasis")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             elif results == "impetigo":
                 dispatcher.utter_message(response="utter_impetigo")
+                Times.time = 4
                 Sentence.sentence = ""
                 return [SlotSet("requested_slot", None) and ActiveLoop(None)]
             Times.time = Times.time - 1
@@ -700,6 +746,158 @@ class ActionCheckNearstDr18(Action):
         query = urllib.parse.quote(f'nearest {specialist}')
         search_url = base_url + query
         webbrowser.open(search_url)
+        return []
+
+
+###action fill specialist var########################################################################################################
+class ActionDr(Action):
+    def name(self) -> Text:
+        return "action_dermatologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "dermatologue"
+        return []
+
+class ActionDr2(Action):
+    def name(self) -> Text:
+        return "action_medecin_generaliste"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "medecin_generaliste"
+        return []
+
+class ActionDr3(Action):
+    def name(self) -> Text:
+        return "action_allergologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "allergologue"
+        return []
+class ActionDr4(Action):
+    def name(self) -> Text:
+        return "action_immunologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "immunologue"
+        return []
+class ActionDr5(Action):
+    def name(self) -> Text:
+        return "action_gastro_enterologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "gastro_enterologue"
+        return []
+class ActionDr6(Action):
+    def name(self) -> Text:
+        return "action_hepatologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "hepatologue"
+        return []
+class ActionDr7(Action):
+    def name(self) -> Text:
+        return "action_infectiologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "infectiologue"
+        return []
+class ActionDr8(Action):
+    def name(self) -> Text:
+        return "action_pneumologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "pneumologue"
+        return []
+class ActionDr9(Action):
+    def name(self) -> Text:
+        return "action_cardiologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "cardiologue"
+        return []
+class ActionDr10(Action):
+    def name(self) -> Text:
+        return "action_neurologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "neurologue"
+        return []
+class ActionDr11(Action):
+    def name(self) -> Text:
+        return "action_orthopediste"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "orthopediste"
+        return []
+class ActionDr12(Action):
+    def name(self) -> Text:
+        return "action_proctologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "proctologue"
+        return []
+class ActionDr13(Action):
+    def name(self) -> Text:
+        return "action_chirurgien_generaliste"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "chirurgien_generaliste"
+        return []
+class ActionDr14(Action):
+    def name(self) -> Text:
+        return "action_chirurgien_vasculaire"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "chirurgien_vasculaire"
+        return []
+class ActionDr15(Action):
+    def name(self) -> Text:
+        return "action_endocrinologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "endocrinologue"
+        return []
+
+class ActionDr16(Action):
+    def name(self) -> Text:
+        return "action_rhumatologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "rhumatologue"
+        return []
+
+class ActionDr17(Action):
+    def name(self) -> Text:
+        return "action_orl_specialist"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "orl specialist"
+        return []
+
+class ActionDr18(Action):
+    def name(self) -> Text:
+        return "action_urologue"
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]):
+        Specialist.specialist = "urologue"
         return []
 
 
